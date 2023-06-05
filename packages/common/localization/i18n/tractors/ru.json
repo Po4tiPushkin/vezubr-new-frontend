@@ -1,0 +1,15 @@
+{
+  "title": "Тягачи",
+  "table": {
+    "id": "ID",
+    "markAndModel": "Марка",
+    "plateNumber": "Гос Номер",
+    "liftingCapacityInKg": "ГРУЗОПОДЪЕМНОСТЬ КУЗОВА",
+    "finishedOrdersCount": "ИСПОЛНЕНО",
+    "crashCount": "ПОЛОМОК",
+    "drivers": "ВОДИТЕЛЕЙ",
+    "vehicleConstructionTypeTitle": "ПОЛУПРИЦЕП",
+    "status": "СТАТУС",
+    "address": "АДРЕС БАЗИРОВАНИЯ"
+  }
+}

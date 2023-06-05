@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+pre {
+  font-family: inherit;
+}
+
+.main {
+  width: 95vw;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.main__main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.main__main .main__block:last-child {
+  margin-left: 25px;
+}
+
+.main__block {
+  width: 50%;
+}
+
+.main__text {
+  margin-left: auto;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.main__title {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.main__table {
+  margin-bottom: 40px;
+}
+
+.main__table--no-margin {
+  margin: 0;
+}
+
+.head {
+  margin-left: 30%;
+}
+
+.header {
+  justify-content: space-between;
+  flex-basis: content;
+}
+
+.header__left {
+  width: 25%;
+}
+
+
+.header__right {
+  width: 30%;
+}
+
+.header__date {
+  width: 500px;
+  margin-left: 100px;
+}
+
+.head .input {
+  min-width: 100px;
+}
+
+.form__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.form__content {
+  margin-top: 25px;
+}
+
+.form__title {
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.top {
+  min-width: 200px;
+}
+
+.top__text {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.content__title {
+  min-width: max-content;
+}
+
+.content__block {
+  margin-bottom: 20px;
+}
+
+.content__input {
+  margin-left: 10px;
+  width: 100%;
+  min-width: 50px;
+}
+
+.input {
+  border-bottom: 1px solid #000;
+  min-height: 19px;
+}
+
+.input--no-border {
+  border: 0;
+}
+
+.input__text {
+  text-align: center;
+  font-size: 12px;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.content__flex .content__title:not(:first-child),
+.content__flex .flexbox:not(:first-child) {
+  margin-left: 10px;
+}
+
+.no-align {
+  align-items: unset;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.td__border {
+  border: 2px solid #000;
+}
+
+.td__text {
+  text-align: right;
+}
+
+.td__text span {
+  margin-right: 10px;
+}
+
+.border-bottom-thin {
+  border-bottom: 1px solid #000;
+}
+
+.form-table__wrapper {
+  width: 500px;
+  display: flex;
+}
+
+.form-table,
+.mt {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+
+}
+
+.content__table {
+  align-items: end;
+}
+
+.mt td {
+  border: 1px solid #000;
+}
+
+.mt-td__text {
+  min-height: 20px;
+  display: inline-block;
+}
+
+table td {
+  word-break: break-all;
+  word-break: break-word;
+}
+
+.cut-line {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cut-line__line {
+  height: 4px;
+  background-color: #000;
+  margin-bottom: 5px;
+}
+
+.td__hint {
+  position: absolute;
+  width: 100%;
+  top: 25px;
+}
+
+.no-border-top {
+  border-top: 0 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.mt-td__span {
+  padding: 0 10px;
+}
+
+.ht {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ht-td__bordered {
+  border: 1px solid #000;
+}
+
+.ht-td__right {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.content__row {
+  margin-bottom: 0;
+  padding-right: 10px;
+}
+
+.content__row .content__title {
+  min-width: unset;
+  width: 100%;
+  max-width: fit-content;
+}
+
+.content__title--small {
+  min-width: unset;
+  width: max-content;
+}
+
+.block-row>div:not(:first-child) {
+  margin-left: 15px;
+}
+
+.block-row .content__input,
+.block-row .flexbox {
+  margin-left: 0 !important;
+}
+
+.main__block--bordered {
+  border: 1px solid #000;
+}
+
+.main__block-content {
+  padding: 0 25px;
+  padding-top: 15px;
+}
+
+.no-border-left {
+  border-left: 0 !important;
+}
+
+.no-border-bottom {
+  border-bottom: 0 !important;
+}
+
+.no-border-right {
+  border-right: 0 !important;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.input-box__div {
+  align-items: center;
+}
+
+.input-box__box {
+  min-width: 70px;
+  height: 40px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.input-box__text {
+  margin-right: 50px;
+}
+
+.new-page {
+  margin: 40px 0;
+  text-align: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.content__block--left {
+  width: fit-content;
+  margin-left: auto;
+}

@@ -1,0 +1,13 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+
+.driver-form {
+  width: 950px;
+}
+
+.page-drivers-create, .page-drivers-edit {
+  display: flex;
+  justify-content: center;
+  padding: 12px !important;
+  background-color: #f6f6f6 !important;
+}

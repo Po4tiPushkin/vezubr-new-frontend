@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="43px" viewBox="0 0 30 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>pages/1 monitor/map/pin_nonumber_yellow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="96.744039%" y2="3.25596098%" id="linearGradient-1">
+            <stop stop-color="#ECB933" offset="0%"></stop>
+            <stop stop-color="#F0E45E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="!5-map-icons" transform="translate(-314.000000, -48.000000)" fill="url(#linearGradient-1)" stroke="#DEE3E8" stroke-width="4">
+            <path d="M327.46972,85.2877277 C319.860132,76.2448219 316,68.7585049 316,62.6666667 C316,55.6570532 321.833836,50 329,50 C336.166164,50 342,55.6570532 342,62.6666667 C342,68.7585049 338.139868,76.2448219 330.53028,85.2877277 L329,87.1062467 L327.46972,85.2877277 Z M329,65 C330.104569,65 331,64.1045695 331,63 C331,61.8954305 330.104569,61 329,61 C327.895431,61 327,61.8954305 327,63 C327,64.1045695 327.895431,65 329,65 Z" id="pages/1-monitor/map/pin_nonumber_yellow"></path>
+        </g>
+    </g>
+</svg>

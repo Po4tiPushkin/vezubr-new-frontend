@@ -1,0 +1,32 @@
+@import '../common/styles/theme';
+.order-address-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__label {
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .anticon {
+      font-family: sans-serif;
+    }
+
+    &__item {
+      padding: 2px 3px;
+      background: #e7e7e7;
+      border-radius: 4px;
+      margin-left: 2px;
+      white-space: nowrap;
+
+      &--time {
+        padding-left: 4px;
+        padding-right: 4px;
+        font-weight: bold;
+      }
+    }
+  }
+}

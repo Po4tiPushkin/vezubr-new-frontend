@@ -1,0 +1,96 @@
+@import '../common/styles/theme';
+.vz-address-modern-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+
+  position: relative;
+
+  min-height: 62px;
+
+  background-color: $component-background;
+  border-radius: $border-radius-base;
+  border: $border-width-base $border-style-base $input-border-color;
+  transition: all 0.3s;
+
+  .field-has-error & {
+    border-color: $error-color;
+    &:hover {
+      border-color: $error-color;
+      box-shadow: 0 0 3px 0 rgba($error-color, 0.5);
+    }
+  }
+
+  .icon-error {
+    position: absolute;
+    color: $error-color;
+    right: 3px;
+    bottom: 3px;
+    font-size: 20px;
+  }
+
+  &__button {
+    flex: 0 0 auto;
+    width: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    background-color: transparent;
+
+    color: $vz-icon-color;
+
+    font-size: 22px;
+
+    &:active,
+    &:hover {
+      background-color: $table-icon-action-active-bg;
+      color: $vz-icon-color;
+    }
+    &:first-child {
+      border-right: $border-width-base $border-style-base $border-color-base;
+      border-top-left-radius: $border-radius-base;
+      border-bottom-left-radius: $border-radius-base;
+    }
+    &:last-child {
+      border-left: $border-width-base $border-style-base $border-color-base;
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+    }
+
+    &--delete {
+      color: $primary-color;
+      &:active,
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__elem {
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+    padding: 5px 10px;
+    color: #000;
+  }
+
+  &__extra {
+    flex: 0 0 auto;
+    display: flex;
+  }
+
+  &__label {
+    font-size: 12px;
+    color: #4b4c55;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+
+  &__label + &__content {
+    margin-top: 4px;
+  }
+}

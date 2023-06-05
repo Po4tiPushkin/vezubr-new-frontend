@@ -1,0 +1,30 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+
+.registry-accept-orders {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &__progress {
+    flex: 1 1 auto;
+  }
+
+  &__button {
+    flex: 0 0 auto;
+    margin-left: 12px;
+  }
+
+  &__accepted {
+    color: $azure;
+    font-size: 16px;
+    cursor: default;
+  }
+
+  &__rejected {
+    color: $error-color;
+    font-size: 16px;
+    cursor: default;
+  }
+}

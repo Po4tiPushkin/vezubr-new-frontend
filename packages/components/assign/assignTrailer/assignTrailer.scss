@@ -1,0 +1,11 @@
+.assign-driver {
+  .selection-right,
+  .selection-left {
+    min-height: 200px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  .selection-right {
+    border-left: 1px solid $grey_3;
+  }
+}

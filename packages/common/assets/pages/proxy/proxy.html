@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доверенность на Водителя</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    pre {
+      font-family: inherit;
+    }
+
+    .main {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .main__text {
+      margin-left: auto;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    .main__title {
+      text-align: center;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
+    .form__top {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    .form__content {
+      margin-top: 25px;
+    }
+
+    .form__title {
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .top {
+      min-width: 200px;
+    }
+
+    .top__text {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .content__title {
+      min-width: max-content;
+    }
+
+    .content__block {
+      margin-bottom: 20px;
+    }
+
+    .content__input {
+      margin-left: 10px;
+      width: 100%;
+    }
+
+    .input {
+      border-bottom: 1px solid #000;
+      min-height: 19px;
+    }
+
+    .input--no-border {
+      border: 0;
+    }
+
+    .input__text {
+      text-align: center;
+    }
+
+    .flexbox {
+      display: flex;
+    }
+
+    .content__flex .content__title:not(:first-child),
+    .content__flex .flexbox:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    .no-align {
+      align-items: unset;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .td__border {
+      border: 2px solid #000;
+    }
+
+    .td__text {
+      text-align: right;
+    }
+
+    .td__text span {
+      margin-right: 10px;
+    }
+
+    .border-bottom-thin {
+      border-bottom: 1px solid #000;
+    }
+
+    .form-table__wrapper {
+      width: 500px;
+      display: flex;
+    }
+
+    .form-table,
+    .mt {
+      border-collapse: collapse;
+      text-align: center;
+      width: 100%;
+
+    }
+
+    .content__table {
+      align-items: end;
+    }
+
+    .mt td {
+      border: 1px solid #000;
+    }
+
+    .mt-td__text {
+      min-height: 20px;
+      display: inline-block;
+    }
+
+    table td {
+      word-break: break-all;
+      word-break: break-word;
+    }
+
+    .cut-line {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cut-line__line {
+      height: 2px;
+      background-color: #000;
+      margin-bottom: 5px;
+    }
+
+    .no-border-top {
+      border-top: 0 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <div class="main__table">
+      <table class="mt ">
+        <tr class="">
+          <td class="mt-tr___title">
+            Номер доверенности
+          </td>
+          <td class="mt-tr___title">
+            Дата выдачи
+          </td>
+          <td class="mt-tr___title">
+            Срок действия
+          </td>
+          <td class="mt-tr___title">
+            Должность и фамилия лица, которому выдана доверенность
+          </td>
+          <td class="mt-tr___title">
+            Расписка в получении доверенности
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><span class="mt-td__text">23232</span></td>
+          <td><span class="mt-td__text">24.06.2023</span></td>
+          <td><span class="mt-td__text"></span></td>
+          <td><span class="mt-td__text"></span></td>
+          <td><span class="mt-td__text"></span></td>
+        </tr>
+      </table>
+      <table class="mt ">
+        <colgroup>
+          <col width="20%" />
+          <col width="20%" />
+          <col width="40%" />
+        </colgroup>
+        <tr class="">
+          <td class="mt-tr___title no-border-top">
+            Поставщик
+          </td>
+          <td class="mt-tr___title no-border-top">
+            Номер и дата наряда (заменяющего наряд документа) или извещения
+          </td>
+          <td class="mt-tr___title no-border-top">
+            Номер и дата документа, подтверждающего выполнение поручения
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td><span class="mt-td__text"></span></td>
+          <td><span class="mt-td__text"></span></td>
+          <td><span class="mt-td__text"></span></td>
+        </tr>
+      </table>
+    </div>
+    <div class="cut-line">
+      <div class="cut-line__line">
+
+      </div>
+      <span>Линия отреза</span>
+    </div>
+    <div class="main__text">
+      <p>
+        Типовая межотраслевая форма № М-2
+        Утверждена постановлением Госкомстата России
+        от 30.10.97 № 71а
+      </p>
+    </div>
+    <div class="form">
+      <div class="form__content">
+
+        <div class="content__block">
+          <div class="flexbox content__flex content__table">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Организация</p>
+              </div>
+              <div class="content__input">
+                <p class="input input--no-border">ООО ЛОГОСОФТ</p>
+              </div>
+            </div>
+            <div class="form-table__wrapper">
+              <table class="form-table">
+                <colgroup>
+                  <col width="50%" />
+                  <col width="50%" />
+                </colgroup>
+                <tr>
+                  <td></td>
+                  <td>Коды</td>
+                </tr>
+                <tr>
+                  <td class="td__text"><span> Форма по ОКУД</span></td>
+                  <td class="td__border border-bottom-thin">0315001</td>
+                </tr>
+                <tr>
+                  <td class="td__text"> <span>по ОКПО</span> </td>
+                  <td class="td__border no-border-top"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex form__title">
+            <div class="flexbox" style="min-width: fit-content;">
+              <div class="content__title">
+                <p>Доверенность №</p>
+              </div>
+              <div style="width: 30px;" class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox">
+              <div class="content__title">
+                <p>Дата выдачи "<span style="width: 20px; display: inline-block;">20</span>"</p>
+              </div>
+            </div>
+            <div class="flexbox">
+              <div class="content__input">
+                <p class="input input--no-border" style="min-width: 100px;"></p>
+              </div>
+            </div>
+            <div class="flexbox" style="min-width: fit-content;">
+              <div class="content__title">
+                <p>20<span style="width: 25px; display: inline-block;">25</span>г.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox">
+              <div class="content__title">
+                <p>Доверенность действительна по "<span style="width: 20px; display: inline-block;"></span>"</p>
+              </div>
+            </div>
+            <div class="flexbox ">
+              <div class="content__input">
+                <p class="input input--no-border" style="min-width: 100px;"></p>
+              </div>
+            </div>
+            <div class="flexbox" style="min-width: fit-content;">
+              <div class="content__title">
+                <p>20<span style="width: 25px; display: inline-block;"></span>г.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">(наименование потребителя и его адрес)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">(наименование плательщика и его адрес)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Счет № </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p>в </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">(наименование банка)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Доверенность выдана</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">(должность)</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">(фамилия, имя, отчество) </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Паспорт: серия</p>
+              </div>
+              <div class="content__input">
+                <p class="input input--no-border"></p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> №</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Кем выдан</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox">
+              <div class="content__title">
+                <p>Дата выдачи "<span style="width: 20px; display: inline-block;"></span>"</p>
+              </div>
+            </div>
+            <div class="flexbox">
+              <div class="content__input">
+                <p class="input input--no-border" style="width: 100px;"></p>
+              </div>
+            </div>
+            <div class="flexbox" style="min-width: fit-content;">
+              <div class="content__title">
+                <p>20<span style="width: 25px; display: inline-block;"></span>г.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p>На получение от</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">(наименование поставщика)</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p>материальных ценностей по</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">(наименование, номер и дата документа)</p>
+                <p class="input"></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+
+.monitor-info-popup {
+  .mpi-status {
+    font-size: 17px;
+    &__name__cell-value {
+      color: $azure;
+    }
+
+    &__value__cell-value {
+      color: $grey_3;
+    }
+  }
+  .mpi-last-updated {
+    font-size: 17px;
+    &__name__cell-value {
+      color: $azure;
+    }
+
+    &__value__cell-value {
+      color: $grey_3;
+    }
+  }
+}

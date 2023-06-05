@@ -1,0 +1,68 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+@import './components/actions/address-favorite-remove-action/styles';
+@import './components/actions/address-favorite-edit-action/styles';
+@import './components/address-favorite-cell/styles';
+
+.address-favorite-choose-form {
+  position: relative;
+
+  .ant-table-tbody > tr > td {
+    border-bottom: 1px solid $border-color-split;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 57px;
+    &::before {
+      display: none;
+    }
+  }
+
+  .ant-table-tbody > tr {
+    &:hover,
+    &.ant-table-row-hover {
+      > td::before {
+        display: none;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 0 -16px;
+    padding: 16px 16px 24px 16px;
+
+    .ant-btn {
+      margin-left: 16px;
+      min-width: 180px;
+    }
+  }
+
+  &__search-input {
+    background-color: $grey_2;
+    padding: 10px 16px;
+  }
+
+  tr {
+    .address-favorite-cell {
+      &__actions {
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+
+        .action--delete {
+          color: $primary-color;
+        }
+
+        @include in('tr:hover') {
+          opacity: 1;
+        }
+      }
+
+      &--active .address-favorite-cell__actions {
+        opacity: 1;
+      }
+    }
+  }
+}

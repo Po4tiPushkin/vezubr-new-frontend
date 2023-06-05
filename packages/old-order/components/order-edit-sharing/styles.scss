@@ -1,0 +1,12 @@
+.sharing-tariff-tree-select {
+  max-height: 40vh !important;
+}
+
+.ant-select-selection.ant-select-selection--multiple {
+  max-height: 23vh;
+  overflow-y: auto;
+}
+
+.ant-select-selection__rendered::after {
+  content: "" !important
+}

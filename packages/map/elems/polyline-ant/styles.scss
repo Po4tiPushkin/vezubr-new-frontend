@@ -1,0 +1,46 @@
+$animation-rules: linear infinite leaflet-ant-path-animation;
+$engines: '-webkit-', '-moz-', '-ms-', '-o-', '';
+
+@mixin applyEngines($rule, $value) {
+  @each $engine in $engines {
+    #{$engine + $rule}: $value;
+  }
+}
+
+@keyframes leaflet-ant-path-animation {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes leaflet-ant-path-animation {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+path.leaflet-ant-path {
+  fill: none;
+
+  @include applyEngines(animation, $animation-rules);
+
+  &--hardware-acceleration {
+    will-change: stroke-dashoffset;
+    backface-visibility: hidden;
+    @include applyEngines(transform, translateZ(0));
+  }
+
+  &--reverse {
+    @include applyEngines(animation-direction, reverse);
+  }
+
+  &--popup-opened {
+    @include applyEngines(animation, none);
+  }
+}

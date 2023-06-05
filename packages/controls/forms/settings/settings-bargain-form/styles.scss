@@ -1,0 +1,51 @@
+$error-color: #bc1a46;
+.has-error {
+  & .icon-error {
+    color: $error-color;
+  }
+}
+
+.field-editor {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+
+  & .anticon-warning {
+    color: $error-color;
+    position: absolute;
+    bottom: 25px;
+    margin-left: 5px;
+  }
+
+  & .ant-input-number {
+    width: 100%;
+  }
+  & .ant-calendar-picker {
+    width: 100%;
+    .ant-input {
+      border: none;
+    }
+  }
+  .ant-input-disabled {
+    background-color: #fff;
+  }
+  & .ant-input-number-disabled {
+    border: none;
+    background-color: transparent;
+    & .ant-input-number-input-wrap {
+      background-color: transparent;
+      & input {
+        border: none;
+      }
+    }
+  }
+  & .ant-input-number-input-wrap {
+    background-color: #f6f6f6;
+  }
+  & .ant-select-disabled {
+    & .ant-select-selection {
+      border: none;
+      background-color: transparent;
+      background: none;
+    }
+  }
+}

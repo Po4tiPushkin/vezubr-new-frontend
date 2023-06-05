@@ -1,0 +1,15 @@
+input[type='checkbox'].element-checkbox {
+  -webkit-appearance: none;
+  width: $icon-size;
+  height: $icon-size;
+  margin: 0;
+  cursor: pointer;
+
+  &.theme-primary {
+    background: transparent url('../../common/assets/img/icons/check_empty_square.png') no-repeat center center;
+    &:checked {
+      border-color: transparent;
+      background: transparent url('../../common/assets/img/icons/check_filled_square_blue.png') no-repeat center center;
+    }
+  }
+}

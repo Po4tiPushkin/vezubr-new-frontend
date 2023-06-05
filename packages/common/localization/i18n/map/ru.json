@@ -1,0 +1,17 @@
+{
+  "orderOnExecution": "Рейсы на исполнении",
+  "orderOnSelection": "Рейсы в подборе",
+  "orderOnPaperCheck": "Рейсы на проверке",
+  "cityDelivery": "Показать Городские перевозки",
+  "internationalDelivery": "Показать Междугородние перевозки",
+  "ordersInExecution": "Показать рейсы в исполнении",
+  "ordersInSelection": "Показать рейсы в подборе",
+  "ordersInSelectionEnding": "Показать рейсы в окончание подбора",
+  "ordersInAuction": "Показать рейсы в торгах",
+  "ordersInPaperCheck": "Показать рейсы в проверке документов",
+  "freeVehicles": "Показать свободные ТС",
+  "urgency3": "Показать рейсы на сегодня",
+  "urgency2": "Показать рейсы на будущее",
+  "ordersInUnloading": "ТС на выгрузке",
+  "ordersWithOffers": "Показать рейсы с предложениями"
+}

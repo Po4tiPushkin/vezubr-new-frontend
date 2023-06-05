@@ -1,0 +1,248 @@
+.field-container {
+  position: relative;
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: $border-radius;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 120px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all ease 0.3s;
+
+  .publish-contour-info {
+    margin: 0 10px;
+  }
+
+  .field-icons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .field-attention {
+      position: absolute;
+      top: -7px;
+      right: -7px;
+    }
+
+    .border-down {
+      &:after {
+        content: '';
+        height: 16px;
+        border-left: 2px solid #dee3e8;
+        position: absolute;
+        bottom: -18px;
+        left: calc(50% - 1px);
+        right: 0;
+      }
+    }
+
+    .icon-border {
+      border-radius: 50%;
+      border: 2px solid $grey_2;
+      padding: 4px;
+
+      &:first-of-type {
+        position: relative;
+        margin-bottom: 16px;
+      }
+
+      .icon-second-border {
+        border-radius: 50%;
+        border: 1px solid $grey_2;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .field-info {
+    .field-content {
+      padding: 2px 8px 10px 8px;
+      width: 100%;
+      position: relative;
+
+      &:nth-of-type(2) {
+        padding-top: 8px;
+      }
+    }
+
+    .field-content-border-bottom {
+      &:first-of-type {
+        &:after {
+          content: '';
+          position: absolute;
+          border-top: 1px solid $grey_2;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    width: 100%;
+
+    .field-desc {
+      width: 100%;
+    }
+
+    .field-address {
+      width: 500px;
+      div {
+        font-size: 14px;
+        color: $grey_3;
+      }
+    }
+  }
+
+  .field-hover {
+    display: none;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    .field-hover {
+      display: block;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      border-top-right-radius: 8px;
+      top: 0;
+      padding: 8px;
+    }
+  }
+}
+
+.producer-field-container {
+  position: relative;
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: $border-radius;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 120px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all ease 0.3s;
+  background: #f6f6f6;
+
+  .publish-contour-info {
+    margin: 0 10px;
+  }
+
+  .field-icons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .field-attention {
+      position: absolute;
+      top: -7px;
+      right: -7px;
+    }
+
+    .border-down {
+      &:after {
+        content: '';
+        height: 16px;
+        border-left: 2px solid #dee3e8;
+        position: absolute;
+        bottom: -18px;
+        left: calc(50% - 1px);
+        right: 0;
+      }
+    }
+
+    .icon-border {
+      border-radius: 50%;
+      border: 2px solid $grey_2;
+      padding: 4px;
+
+      &:first-of-type {
+        position: relative;
+        margin-bottom: 16px;
+      }
+
+      .icon-second-border {
+        border-radius: 50%;
+        border: 1px solid $grey_2;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+  .field-info {
+    .field-content {
+      padding: 2px 8px 10px 8px;
+      width: 100%;
+      position: relative;
+      &:nth-of-type(2) {
+        padding-top: 8px;
+      }
+      .field-small-desc {
+        width: 500px;
+      }
+    }
+
+    .field-content-border-bottom {
+      &:first-of-type {
+        &:after {
+          content: '';
+          position: absolute;
+          border-top: 1px solid $grey_2;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    width: 100%;
+
+    .field-desc {
+      width: 100%;
+    }
+
+    .field-address {
+      height: 17px;
+      div {
+        font-size: 14px;
+        color: $grey_3;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .field-desc {
+    width: 100%;
+    .date-section {
+      //font-size: 15px;
+      text-align: right;
+      font-family: 'DIN 2014 Narrow';
+      font-weight: 500;
+    }
+  }
+
+  .field-hover {
+    display: none;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    .field-hover {
+      display: block;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      border-top-right-radius: 8px;
+      top: 0;
+      padding: 8px;
+    }
+  }
+}

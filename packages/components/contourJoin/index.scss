@@ -1,0 +1,37 @@
+.contour-join {
+  img {
+    &.bg {
+      min-height: 100%;
+      min-width: 1024px;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
+  .wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form-wrapper {
+      margin: 32px 0 0 0;
+      padding: 0 65px;
+      &.small {
+        margin: 44px 0 0 0;
+        padding: 0 44px;
+      }
+    }
+  }
+  .white-box {
+    width: 650px;
+    justify-content: flex-start;
+    padding: 50px;
+    min-height: 350px;
+  }
+
+  .white-box-container {
+    margin: 0;
+  }
+}

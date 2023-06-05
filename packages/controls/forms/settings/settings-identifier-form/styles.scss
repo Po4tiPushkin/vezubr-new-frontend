@@ -1,0 +1,22 @@
+.identifier {
+  &__item {
+    &:last-child {
+      padding-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .identifier {
+    &__form {
+      display: block;
+    }
+
+    &__item {
+      &:last-child {
+        margin-top: 25px;
+        padding: 0;
+      }
+    }
+  }
+}

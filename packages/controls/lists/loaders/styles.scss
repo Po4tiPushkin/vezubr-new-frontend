@@ -1,0 +1,10 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+.loaders > .loader {
+    background: #f6f6f6 !important;
+}
+
+.loaders {
+  background: $white !important;
+  padding: 0 !important;
+}

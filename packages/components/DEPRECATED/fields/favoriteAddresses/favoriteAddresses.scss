@@ -1,0 +1,94 @@
+.vz-favorite-addresses {
+  .favorite-search-wrapper {
+    position: relative;
+    background: $grey_1;
+    padding: 8px;
+    .favorites-search {
+      background-color: $grey_2;
+      min-height: 36px;
+      width: 100%;
+      border: 0;
+    }
+    .search-icon {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+  }
+  .addresses {
+    max-height: 388px;
+    overflow-x: scroll;
+    .address-item {
+      box-shadow: inset 0 -1px 0 0 rgba(11, 28, 53, 0.08);
+      background-color: $grey_0;
+      padding-top: 12px;
+      position: relative;
+      padding-bottom: 8px;
+
+      .edit-mode {
+        height: 36px;
+        width: 100%;
+        position: relative;
+        input {
+          margin-left: 57px;
+          width: 238px;
+          border: none;
+          border-radius: 4px;
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+          background: $grey_2;
+          padding: 8px;
+        }
+        .check-action {
+          position: absolute;
+          cursor: pointer;
+          right: 5px;
+        }
+      }
+
+      .delete-mode {
+        padding: 0 20px 0 55px;
+        width: 100%;
+        .delete-title {
+          color: $dark_grey;
+          font-size: 16px;
+        }
+        button {
+          &.theme-simple {
+            color: $azure;
+          }
+        }
+      }
+
+      .actions {
+        display: none;
+        position: absolute;
+        right: 0;
+        div {
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        background: $white;
+        .actions {
+          display: flex;
+        }
+      }
+      h5 {
+        color: $black;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 0 4px 0;
+      }
+      p {
+        font-size: 14px;
+        color: $grey_3;
+        margin: 0;
+      }
+    }
+  }
+  .footer-section {
+    height: 60px;
+    background: $white;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14);
+  }
+}

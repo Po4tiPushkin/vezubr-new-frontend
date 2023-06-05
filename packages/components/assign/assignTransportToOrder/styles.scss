@@ -1,0 +1,122 @@
+@import './components/transport/styles';
+.assignModal {
+  &__title {
+    padding: 16px 16px 8px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__content {
+    background-color: rgb(222, 227, 232);
+    padding: 12px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__list {
+    margin-top: 20px;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  &__error {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__search {
+    .item {
+      .ant-select {
+        width: 100%;
+      }
+
+      width: 40%;
+    }
+
+    display: flex;
+  }
+
+  &__pagination {
+    padding: 10px 15px 0px;
+    justify-content: center;
+  }
+
+  &__tabs {
+    margin-bottom: 20px;
+  }
+
+  &__pages {
+    padding: 20px 12px 0;
+    background: #dee3e8;
+    border-bottom: 1px solid #b6bec6;
+  }
+
+  .transport-content {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+
+    .vehicle-info {
+      width: 40px;
+      cursor: pointer;
+
+      .anticon {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .driver-search-status {
+    margin-bottom: 12px;
+    padding: 0 10px;
+
+    .ant-select {
+      width: 100%;
+    }
+
+    .ant-select-selection {
+      background-color: #eef0f2;
+      color: #9b9fa3;
+      border: none;
+    }
+  }
+
+  .drivers-search {
+    padding: 0 10px;
+  }
+
+  .driver-selection {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    width: 260px;
+
+    .icon-container {
+      border: solid 2px #e6e6e6;
+      border-radius: 4px;
+    }
+
+    .empty-driver {
+      width: 100%;
+    }
+
+    .driver-chevron {
+      flex: 0;
+    }
+  }
+
+  .vertical-line::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #e6e6e6;
+    right: 0;
+  }
+
+}

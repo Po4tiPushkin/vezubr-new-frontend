@@ -1,0 +1,13 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+
+.trailer-form {
+  width: 950px;
+}
+
+.page-trailers-create, .page-trailers-edit, .page-trailers-new-create, .page-trailers-new-edit  {
+  display: flex;
+  justify-content: center;
+  padding: 12px !important;
+  background-color: #f6f6f6 !important;
+}

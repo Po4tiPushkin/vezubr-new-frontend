@@ -1,0 +1,32 @@
+@import '../common/styles/theme';
+@import './filters/styles';
+@import './filtersApply/styles';
+
+.vz-table-filtered {
+  .react-resizable {
+    position: relative;
+    background-clip: padding-box;
+  }
+  .react-resizable-handle {
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    bottom: 0;
+    right: -4px;
+    opacity: 0.3;
+    transition: all 0.3s ease-in;
+    &:hover {
+      background-color: #bbb;
+    }
+    cursor: col-resize;
+    z-index: 1;
+  }
+  // .element-icon {
+  //   width: 34px;
+  //   height: 34px;
+  // }
+}
+
+.ant-table-column-has-actions.react-resizable:hover {
+  background-color: #fafafa !important;
+}

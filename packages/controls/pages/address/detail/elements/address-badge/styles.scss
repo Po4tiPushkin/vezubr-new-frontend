@@ -1,0 +1,31 @@
+@import '../common/styles/variables';
+
+.address-badge {
+  font-family: DIN\ 2014 Narrow,serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  padding-right: 20px;
+
+  .ant-badge-count {
+    top: 50%;
+    right: -15px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+    min-width: 24px;
+    height: 24px;
+    border-radius: 12px;
+  }
+
+  &--yellow {
+    .ant-badge-count {
+      background: $gradient_yellow;
+    }
+  }
+
+  &--red {
+    .ant-badge-count {
+      background: $gradient_red;
+    }
+  }
+}

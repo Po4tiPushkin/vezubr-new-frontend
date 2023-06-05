@@ -1,0 +1,28 @@
+.order-view-monitor-bargain {
+  min-height: 50px;
+  position: relative;
+  overflow: hidden;
+
+  .vz-empty {
+    padding: 20px 0;
+  }
+
+  .loader {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 34px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#fff, 0.5);
+  }
+}

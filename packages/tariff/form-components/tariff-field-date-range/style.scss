@@ -1,0 +1,10 @@
+.tariff-field-date-range {
+  .ant-calendar-range-picker-input {
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

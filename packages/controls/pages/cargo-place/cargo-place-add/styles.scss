@@ -1,0 +1,71 @@
+.cargo-page-add {
+    margin: 0 auto;
+    &__header {
+        color: #4b4c55;
+        font-size: 28px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        box-shadow: none !important;
+    }
+    & .white-box.extra-wide {
+        width: 100%;
+        max-width: 952px;
+    }
+    & .white-box.stretch {
+        width: 952px;
+        position: inherit;
+        justify-content: flex-start;
+        top: inherit;
+        height: auto;
+        padding: 0 16px;
+    }
+    .ant-descriptions-view {
+        .ant-descriptions-row {
+            .ant-descriptions-item-label {
+                width: 120px;
+                // padding: 8px 12px;
+                flex: 0 1 100%;
+                &::before {
+                    content: '';
+                    display: none;
+                }
+            }
+            .cargo-form__item--break-all {
+                width: 37%;
+            }
+            .ant-descriptions-item-content {
+                flex: 0 1 100%;
+            }
+        }
+
+    }
+
+    & .ant-descriptions-bordered{
+        .ant-descriptions-item-content {
+            border-right: none;
+            &::before {
+                content: '';
+                display: none;
+            }
+            & .field-editor {
+                & .ant-input-number{
+                    width: 100%;
+                }
+                & .ant-calendar-picker {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    & .ant-descriptions-title {
+        font-size: 16px;
+        color: rgb(75, 76, 85);
+        text-align: left;
+        margin-top: 0px !important;
+        padding: 10px 20px !important;
+    }
+}
+
+

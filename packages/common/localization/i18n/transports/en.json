@@ -1,0 +1,15 @@
+{
+  "table": {
+    "bodyType": "Тип кузова",
+    "type": "Тип",
+    "classification": "Классиф ТС",
+    "markAndModel": "Марка",
+    "plateNumber": "Гос номер",
+    "driversCount": "Водителей",
+    "executed": "Исполнено",
+    "crashCount": "Поломок",
+    "onLine": "Статус ТС",
+    "jobStarted": "Старт эксплуатации",
+    "jobEnded": "Конец эксплуатации"
+  }
+}

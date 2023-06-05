@@ -1,0 +1,39 @@
+.orders-filter-section {
+  flex: 0 0 auto;
+  .filter-label {
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+
+  .additional-title {
+    padding-bottom: 4px;
+    color: $black !important;
+  }
+
+  .save-filters {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .save-filter-button {
+    cursor: pointer;
+    color: #1fd1d2;
+    font-family: 'DIN 2014 Narrow';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+  }
+
+  .reset-filter-button {
+    cursor: pointer;
+    margin-left: 24px;
+    color: #1fd1d2;
+    font-family: 'DIN 2014 Narrow';
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+  }
+}

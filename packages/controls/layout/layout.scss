@@ -1,0 +1,20 @@
+.container {
+  padding: 0;
+}
+
+.blocked {
+  pointer-events: none;
+  cursor: default;
+}
+
+.notBlocked {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+@import './header/header';
+@import './main/main';
+@import './dashboardLayout/dashboardLayout';
+@import './topNav/topNav';
+@import './sidebar/sidebar';
+@import './contentBox/contentBox';

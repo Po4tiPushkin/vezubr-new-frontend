@@ -1,0 +1,27 @@
+.dashboard .container.path-tariffs-add {
+  padding: 0;
+}
+
+.tariff-hourly-page-add {
+  margin: 0 auto;
+  width: 85vw !important;
+
+  &__header {
+    width: 100%;
+    .tariff-choose-tariff-type-form {
+      flex: 1 1 auto;
+      margin-right: 12px;
+      margin-left: 14px;
+      .vz-form-item {
+        padding-bottom: 0;
+        &__label {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.tariff-header-wrapper {
+  align-items: baseline;
+}

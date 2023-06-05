@@ -1,0 +1,19 @@
+.alert-box {
+  .alert-box-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 32px;
+    h4 {
+      font-weight: bold;
+      color: $dark_grey;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    p {
+      margin: 0;
+      color: $dark_grey;
+      font-size: 16px;
+    }
+  }
+}

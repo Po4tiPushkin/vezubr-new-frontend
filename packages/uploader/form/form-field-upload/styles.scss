@@ -1,0 +1,182 @@
+@import '../common/styles/theme';
+.vz-form-field-upload {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+
+  position: relative;
+
+  min-height: 60px;
+
+  background-color: $component-background;
+  border-radius: $border-radius-base;
+  border: $border-width-base $border-style-base $input-border-color;
+  transition: all 0.3s;
+
+  &.field-has-error {
+    border-color: $error-color;
+    &:hover {
+      border-color: $error-color;
+      box-shadow: 0 0 3px 0 rgba($error-color, 0.5);
+    }
+  }
+
+  $button-min-height: 58px;
+  $button-min-width: 60px;
+  $button-padding: 4px;
+
+  &__viewer {
+    min-height: $button-min-height;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: $button-min-width;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    color: $vz-icon-color;
+    border-right: 1px solid $input-border-color;
+
+    &:active,
+    &:hover {
+      background-color: $table-icon-action-active-bg;
+    }
+
+    &__wrap {
+      display: table;
+      height: 100%;
+      width: 100%;
+      &__cell {
+        display: table-cell;
+        padding: $button-padding;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__upload {
+    width: auto;
+    flex: 0 0 auto;
+    display: block;
+    min-height: $button-min-height;
+    .ant-upload.ant-upload-select-picture-card {
+      float: none;
+      min-width: $button-min-width;
+      width: auto;
+      height: 100%;
+      margin: 0;
+      border: 0;
+      border-right: 1px solid $input-border-color;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+      background-color: transparent;
+      color: $vz-icon-color;
+      > .ant-upload {
+        color: $vz-icon-color;
+        padding: $button-padding;
+      }
+
+      &:active,
+      &:hover {
+        background-color: $table-icon-action-active-bg;
+        color: $vz-icon-color;
+        > .ant-upload {
+          color: $vz-icon-color;
+        }
+      }
+    }
+  }
+
+  .icon-error {
+    position: absolute;
+    color: $error-color;
+    right: 3px;
+    bottom: 3px;
+    font-size: 20px;
+  }
+
+  &__button-image {
+    max-width: 64px;
+    max-height: $button-min-height - 2 * $button-padding;
+    display: block;
+    margin: auto;
+  }
+
+  &__button-icon {
+    display: block;
+    color: $vz-icon-color;
+    font-size: 22px;
+    .anticon {
+      display: block;
+    }
+  }
+
+  &__button-delete {
+    flex: 0 0 auto;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    background-color: transparent;
+
+    color: $primary-color;
+
+    font-size: 18px;
+
+    border-left: $border-width-base $border-style-base $border-color-base;
+    border-top-right-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+
+    &:active,
+    &:hover {
+      background-color: $table-icon-action-active-bg;
+      color: $primary-color;
+    }
+  }
+
+  &__elem {
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+    padding: 5px 10px;
+    color: #000;
+  }
+
+  &__label {
+    font-size: 12px;
+    color: #4b4c55;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    .ant-input {
+      color: #000;
+    }
+    .ant-input,
+    .ant-input:focus,
+    .ant-input:hover,
+    .ant-input-affix-wrapper:hover .ant-input,
+    &.has-error .ant-input,
+    &.has-error .ant-input:hover,
+    &.has-error .ant-input-affix-wrapper .ant-input,
+    &.has-error .ant-input:not([disabled]):hover,
+    &.has-error .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+      border-color: transparent;
+      box-shadow: none;
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__label + &__content {
+    margin-top: 4px;
+  }
+}

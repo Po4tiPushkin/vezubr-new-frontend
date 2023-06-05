@@ -1,0 +1,9 @@
+@import '../tariff/actions/tariff-approve-set-tariff/styles';
+
+.cell-contours-status {
+  margin: -8px 0 0 0;
+  .ant-tag {
+    cursor: help;
+    margin-top: 8px;
+  }
+}

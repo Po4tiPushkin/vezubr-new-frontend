@@ -1,0 +1,12 @@
+@import '../common/styles/variables';
+
+.monitor-badge {
+  .ant-badge-count {
+    border: 2px solid #fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+    background: $gradient_red;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 12px;
+  }
+}

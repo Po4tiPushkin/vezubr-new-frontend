@@ -1,0 +1,40 @@
+.assign-driver {
+  .selection-right,
+  .selection-left {
+    min-height: 200px;
+
+    .drivers-list {
+      overflow-x: scroll;
+      margin-left: 10px;
+      padding-right: 15px;
+      max-height: 450px;
+    }
+  }
+  .selection-right {
+    border-left: 1px solid $grey_3;
+  }
+}
+
+.driver-search {
+  position: relative;
+  padding: 0 10px;
+  margin-bottom: 12px;
+  input {
+    background-color: $grey_1;
+    color: $grey_3;
+    width: 100%;
+    padding: 8px;
+    border-radius: $border-corner_4;
+    border: none;
+    &::placeholder {
+      color: $grey_3;
+      opacity: 1;
+    }
+  }
+}
+
+.no-info {
+  min-height: 300px;
+  font-size: 24px;
+  width: 100%;
+}

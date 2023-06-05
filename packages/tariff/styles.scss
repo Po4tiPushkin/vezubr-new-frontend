@@ -1,0 +1,15 @@
+@import 'styles/common';
+
+@import 'form-components/tarif-table/styles';
+@import 'form-components/baseWork/styles';
+@import 'form-components/tariff-field-date-range/style';
+@import 'form-components/tariff-cost/styles';
+@import 'form-components/tariff-field-hour-range/styles';
+@import 'form-components/tariff-body-types/styles';
+@import 'form-components/distance/styles';
+@import 'form-components/tariff-input-number-sub-value/styles';
+@import 'components/tariff-list-tag-by-ids/styles';
+@import 'form-components/service/styles.scss';
+@import 'actions/tariff-approve-set-tariff/styles';
+@import 'forms/styles';
+@import 'view/styles';

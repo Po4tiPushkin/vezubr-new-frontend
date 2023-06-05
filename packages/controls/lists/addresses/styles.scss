@@ -1,0 +1,28 @@
+.dashboard .container.page-addresses {
+  background: #fff;
+  padding: 0;
+
+  & .cell-text-overflow-content {
+    white-space: pre-line;
+  }
+  & .cell-text-overflow {
+    height: 25px;
+  }
+  & .vz-table-theme--default {
+    & .ant-table-tbody>tr.red>td:before,
+    & .ant-table-tbody>tr.yellow>td:before,
+    & .ant-table-tbody>tr.orange>td:before,
+    & .ant-table-tbody>tr.blue>td:before,
+    & .ant-table-tbody>tr.grey>td:before {
+      content: '';
+      bottom: 0px !important;
+      height: 1px !important;
+    }
+  }
+  .filters-apply {
+    &__button {
+      margin-bottom: 4px;
+    }
+  }
+}
+

@@ -1,0 +1,85 @@
+
+.cargo-view-main-info {
+    padding: 0px;
+    & .ant-descriptions-item-content {
+        &::before {
+            content: '' !important;
+            background: none !important;
+        }
+    }
+    & .title-bold {
+        & .ant-descriptions-title {
+            margin-top: 0px;
+            padding: 28px 16px 20px;
+            background-color: #eef0f2;
+            &::before {
+                content: '';
+                background: none;
+            }
+        }
+    }
+    & .ant-descriptions {
+        &-row {
+            border-top: 1px solid #eef0f2;
+            border-bottom: 1px solid #eef0f2;
+        }
+        &-item-label {
+            &::before {
+                content: '' !important;
+                background: none !important;
+            }
+        }
+        &-title {
+            margin-top: 0px !important;
+            padding: 24px 16px 8px !important ;
+            background-color: #ffffff !important;
+
+            &::before {
+                content: '' !important;
+                background: none !important;
+            }
+
+            &:nth-child(2n) {
+                background-color: #fafafa;
+                margin-bottom: 0px;
+            }
+        }
+        &-item-content {
+            width: 50%;
+            border-right: none !important;
+            &::before {
+                content: '';
+                background: none;
+            }
+        }
+    }
+    &__small-title {
+        & .ant-descriptions-title {
+            background: #f6f6f6 !important;
+            color: #9b9fa3;
+            font-size: 12px;
+            width: 100%;
+            padding: 24px 16px 8px;
+            text-transform: uppercase;
+            &::before {
+                content: '';
+                background: none;
+            }
+        }
+    }
+    & .ant-input {
+        min-width: 100px;
+        width: 100%;
+        &:not(:last-child) {
+            padding-right: 0px !important;
+        }
+    }
+    & .ant-input[disabled] {
+        border: none;
+        background-color: white;
+    }
+    & .vz-form-actions {
+        padding: 0px 20px;
+    }
+}
+

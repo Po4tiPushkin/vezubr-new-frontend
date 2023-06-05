@@ -1,0 +1,23 @@
+.monitor-altering-list {
+  margin: -10px 0 0 -10px;
+  &__row {
+    display: flex;
+    flex-flow: row nowrap;
+    &--center {
+      align-items: center;
+    }
+  }
+
+  &__cell {
+    flex: 1 1 auto;
+    margin: 10px 0 0 10px;
+  }
+
+  &__row--free &__cell {
+    flex: 0 0 auto;
+  }
+
+  &__row--last-free &__cell:last-child {
+    flex: 0 0 auto;
+  }
+}

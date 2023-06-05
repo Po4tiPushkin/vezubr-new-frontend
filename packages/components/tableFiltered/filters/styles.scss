@@ -1,0 +1,95 @@
+.table-filters {
+  margin-top: 16px;
+  &-title-zone {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &-item {
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+  }
+
+  .table-filters-title {
+    flex: 0 0 auto;
+    h2,
+    img {
+      flex: 0 0 auto;
+    }
+
+    h2 {
+      margin-left: 12px;
+    }
+  }
+
+  .table-filters-title-right {
+    justify-content: flex-end;
+  }
+
+  .ant-select {
+    min-width: 200px;
+  }
+
+  .filter-item {
+    margin: 0 10px 0 0;
+    .ant-form-item {
+      margin-right: 0;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &.setter {
+        display: inline-flex;
+      }
+      &.picker {
+        display: inline-flex;
+      }
+      label {
+        font-weight: 700;
+      }
+    }
+    .ant-form-item-label,
+    .ant-form-item-control {
+      line-height: unset;
+    }
+    &--button {
+      padding-top: 4px;
+    }
+    &.has-min-length {
+      margin-top: 0.6px;
+    }
+    &.filter-date-range {
+      display: inline-flex;
+      align-items: flex-end;
+    }
+  }
+
+  .table-filters-main-zone {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    padding-bottom: 8px;
+    margin-left: 6px;
+
+    &-buttons {
+      display: flex;
+      align-items: flex-end;
+      min-height: 100%;
+    }
+
+    .filter-item {
+      margin-bottom: 8px;
+      max-height: 58px;
+    }
+  }
+}
+
+.filters-config__block-wrp {
+  padding-bottom: 20px;
+}
+
+@import './modals/ModalChooseFilters/styles';
+@import './components/range/styles';

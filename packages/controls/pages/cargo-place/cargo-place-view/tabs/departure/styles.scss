@@ -1,0 +1,13 @@
+.cargo-view-tab-departure {
+    & .cell-text-overflow-content {
+        position: absolute;
+        max-width: 100%;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        white-space: break-spaces;
+    }
+    & .vz-table-modern .ant-table-tbody>tr>td {
+        padding: 0px 16px 10px;
+    }
+}
+

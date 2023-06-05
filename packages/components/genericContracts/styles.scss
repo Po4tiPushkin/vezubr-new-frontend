@@ -1,0 +1,126 @@
+.generic-doc-item {
+  position: relative;
+  #loader {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#fff, 0.5);
+  }
+}
+
+.generic-doc-preview {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .doc-upload {
+    flex: 1 1 auto;
+
+    .title {
+      word-break: normal;
+    }
+    .element-icon {
+      margin-left: 0;
+    }
+  }
+
+  .generic-doc-preview-empty {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    .empty-icon {
+      border: 1px dashed #d3d7d7;
+      width: 84px;
+      height: 84px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex: 0 0 auto;
+      .anticon {
+        &.anticon-file-pdf {
+          color: #f03f39;
+        }
+        svg {
+          width: 84px;
+          height: 84px;
+        }
+      }
+    }
+
+    .empty-info {
+      margin-left: 16px;
+    }
+  }
+
+  .generic-actions {
+    margin-left: 16px;
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+
+    .element-button {
+      min-width: 150px;
+      font-size: 14px;
+      padding: 4px 10px;
+      height: 32px;
+      &.lds-spinner {
+        .spinner-wrapper {
+          top: -16px;
+          &.blue-loader {
+            top: 12px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: -36px;
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-view .company-info .generic-doc-preview .file-input-wrapper {
+  box-shadow: none;
+  padding-bottom: 0;
+}
+
+.profile .generic-doc-preview .doc-upload .title {
+  color: #333;
+  letter-spacing: normal;
+  text-align: left;
+  line-height: 1.42857em;
+  max-width: none;
+  text-decoration: none;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.generic-contracts {
+  margin: 0 0 0 -40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 40px;
+
+  .generic-doc-item {
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+
+  &.col-2 {
+    .generic-doc-item {
+      max-width: calc(50% - 40px);
+      flex: 1 1 calc(50% - 40px);
+    }
+  }
+}

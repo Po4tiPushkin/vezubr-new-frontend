@@ -1,0 +1,53 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+.registry-detail {
+  &-table-container {
+    .rejected,
+    .accepted {
+      color: $azure;
+      padding-right: $btn-border-radius-sm;
+      font-size: 16px;
+      cursor: default;
+    }
+    .unknown {
+      color: $black;
+    }
+    .rejected {
+      color: $error-color;
+    }
+  }
+
+  &__accept-orders {
+    &--rejected,
+    &--accepted {
+      color: $azure;
+      padding-right: $btn-border-radius-sm;
+      font-size: 16px;
+      cursor: default;
+    }
+    &--unknown {
+      color: $black;
+    }
+    &--rejected {
+      color: $error-color;
+    }
+  }
+
+  &-actions {
+    min-height: 36px;
+    display: flex;
+    margin: -13px 0 20px 0;
+    button {
+      margin-left: 16px;
+    }
+  }
+}
+
+.registry__detail-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin-left: 16px;
+  }
+}

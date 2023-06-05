@@ -1,0 +1,21 @@
+.form-operation-time {
+  &__table-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__items-wrp {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: 20%;
+    max-width: 20%;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+  }
+}

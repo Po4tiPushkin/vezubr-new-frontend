@@ -1,0 +1,108 @@
+.pin-icon-marker {
+  .pin-wrapper {
+    position: relative;
+    .pin-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      padding: 6px 5px 5px 5px;
+    }
+  }
+}
+
+.pin-icon-marker-bg {
+  .pin-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .pin-bg {
+    }
+    .pin-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.marker-cluster-custom {
+  border-radius: 50%;
+  div {
+    font-family: din\2014, serif;
+    font-weight: 700;
+    position: absolute;
+
+    width: auto;
+    height: auto;
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px;
+
+    text-align: center;
+    border-radius: 50%;
+  }
+  span {
+    line-height: 1em;
+  }
+}
+
+.marker-cluster-custom.destination {
+  div {
+    color: #fff;
+    background-color: green;
+  }
+
+  &.marker-cluster-small {
+    background-color: rgba(188, 26, 70, 0.48);
+  }
+  &.marker-cluster-medium {
+    background-color: rgba(188, 26, 70, 0.76);
+  }
+
+  &.marker-cluster-large {
+    background-color: #bc1a46;
+  }
+}
+
+.marker-cluster-custom.address {
+  div {
+    color: #fff;
+    background-color: #979797;
+  }
+
+  &.marker-cluster-small {
+    background-color: #dee3e8;
+  }
+  &.marker-cluster-medium {
+    background-color: #e8e69f;
+  }
+
+  &.marker-cluster-large {
+    background-color: #e84843;
+  }
+}

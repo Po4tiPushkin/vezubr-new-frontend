@@ -1,0 +1,61 @@
+@import '../common/styles/theme';
+
+.modal-modern {
+  &.ant-modal {
+    max-width: calc(100vw - 140px);
+    @media (max-width: $screen-sm-max) {
+      max-width: calc(100vw - 16px);
+    }
+  }
+
+  .ant-modal-content {
+    border-radius: $modal-content-border-radius;
+    background-color: #fff;
+  }
+
+  .ant-modal-header {
+    padding: $modal-header-padding-vertical $modal-header-padding-horizontal $modal-header-padding-bottom;
+  }
+
+  .ant-modal-title {
+    margin: 0;
+    color: #000000;
+    font-family: 'DIN 2014', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    word-wrap: break-word;
+  }
+
+  .ant-modal-footer {
+  }
+
+  .ant-modal-body {
+    @include in('.modal-modern.body-no-padding') {
+      padding: 0;
+    }
+  }
+
+  .ant-modal-close {
+    @media (min-width: $screen-md-min) {
+      right: -54px;
+    }
+
+    &:focus,
+    &:hover {
+      color: #000;
+    }
+
+    .ant-modal-close-x {
+      width: 44px;
+      height: 44px;
+      font-size: 20px;
+      font-style: normal;
+      line-height: 44px;
+      @media (min-width: $screen-md-min) {
+        border-radius: $modal-content-border-radius;
+        background: $component-background;
+      }
+    }
+  }
+}

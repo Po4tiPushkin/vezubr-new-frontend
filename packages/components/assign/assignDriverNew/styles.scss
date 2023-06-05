@@ -1,0 +1,47 @@
+.assign-driver {
+  width: 900px !important;
+  &__list, &__assigned {
+    min-height: 200px;
+    padding-left: 10px;
+    flex: 0.5 !important;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  &__assigned {
+    border-left: 1px solid #9b9fa3;
+  }
+  .ant-modal-body {
+    background-color: rgb(222, 227, 232);
+  }
+}
+
+.driver-asign {
+  
+  &-info {
+    background-color: white;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.08);
+    border-radius: 8px;
+    &__content {
+      flex: 1 1 auto;
+    }
+    &__action {
+
+      .ant-btn, .ant-btn:hover, .ant-btn:active, .ant-btn:focus {
+        border-radius: 0;
+        padding: 0;
+        background: linear-gradient(45deg,#0f94d6,#1fd1d2);
+      }
+
+      &-assigned {
+        .ant-btn, .ant-btn:hover, .ant-btn:active, .ant-btn:focus {
+          background: linear-gradient(-45deg,#bc1a46,#f33b3b);
+          border: none;
+        }
+      }
+    }
+  }
+}

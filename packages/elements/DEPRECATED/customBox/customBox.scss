@@ -1,0 +1,13 @@
+.alert-box {
+  .alert-box-container {
+    &.custom-box {
+      padding-bottom: 10px;
+
+      .buttons-wrapper {
+        box-shadow: inset 0 1px 0 0 #eef0f2;
+        padding-top: 16px;
+        margin-top: 16px;
+      }
+    }
+  }
+}

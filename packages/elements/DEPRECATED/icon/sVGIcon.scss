@@ -1,0 +1,48 @@
+.element-icon {
+  display: inline-block;
+  &.icon-small {
+    width: 36px;
+    height: 36px;
+  }
+  &.icon-xs {
+    width: 32px;
+    height: 32px;
+  }
+  width: $icon-size;
+  height: $icon-size;
+  &.wide {
+    &.big {
+      width: auto;
+      height: auto;
+    }
+  }
+  &.auto {
+    width: auto;
+    height: auto;
+  }
+}
+
+.element-button-icon {
+  &.small {
+    .element-icon {
+      border: none !important;
+      left: -1px;
+      top: 0px;
+      width: $icon-small-size;
+      height: $icon-small-size;
+    }
+  }
+}
+
+.pin-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .pin-icon-text {
+    position: absolute;
+    font-size: 16px;
+    color: $white;
+    text-align: center;
+    top: 5px;
+  }
+}

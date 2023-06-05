@@ -1,0 +1,61 @@
+.monitor-layout-content {
+  @mixin loader-config {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+
+    background: rgba(#fff, 0.5);
+  }
+
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+
+  > #loader {
+    @include loader-config;
+  }
+
+  &__left {
+    flex: 1 1 40%;
+  }
+
+  &__filters {
+    max-height: 50px;
+    & .ant-form-item-control {
+      line-height: unset;
+    }
+    & .table-filters-main-zone {
+      margin-left: 0 !important;
+    }
+    & .ant-select {
+      min-width: unset !important;
+    }
+
+    .filter-date-range {
+      display: none !important;
+    }
+    
+  }
+
+  &__list-wrap {
+    flex: 1 1 40%;
+    position: relative;
+    min-height: 300px;
+  }
+
+  &__map {
+    flex: 1 1 60%;
+    position: relative;
+    > #loader {
+      @include loader-config;
+    }
+  }
+}

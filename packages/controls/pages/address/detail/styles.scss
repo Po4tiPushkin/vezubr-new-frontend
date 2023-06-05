@@ -1,0 +1,29 @@
+@import "./tabs/history/styles";
+@import "./tabs/schedule/styles";
+
+.address-page {
+  max-width: 1070px;
+  margin: 0 auto;
+  &__body {
+    margin-top: 12px;
+    position: relative;
+    #loader {
+      position: absolute;
+      z-index: 405;
+      background: rgba(#fff, 0.5);
+      left: 0;
+      top: 0;
+      align-items: flex-start;
+
+      .spinner {
+        position: sticky;
+        top: 50%;
+      }
+    }
+  }
+}
+
+.path-addresses-id {
+  background: #f6f6f6 !important;
+}
+

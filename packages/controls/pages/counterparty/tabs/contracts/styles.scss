@@ -1,0 +1,50 @@
+@import '../common/styles/theme';
+
+.contracts-table-container {
+  margin: 0 -24px 0;
+  width: 100%;
+  .table-filters {
+    margin: 0 6px 12px 6px;
+    .table-filters-title-right {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    hr {
+      display: none;
+    }
+  }
+
+  .vz-table-modern {
+    .ant-table-tbody > tr > td {
+      border-bottom: 1px solid $border-color-split;
+      &::before {
+        display: none;
+      }
+    }
+
+    .ant-table-tbody > tr {
+      &:hover,
+      &.ant-table-row-hover {
+        > td::before {
+          display: none;
+        }
+      }
+    }
+
+    tr.ant-table-expanded-row {
+      background: #fafafa;
+      box-shadow: inset 0 0 5px #d0cbcb;
+      > td:last-child {
+        padding: 0;
+      }
+      > td > .ant-table-wrapper {
+        margin: 10px 0 34px 0;
+      }
+    }
+  }
+
+
+
+}
+

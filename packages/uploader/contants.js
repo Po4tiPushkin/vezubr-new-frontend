@@ -1,0 +1,1 @@
+export const FILE_SIZE_LIMIT_IN_BYTES = 10485760;

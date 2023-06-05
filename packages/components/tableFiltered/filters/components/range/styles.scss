@@ -1,0 +1,24 @@
+@import '../common/styles/theme';
+
+.ant-input-group.range-simple {
+  .range-simple-from {
+    width: 150px;
+    text-align: center;
+  }
+
+  .range-simple-delimiter {
+    width: 30px;
+    border-left: 0;
+    pointer-events: none;
+    background-color: $component-background;
+  }
+
+  .range-simple-to {
+    width: 150px;
+    &,
+    .ant-input {
+      border-left: 0;
+      text-align: center;
+    }
+  }
+}

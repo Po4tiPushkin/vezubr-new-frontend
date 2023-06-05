@@ -1,0 +1,21 @@
+@import 'elements/styles';
+@import 'layout/styles';
+@import 'components/styles';
+@import 'view/styles';
+
+@import 'styles/clusterIcon';
+@import 'styles/alteringListStyles';
+
+.monitor-layout-content__filters {
+  .ant-select {
+    width: 160px;
+  }
+}
+
+.monitor-layout-list-item__body__identifier {
+  max-width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+}

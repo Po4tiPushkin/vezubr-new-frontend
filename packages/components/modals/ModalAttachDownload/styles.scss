@@ -1,0 +1,72 @@
+.documents-download-attach {
+  min-height: 400px;
+  padding: 0 12px 30px 12px;
+
+  h2 {
+    box-shadow: inset 0 -1px 0 0 rgba(11, 28, 53, 0.08);
+    color: #000;
+    font-size: 18px;
+    padding: 8px 0;
+    margin-bottom: 24px;
+  }
+
+  .doc-item {
+    position: relative;
+    max-width: 500px;
+    margin: 20px 0 0 0;
+
+    #loader {
+      margin-top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: rgba(#fff, 0.5);
+    }
+  }
+
+  .section-item {
+    margin-top: 24px;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.group-highlight {
+      margin: -15px -27px 0 -27px;
+      > h2 {
+        margin-bottom: 10px;
+        box-shadow: none;
+      }
+      > .section-content {
+        background: rgba(#fafafa, 0.8);
+        padding: 20px 27px 40px 27px;
+        box-shadow: inset 0 0 5px #d0cbcb;
+      }
+    }
+
+    &.inline {
+      > h2 {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      > .section-description {
+        margin-top: 15px;
+        margin-left: 20px;
+        color: #9b9fa3;
+      }
+      > .section-content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin-left: -40px;
+        > .doc-item {
+          margin-left: 40px;
+          flex: 1 1 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.form-inputs-line {
+  width: calc(100% - 30px);
+  height: 3px;
+  background-color: rgb(169, 169, 169);
+  border-radius: 2px;
+  margin: 15px auto;
+}
+
+.registration-form {
+  .vz-form-group {
+    box-shadow: none;
+  }
+}

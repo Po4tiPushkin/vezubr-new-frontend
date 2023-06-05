@@ -1,0 +1,11 @@
+@import '../common/styles/theme';
+.tariff-hourly-editor-form {
+  position: relative;
+
+  #loader {
+    position: absolute;
+    background: rgba(#fff, 0.2);
+    left: 0;
+    top: 0;
+  }
+}

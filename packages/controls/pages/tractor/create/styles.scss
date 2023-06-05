@@ -1,0 +1,13 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+
+.tractor-form {
+  width: 950px;
+}
+
+.page-tractors-create, .page-tractors-edit {
+  display: flex;
+  justify-content: center;
+  padding: 12px !important;
+  background-color: #f6f6f6 !important;
+}

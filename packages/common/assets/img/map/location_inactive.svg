@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>pages/1 monitor/map/location_inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="23 9 17 25 14 17 7 14"></polygon>
+    </defs>
+    <g id="Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="!2-icons" transform="translate(-1123.000000, -2034.000000)">
+            <g id="Group-166" transform="translate(1123.000000, 2034.000000)">
+                <g id="pages/1-monitor/map/location">
+                    <rect id="Rectangle-3-Copy-2" x="0" y="0" width="32" height="32"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Path-2"></g>
+                    <g id="&amp;-color/gray_2" mask="url(#mask-2)" fill="#DEE3E8" fill-rule="evenodd">
+                        <rect x="0" y="0" width="32" height="32"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

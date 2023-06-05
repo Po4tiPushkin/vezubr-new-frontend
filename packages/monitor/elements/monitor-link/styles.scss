@@ -1,0 +1,44 @@
+@import '../common/styles/theme';
+$cls: 'monitor-link';
+
+a.#{$cls} {
+  text-decoration: none;
+  color: inherit;
+}
+
+.#{$cls} {
+  text-decoration: none;
+
+  &__text {
+    color: $vz-icon-color;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid rgba($vz-icon-color, 0.2);
+  }
+
+  &__suffix,
+  &__prefix {
+    font-size: 0.7em;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__prefix {
+    margin-right: 0.3em;
+  }
+
+  &__suffix {
+    color: $primary-color;
+    margin-left: 0.3em;
+  }
+
+  &:hover,
+  &:active {
+    .#{$cls}__text {
+      color: $azure;
+      border-bottom-color: rgba($azure, 0.6);
+    }
+
+    .#{$cls}__suffix {
+      color: $azure;
+    }
+  }
+}

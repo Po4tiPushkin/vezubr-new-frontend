@@ -1,0 +1,80 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+
+$descriptions-default-padding: 16px 24px;
+$descriptions-middle-padding: 12px 24px;
+$descriptions-small-padding: 8px 16px;
+
+//nth($list, $n)
+
+.ant-descriptions-bordered.vz-descriptions {
+  &--theme-bordered-underline {
+    .ant-descriptions-view {
+      border: 0;
+    }
+
+    .ant-descriptions-title {
+      position: relative;
+      margin-top: 28px;
+      margin-bottom: 0;
+      padding: 0 24px 20px 24px;
+      &::before {
+        content: '';
+        position: absolute;
+        background: $border-color-split;
+        height: $border-width-base;
+        left: 24px;
+        right: 24px;
+        bottom: 0;
+      }
+    }
+    &.ant-descriptions-small {
+      .ant-descriptions-title {
+        position: relative;
+        margin-top: 28px;
+        margin-bottom: 0;
+        padding: 0 16px 20px 16px;
+        &::before {
+          left: 16px;
+          right: 16px;
+        }
+      }
+    }
+
+    .ant-descriptions-row {
+      border-bottom: none;
+    }
+
+    .ant-descriptions-item-label {
+      background: none;
+      border-right: none;
+    }
+
+    .ant-descriptions-item-content,
+    .ant-descriptions-item-label {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        background: $border-color-split;
+        height: $border-width-base;
+        left: 24px;
+        right: 24px;
+        bottom: 0;
+      }
+    }
+
+    &.ant-descriptions-small {
+      .ant-descriptions-item-content,
+      .ant-descriptions-item-label {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        &::before {
+          left: 16px;
+          right: 16px;
+        }
+      }
+    }
+
+  }
+}

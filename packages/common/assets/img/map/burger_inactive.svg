@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>pages/1 monitor/map/burger_inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9,15 L23,15 C23.5522847,15 24,15.4477153 24,16 C24,16.5522847 23.5522847,17 23,17 L9,17 C8.44771525,17 8,16.5522847 8,16 C8,15.4477153 8.44771525,15 9,15 Z M9,19 L23,19 C23.5522847,19 24,19.4477153 24,20 C24,20.5522847 23.5522847,21 23,21 L9,21 C8.44771525,21 8,20.5522847 8,20 C8,19.4477153 8.44771525,19 9,19 Z M9,11 L23,11 C23.5522847,11 24,11.4477153 24,12 C24,12.5522847 23.5522847,13 23,13 L9,13 C8.44771525,13 8,12.5522847 8,12 C8,11.4477153 8.44771525,11 9,11 Z" id="path-1"></path>
+    </defs>
+    <g id="Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="!2-icons" transform="translate(-1390.000000, -1650.000000)">
+            <g id="Group-168" transform="translate(1390.000000, 1650.000000)">
+                <g id="pages/1-monitor/map/burger">
+                    <rect id="Rectangle-3-Copy-2" x="0" y="0" width="32" height="32"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Combined-Shape"></g>
+                    <g id="&amp;-color/gray_2" mask="url(#mask-2)" fill="#DEE3E8" fill-rule="evenodd">
+                        <rect x="0" y="0" width="32" height="32"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

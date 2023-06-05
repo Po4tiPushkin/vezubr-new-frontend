@@ -1,0 +1,44 @@
+@import '../common/styles/theme';
+.vz-address-modern-favorite {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: center;
+
+  min-height: 62px;
+
+  background-color: #fff;
+  border-radius: $border-radius-base;
+  border: $border-width-base $border-style-base $input-border-color;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &:active,
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+    border-color: $input-hover-border-color;
+  }
+
+  &__icon {
+    width: 44px;
+    flex: 0 0 auto;
+    color: $primary-color;
+    font-size: 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__elem {
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+    padding: 5px 10px 5px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+  }
+}

@@ -1,0 +1,82 @@
+.order-documents-viewer-uploader {
+  &__groups {
+    margin-left: 28px;
+    &--level-0 {
+      margin-left: 0;
+    }
+  }
+
+  &__group {
+    &__title {
+      background: #f6f6f6;
+      color: #9b9fa3;
+      font-size: 12px;
+      width: 100%;
+      padding: 24px 16px 8px;
+      text-transform: uppercase;
+    }
+
+    &__docs {
+      padding: 0 16px;
+    }
+  }
+
+  &__doc {
+    margin-top: 16px;
+    border-bottom: 1px solid #dee3e8;
+    padding-bottom: 16px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__files {
+      margin-top: 16px;
+      &__row {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin: -16px 0 0 -50px;
+        &__col {
+          min-width: 450px;
+          width: 50%;
+          padding: 16px 0 0 50px;
+        }
+      }
+    }
+  }
+
+  &__comment {
+    padding: 20px 0 0;
+
+    .ant-btn {
+      margin-left: 16px;
+    }
+  }
+
+  &__comment-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__comment-group {
+    box-shadow: none;
+    padding: 20px 0;
+  }
+
+  &__accept {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__accept-button {
+    margin-left: 16px;
+    transition: opacity 0.2s ease-in-out;
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

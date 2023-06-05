@@ -1,0 +1,58 @@
+@import '../common/styles/theme';
+.order-form {
+  position: relative;
+
+  #loader {
+    position: absolute;
+    background: rgba(#fff, 0.5);
+    left: 0;
+    top: 0;
+    align-items: flex-start;
+
+    .spinner {
+      position: sticky;
+      top: 50%;
+    }
+  }
+
+  &__hint {
+    i {
+      color: $vz-icon-color;
+    }
+  }
+
+  &__actions {
+    padding: 24px 0;
+    margin-top: 0;
+    &__wrap {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin: -15px 0 0 -15px;
+    }
+
+    .ant-btn {
+      min-width: 216px;
+      margin: 15px 0 0 15px;
+    }
+  }
+
+  &__category-choice {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-calculate-steps {
+    margin: 0 -24px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .order-advanced-options {
+    .custom-properties-form {
+      padding: 0;
+    }
+  }
+}

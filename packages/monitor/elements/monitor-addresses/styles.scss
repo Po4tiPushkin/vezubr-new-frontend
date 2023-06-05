@@ -1,0 +1,20 @@
+@import '../common/styles/variables';
+
+.monitor-addresses {
+  font-size: 14px;
+  color: $grey_3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &__divided {
+    margin: 0 0.5em;
+  }
+
+  &__first-point {
+    white-space: nowrap;
+  }
+
+  &__last-point {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,89 @@
+$font-path: '../common/assets/fonts';
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~inStyle';
+
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/tables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/modals';
+
+@import '../common/styles/variables';
+@import '../common/styles/typography';
+@import '../common/styles/animate';
+@import '../common/styles/general';
+
+@import '../common/styles/map';
+@import '../common/styles/area';
+
+@import '../elements/elements';
+
+@import '../map/styles';
+@import '../address/styles';
+@import '../tariff/styles';
+@import '../order/styles';
+@import '../monitor/styles';
+@import '../bargain/styles';
+@import '../uploader/styles';
+@import '../controls/styles';
+
+@import '../components/components';
+@import '../controls/layout/layout';
+
+@import '../common/assets/fonts/DIN-2014/styles';
+@import '../common/assets/fonts/DIN-2014-NARROW/styles';
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'DIN 2014', sans-serif;
+  font-size: $font-size;
+  font-weight: normal;
+
+  * {
+    box-sizing: border-box;
+
+    & ::after,
+    & ::before {
+      box-sizing: border-box;
+    }
+  }
+}
+
+a {
+  color: $azure;
+  &:hover {
+    text-decoration: none;
+    color: $azure;
+  }
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    display: table;
+
+    clear: both;
+
+    content: '';
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.no-events {
+  pointer-events: none;
+}
+button,
+input {
+  &:focus {
+    outline: none !important;
+  }
+}

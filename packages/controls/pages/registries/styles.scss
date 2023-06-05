@@ -1,0 +1,55 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+
+.dashboard .container.registries {
+  background: $white;
+  padding: 0;
+}
+
+.registries-table-container {
+  .rejected,
+  .accepted,
+  .standart {
+    color: $azure;
+    padding-right: $btn-border-radius-sm;
+    font-size: 16px;
+    cursor: default;
+  }
+  .rejected {
+    color: $error-color;
+  }
+
+  .standart {
+    color: $black;
+  }
+
+  .date-reject {
+    color: $error-color;
+  }
+  .date-accept {
+    color: $azure;
+  }
+
+  td.icon-td-act-type {
+    img {
+      margin: -12px 0;
+    }
+  }
+
+  td.currency {
+    text-align: right;
+  }
+
+  .cartulary-footer-info {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    margin-left: -50px;
+    > div {
+      flex: 0 0 auto;
+      margin-left: 50px;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+}

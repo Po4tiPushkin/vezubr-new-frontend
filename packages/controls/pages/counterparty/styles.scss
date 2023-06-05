@@ -1,0 +1,17 @@
+@import "./tabs/contracts/styles";
+@import "./tabs/tariffs/styles";
+@import "./tabs/settings/styles.scss";
+@import "./tabs/service/styles.scss";
+.counterparty-page {
+  width: 85vw;
+  margin: 0 auto;
+  &__body {
+    margin-top: 12px;
+    max-height: 74vh;
+    min-height: 74vh;
+    overflow-y: auto; 
+    padding-bottom: 20px;
+
+  }
+
+}

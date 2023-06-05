@@ -1,0 +1,33 @@
+@import '../common/styles/theme';
+
+.marker-cluster-custom.marker-cluster-monitor {
+  div {
+    color: #fff;
+    background-color: #979797;
+  }
+
+  &.marker-cluster-small {
+    background-color: #dee3e8;
+  }
+  &.marker-cluster-medium {
+    background-color: #e8e69f;
+  }
+
+  &.marker-cluster-large {
+    background-color: #e84843;
+  }
+
+  &.marker-cluster-monitor--has-problem {
+    div {
+      color: $error-color;
+      background-color: #fff;
+      margin: 3px;
+    }
+
+    &.marker-cluster-small,
+    &.marker-cluster-medium,
+    &.marker-cluster-large {
+      background-color: rgba($error-color, 0.7);
+    }
+  }
+}

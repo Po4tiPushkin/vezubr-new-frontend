@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4p</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    pre {
+      font-family: inherit;
+    }
+
+    .main {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .main__main {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    .main__main .main__block:last-child {
+      margin-left: 25px;
+    }
+
+    .main__block {
+      width: 50%;
+    }
+
+    .main__text {
+      margin-left: auto;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    .main__title {
+      text-align: center;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
+    .main__table {
+      margin-bottom: 40px;
+    }
+
+    .main__table--no-margin {
+      margin: 0;
+    }
+
+    .head {
+      margin-left: 30%;
+    }
+
+    .header {
+      justify-content: space-between;
+      flex-basis: content;
+    }
+
+    .header__left {
+      width: 25%;
+    }
+
+
+    .header__right {
+      width: 30%;
+    }
+
+    .header__date {
+      width: 500px;
+      margin-left: 100px;
+    }
+
+    .head .input {
+      min-width: 100px;
+    }
+
+    .form__top {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    .form__content {
+      margin-top: 25px;
+    }
+
+    .form__title {
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .top {
+      min-width: 200px;
+    }
+
+    .top__text {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .content__title {
+      min-width: max-content;
+    }
+
+    .content__block {
+      margin-bottom: 20px;
+    }
+
+    .content__input {
+      margin-left: 10px;
+      width: 100%;
+      min-width: 50px;
+    }
+
+    .input {
+      border-bottom: 1px solid #000;
+      min-height: 19px;
+    }
+
+    .input--no-border {
+      border: 0;
+    }
+
+    .input__text {
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .flexbox {
+      display: flex;
+    }
+
+    .content__flex .content__title:not(:first-child),
+    .content__flex .flexbox:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    .no-align {
+      align-items: unset;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .td__border {
+      border: 2px solid #000;
+    }
+
+    .td__text {
+      text-align: right;
+    }
+
+    .td__text span {
+      margin-right: 10px;
+    }
+
+    .border-bottom-thin {
+      border-bottom: 1px solid #000;
+    }
+
+    .form-table__wrapper {
+      width: 500px;
+      display: flex;
+    }
+
+    .form-table,
+    .mt {
+      border-collapse: collapse;
+      text-align: center;
+      width: 100%;
+
+    }
+
+    .content__table {
+      align-items: end;
+    }
+
+    .mt td {
+      border: 1px solid #000;
+    }
+
+    .mt-td__text {
+      min-height: 20px;
+      display: inline-block;
+    }
+
+    table td {
+      word-break: break-all;
+      word-break: break-word;
+    }
+
+    .cut-line {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cut-line__line {
+      height: 4px;
+      background-color: #000;
+      margin-bottom: 5px;
+    }
+
+    .td__hint {
+      position: absolute;
+      width: 100%;
+      top: 25px;
+    }
+
+    .no-border-top {
+      border-top: 0 !important;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .mt-td__span {
+      padding: 0 10px;
+    }
+
+    .hard__table {}
+
+    .ht {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .ht-td__bordered {
+      border: 1px solid #000;
+    }
+
+    .ht-td__right {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    .content__row {
+      margin-bottom: 0;
+      padding-right: 10px;
+    }
+
+    .content__row .content__title {
+      min-width: unset;
+      width: 100%;
+      max-width: fit-content;
+    }
+
+    .content__title--small {
+      min-width: unset;
+      width: max-content;
+    }
+
+    .block-row>div:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    .block-row .content__input,
+    .block-row .flexbox {
+      margin-left: 0 !important;
+    }
+
+    .main__block--bordered {
+      border: 1px solid #000;
+    }
+
+    .main__block-content {
+      padding: 0 25px;
+      padding-top: 15px;
+    }
+
+    .no-border-left {
+      border-left: 0 !important;
+    }
+
+    .no-border-bottom {
+      border-bottom: 0 !important;
+    }
+
+    .no-border-right {
+      border-right: 0 !important;
+    }
+
+    .new-page {
+      margin: 40px 0;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header flexbox">
+      <div class="header__left">
+        <div class="">
+          Место для штампа организации
+        </div>
+      </div>
+      <div class="header__right">
+        <p>
+          Типовая межотраслевая форма № 4-П
+          Утверждена постановлением Госкомстата России
+          от 28.11.97 № 78
+        </p>
+      </div>
+
+    </div>
+    <div class="content__block ">
+      <div>
+        <h2>Путевой лист</h2>
+      </div>
+      <div class="flexbox content__flex">
+        <div class="flexbox full-width">
+          <div class="content__title">
+            <p> грузового автомобиля </p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+            <p class="input__text">серия</p>
+          </div>
+        </div>
+        <div class="flexbox full-width">
+          <div class="content__title">
+            <p>№</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content__block header__date">
+      <div class="flexbox content__flex">
+        <div class="flexbox">
+          <div class="content__title">
+            <p>"<span style="width: 20px; display: inline-block;"></span>"</p>
+          </div>
+        </div>
+        <div class="flexbox" style="width: 150px">
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+        <div class="flexbox" style="min-width: fit-content;">
+          <div class="content__title">
+            <p><span style="width: 50px; display: inline-block;"></span>года</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content__block ">
+      <div class="flexbox content__flex content__table">
+        <div class="flexbox full-width">
+          <div class="content__title">
+            <p> Организация</p>
+          </div>
+          <div class="content__input">
+            <p class="input input">ООО ЛОГОСОФТ</p>
+            <p class="input__text">наименование, адрес и номер телефона</p>
+          </div>
+        </div>
+        <div class="form-table__wrapper">
+          <table class="form-table">
+            <colgroup>
+              <col width="50%" />
+              <col width="50%" />
+            </colgroup>
+            <tr>
+              <td></td>
+              <td>Коды</td>
+            </tr>
+            <tr>
+              <td class="td__text"><span> Форма по ОКУД</span></td>
+              <td class="td__border border-bottom-thin">0345005</td>
+            </tr>
+            <tr>
+              <td class="td__text"> <span>по ОКПО</span> </td>
+              <td class="td__border no-border-top"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="main__main">
+      <div class="main__block">
+        <div class="hard__table">
+          <table class="ht">
+            <colgroup>
+              <col width="90%" />
+              <col width="10%" />
+            </colgroup>
+            <tr>
+              <td></td>
+              <td class="ht-td__bordered">Код</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ht-td__right">Режим работы</div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ht-td__right">Колонна</div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ht-td__right">Бригада</div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="content__block content__row">
+                  <div class="flexbox content__flex">
+                    <div class="flexbox" style="width: 100%;">
+                      <div class="content__title">
+                        <p>Марка автомобиля </p>
+                      </div>
+                      <div class="content__input">
+                        <p class="input"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="content__block content__row">
+                  <div class="flexbox content__flex">
+                    <div class="flexbox" style="width: 100%;">
+                      <div class="content__title">
+                        <p>Государственный номерной знак </p>
+                      </div>
+                      <div class="content__input">
+                        <p class="input"></p>
+                      </div>
+                      <div class="content__title">
+                        <p>Гаражный номер </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="content__block content__row">
+                  <div class="flexbox content__flex">
+                    <div class="flexbox" style="width: 100%;">
+                      <div class="content__title">
+                        <p>Водитель</p>
+                      </div>
+                      <div class="content__input">
+                        <p class="input"></p>
+                        <p class="input__text">фамилия, имя, отчество</p>
+                      </div>
+                      <div class="content__title">
+                        <p>Табельный номер</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Удостоверение № </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p>Класс </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p>Лицензионная карточка </p>
+              </div>
+              <div class="content__input" style="width: fit-content;">
+                <p class="input"> стандартная, ограниченная </p>
+                <p class="input__text">ненужное зачеркнуть</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Регистрационный №</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p>Серия </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p>№ </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hard-table">
+          <table class="ht">
+            <colgroup>
+              <col width="90%">
+              <col width="10%">
+            </colgroup>
+            <tr>
+              <td>
+                <div class="content__block content__row">
+                  <div class="flexbox content__flex">
+                    <div class="flexbox" style="width: 100%;">
+                      <div class="content__title">
+                        <p>Прицеп 1 </p>
+                      </div>
+                      <div class="content__input">
+                        <p class="input"></p>
+                        <p class="input__text">марка</p>
+                      </div>
+                      <div class="content__title">
+                        <p>Государственный номерной знак </p>
+                      </div>
+                      <div class="content__input">
+                        <p class="input"></p>
+                      </div>
+                      <div class="content__title">
+                        <p>Гаражный номер </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="content__block content__row">
+                  <div class="flexbox content__flex">
+                    <div class="flexbox" style="width: 100%;">
+                      <div class="content__title">
+                        <p>Прицеп 2 </p>
+                      </div>
+                      <div class="content__input">
+                        <p class="input"></p>
+                        <p class="input__text">марка</p>
+                      </div>
+                      <div class="content__title">
+                        <p>Государственный номерной знак </p>
+                      </div>
+                      <div class="content__input">
+                        <p class="input"></p>
+                      </div>
+                      <div class="content__title">
+                        <p>Гаражный номер </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="ht-td__bordered"><span class="mt-td__span"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Сопровождающие лица:</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="table-3" class="main__table main__table--no-margin">
+          <table class="mt">
+            <tr>
+              <td colspan="5"><span class="mt__title">Задание водителю</span></td>
+            </tr>
+            <tr>
+              <td rowspan="2">в чье распоряжение
+                (наименование и адрес заказчика)
+              </td>
+              <td colspan="2">время, ч. мин</td>
+              <td colspan="2">количество</td>
+            </tr>
+            <tr>
+              <td>прибытия</td>
+              <td>убытия</td>
+              <td>часов</td>
+              <td>ездок</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title content__title--small ">
+                <p> Водительское удостоверение проверил,
+                  задание выдал, выдать горючего
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+              <div class="content__title">
+                <p> литров </p>
+              </div>
+            </div>
+          </div>
+          <div class="content__flex flexbox">
+            <div class="flexbox full-width">
+              <div class="content__title content__title--small ">
+                <p> Диспетчер
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+              <div class="content__title">
+                <p> </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title content__title--small">
+                <p> Водитель по состоянию здоровья
+                  к управлению допущен</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">должность</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text"> расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__block">
+        <div id="table-1" class="main__table">
+          <table class="mt">
+            <colgroup>
+              <col>
+              <col width="65px">
+              <col width="65px">
+              <col width="25px">
+              <col width="45px">
+            </colgroup>
+            <tr>
+              <td colspan="8">Работа водителя и автомобиля</td>
+            </tr>
+            <tr>
+              <td rowspan="2">операция</td>
+              <td colspan="4">время по графику</td>
+              <td rowspan="2">нулевой пробег, км</td>
+              <td rowspan="2">показание спидометра, км</td>
+              <td rowspan="2">время фактическое,
+                число, месяц, ч. мин.</td>
+            </tr>
+            <tr>
+              <td>число</td>
+              <td>месяц</td>
+              <td>ч</td>
+              <td>мин</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>выезд из гаража</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+            <tr>
+              <td>возвращение в гараж </td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div id="table-2" class="main__table main__table--no-margin">
+          <table id="table-2-1" class="mt">
+            <tr>
+              <td colspan="7" rowspan="1">Движение горючего </td>
+              <td colspan="2" rowspan="2">Время работы, ч. мин.</td>
+            </tr>
+            <tr>
+              <td colspan="2">Прочее</td>
+              <td rowspan="2">Выдано</td>
+              <td colspan="2">остаток при</td>
+              <td rowspan="2">сдано, л </td>
+              <td rowspan="2">коэффициент изменения нормы</td>
+            </tr>
+            <tr>
+              <td>марка</td>
+              <td>код марки</td>
+              <td>выезде, л</td>
+              <td>возвращении, л</td>
+              <td>спецоборудования</td>
+              <td>двигателя</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+            </tr>
+            <tr>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+            <tr>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+          <table id="table-2-1" class="mt">
+            <colgroup>
+              <col width="10%" />
+              <col width="10%" />
+              <col width="25%" />
+              <col width="25%" />
+              <col width="30%" />
+            </colgroup>
+            <tr>
+              <td colspan="5" class="no-border-top">Подпись</td>
+            </tr>
+            <tr>
+              <td>заправщика</td>
+              <td>механика</td>
+              <td>механика</td>
+              <td>заправщика</td>
+              <td>диспетчера</td>
+            </tr>
+            <tr>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title ">
+                <p> Автомобиль технически исправен
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title ">
+                <p> Особые отметки
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox content__flex">
+
+          </div>
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title ">
+                <p> Выезд разрешен. Механик
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title ">
+                <p>
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title ">
+                <p> Автомобиль принял. Водитель
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title ">
+                <p>
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+          <div class="flexbox">
+            При возвращении автомобиль
+            <div>
+              <div style="margin-left: 5px;"> исправен</div>
+              <div>неисправен</div>
+            </div>
+          </div>
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title content__title--small ">
+                <p> Сдал водитель
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title ">
+                <p>
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title content__title--small ">
+                <p> Принял механик
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title  ">
+                <p>
+                </p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="cut-line">
+      <span>Линия отреза</span>
+      <div class="cut-line__line">
+      </div>
+    </div>
+    <div class="main__main">
+      <div class="main__block">
+        <div id="table-4" class="main__table main__table--no-margin ">
+          <table class="mt">
+            <tr>
+              <td colspan="11">
+                <div>
+                  <div style="margin-bottom: 25px;">
+                    ТАЛОН ВТОРОГО ЗАКАЗЧИКА (заполняется в организации-владельца автотранспорта)
+                  </div>
+                  <div class="content__block" style="padding: 0 20px;">
+                    <div class="flexbox content__flex">
+                      <div class="flexbox full-width">
+                        <div class="content__title">
+                          <p> К путевому
+                            листу
+                          </p>
+                        </div>
+                        <div class="content__input">
+                          <p class="input"></p>
+                        </div>
+                      </div>
+                      <div class="flexbox full-width">
+                        <div class="content__title">
+                          <p> №</p>
+                        </div>
+                        <div class="content__input">
+                          <p class="input"></p>
+                        </div>
+                      </div>
+                      <div class="flexbox">
+                        <div class="content__title">
+                          <p>от "<span style="width: 25px; display: inline-block;">31</span>"</p>
+                        </div>
+                      </div>
+                      <div class="flexbox">
+                        <div style="width: 100px;" class="content__input">
+                          <p class="input">сентября</p>
+                        </div>
+                      </div>
+                      <div class="flexbox" style="min-width: fit-content;">
+                        <div class="content__title">
+                          <p><span style="width: 50px; display: inline-block;">2022</span>года</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3">Результат по второму заказчику</td>
+              <td rowspan="2">Время оплачиваемое</td>
+              <td rowspan="2">Езды</td>
+              <td rowspan="2">Экспедитор</td>
+              <td colspan="2">Пробег</td>
+              <td rowspan="2">Перепробег</td>
+              <td rowspan="2">Тонны</td>
+              <td rowspan="2">Т-км</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">Всего к оплате</td>
+            </tr>
+            <tr>
+              <td>всего</td>
+              <td>с грузом</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>34</td>
+              <td>35</td>
+              <td>36</td>
+              <td>37</td>
+              <td>38</td>
+              <td>39</td>
+              <td>40</td>
+              <td>41</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>Единица измерения</td>
+              <td>ч. мин</td>
+              <td>ед.</td>
+              <td>да/нет</td>
+              <td>км</td>
+              <td>км</td>
+              <td>км</td>
+              <td>т</td>
+              <td>ткм</td>
+              <td></td>
+              <td>ру. коп</td>
+            </tr>
+            <tr>
+              <td>Выполнено</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>Тариф, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>К оплате, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Таксировщик</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+            <div class="flexbox ">
+              <div class="content__title content__title--small">
+                <p> Начальник эксплуатации</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__block">
+        <div id="table-4" class="main__table main__table--no-margin ">
+          <table class="mt">
+            <tr>
+              <td colspan="11">
+                <div>
+                  <div style="margin-bottom: 25px;">
+                    ТАЛОН ПЕРВОГО ЗАКАЗЧИКА (заполняется в организации-владельца автотранспорта)
+                  </div>
+                  <div class="content__block" style="padding: 0 20px;">
+                    <div class="flexbox content__flex">
+                      <div class="flexbox full-width">
+                        <div class="content__title">
+                          <p> К путевому
+                            листу
+                          </p>
+                        </div>
+                        <div class="content__input">
+                          <p class="input"></p>
+                        </div>
+                      </div>
+                      <div class="flexbox full-width">
+                        <div class="content__title">
+                          <p> №</p>
+                        </div>
+                        <div class="content__input">
+                          <p class="input"></p>
+                        </div>
+                      </div>
+                      <div class="flexbox">
+                        <div class="content__title">
+                          <p>от "<span style="width: 25px; display: inline-block;">31</span>"</p>
+                        </div>
+                      </div>
+                      <div class="flexbox">
+                        <div style="width: 100px;" class="content__input">
+                          <p class="input">сентября</p>
+                        </div>
+                      </div>
+                      <div class="flexbox" style="min-width: fit-content;">
+                        <div class="content__title">
+                          <p><span style="width: 50px; display: inline-block;">2022</span>года</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3">Результат по первому заказчику</td>
+              <td rowspan="2">Время оплачиваемое</td>
+              <td rowspan="2">Езды</td>
+              <td rowspan="2">Экспедитор</td>
+              <td colspan="2">Пробег</td>
+              <td rowspan="2">Перепробег</td>
+              <td rowspan="2">Тонны</td>
+              <td rowspan="2">Т-км</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">Всего к оплате</td>
+            </tr>
+            <tr>
+              <td>всего</td>
+              <td>с грузом</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>34</td>
+              <td>35</td>
+              <td>36</td>
+              <td>37</td>
+              <td>38</td>
+              <td>39</td>
+              <td>40</td>
+              <td>41</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>Единица измерения</td>
+              <td>ч. мин</td>
+              <td>ед.</td>
+              <td>да/нет</td>
+              <td>км</td>
+              <td>км</td>
+              <td>км</td>
+              <td>т</td>
+              <td>ткм</td>
+              <td></td>
+              <td>ру. коп</td>
+            </tr>
+            <tr>
+              <td>Выполнено</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>Тариф, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>К оплате, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Таксировщик</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+            <div class="flexbox ">
+              <div class="content__title content__title--small">
+                <p> Начальник эксплуатации</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="new-page">Оборотная сторона формы № 4-П</div>
+    <div class="main__main">
+      <div class="main__block">
+        <p style="text-align: right;">ВЫПОЛНЕНИЕ</p>
+        <div id="table-7" class="main__table ">
+          <table class="mt" style="text-align: left;">
+            <colgroup>
+              <col width="30%" />
+              <col width="40%" />
+              <col width="15%" />
+              <col width="10%" />
+            </colgroup>
+            <tr>
+              <td rowspan="">Первый заказчик</td>
+              <td rowspan="" class="relative"> <span></span></td>
+              <td rowspan="" class="align-right mt-td__span"><span class="">код</span></td>
+              <td rowspan="" class="mt-td__span"></td>
+            <tr>
+              <td rowspan="2">При прибытии к заказчику</td>
+              <td class="mt-td__span">
+                <div class="flexbox" style="justify-content: space-between;">
+                  <span class="input__text">наименование</span>
+                  <span class="">Показания спидометра</span>
+                </div>
+              </td>
+              <td colspan="2" class="mt-td__span"><span>232</span></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span"><span class="">дата (число, месяц), время, ч. мин</span></td>
+              <td colspan="2" class="mt-td__span">21.02, 23.30</td>
+            </tr>
+            <tr>
+              <td rowspan="2">При убытии от заказчика:</td>
+              <td class="align-right mt-td__span"><span class="">Показания спидометра</span></td>
+              <td colspan="2" class="mt-td__span"><span>232</span></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span"><span class="">дата (число, месяц), время, ч. мин</span></td>
+              <td colspan="2" class="mt-td__span">21.02, 23.30</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Приложенные ТТД: №№</td>
+              <td rowspan="2" class="mt-td__span"><span class="mt-td__text"></span></td>
+              <td class="align-right mt-td__span"><span class="">количество</span></td>
+              <td rowspan="2" class="mt-td__span"></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span"><span class="">ТТД</span></td>
+            </tr>
+            <tr>
+              <td rowspan="2">Маршрут движения (откуда куда): </td>
+              <td rowspan="2" class="mt-td__span"><span class="mt-td__text"></span></td>
+              <td class="align-right mt-td__span"> <span class="">количество</span> </td>
+              <td rowspan="2" class="mt-td__span"></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span">ездок</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Место для штампа Заказчика </td>
+              <td rowspan="2" class="mt-td__span"><span class="mt-td__text"></span></td>
+              <td class="align-right mt-td__span"><span class="">код вида</span></td>
+              <td rowspan="2" class="mt-td__span"></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span ">груза</td>
+            </tr>
+          </table>
+        </div>
+        <div id="table-8" class="main__table ">
+          <table class="mt">
+            <tr>
+              <td colspan="4">Простои на Линии</td>
+              <td rowspan="3">Подпись ответственного лица</td>
+            </tr>
+            <tr>
+              <td colspan="2">Причина</td>
+              <td colspan="2">дата (число, месяц), время, ч. мин</td>
+            </tr>
+            <tr>
+              <td>наименование</td>
+              <td>код</td>
+              <td>начало</td>
+              <td>окончание</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+            <tr>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+            <tr>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div id="table-4" class="main__table main__table--no-margin ">
+          <table class="mt">
+            <tr>
+              <td rowspan="3">Результат по первому заказчику</td>
+              <td rowspan="2">Время оплачиваемое</td>
+              <td rowspan="2">Езды</td>
+              <td rowspan="2">Экспедитор</td>
+              <td colspan="2">Пробег</td>
+              <td rowspan="2">Перепробег</td>
+              <td rowspan="2">Тонны</td>
+              <td rowspan="2">Т-км</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">Всего к оплате</td>
+            </tr>
+            <tr>
+              <td>всего</td>
+              <td>с грузом</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>34</td>
+              <td>35</td>
+              <td>36</td>
+              <td>37</td>
+              <td>38</td>
+              <td>39</td>
+              <td>40</td>
+              <td>41</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>Единица измерения</td>
+              <td>ч. мин</td>
+              <td>ед.</td>
+              <td>да/нет</td>
+              <td>км</td>
+              <td>км</td>
+              <td>км</td>
+              <td>т</td>
+              <td>ткм</td>
+              <td></td>
+              <td>ру. коп</td>
+            </tr>
+            <tr>
+              <td>Выполнено</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>Тариф, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>К оплате, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Таксировщик</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+            <div class="flexbox ">
+              <div class="content__title content__title--small">
+                <p> Начальник эксплуатации</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__block">
+        <p style="text-align: left;">ЗАДАНИЯ (заполняется заказчиком)</p>
+        <div id="table-7" class="main__table ">
+          <table class="mt" style="text-align: left;">
+            <colgroup>
+              <col width="30%" />
+              <col width="40%" />
+              <col width="15%" />
+              <col width="10%" />
+            </colgroup>
+            <tr>
+              <td rowspan="">Второй заказчик</td>
+              <td rowspan="" class="relative"> <span></span></td>
+              <td rowspan="" class="align-right mt-td__span"><span class="">код</span></td>
+              <td rowspan="" class="mt-td__span"></td>
+            <tr>
+              <td rowspan="2">При прибытии к заказчику</td>
+              <td class="mt-td__span">
+                <div class="flexbox" style="justify-content: space-between;">
+                  <span class="input__text">наименование</span>
+                  <span class="">Показания спидометра</span>
+                </div>
+              </td>
+              <td colspan="2" class="mt-td__span"><span>232</span></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span"><span class="">дата (число, месяц), время, ч. мин</span></td>
+              <td colspan="2" class="mt-td__span">21.02, 23.30</td>
+            </tr>
+            <tr>
+              <td rowspan="2">При убытии от заказчика:</td>
+              <td class="align-right mt-td__span"><span class="">Показания спидометра</span></td>
+              <td colspan="2" class="mt-td__span"><span>232</span></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span"><span class="">дата (число, месяц), время, ч. мин</span></td>
+              <td colspan="2" class="mt-td__span">21.02, 23.30</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Приложенные ТТД: №№</td>
+              <td rowspan="2" class="mt-td__span"><span class="mt-td__text"></span></td>
+              <td class="align-right mt-td__span"><span class="">количество</span></td>
+              <td rowspan="2" class="mt-td__span"></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span"><span class="">ТТД</span></td>
+            </tr>
+            <tr>
+              <td rowspan="2">Маршрут движения (откуда куда): </td>
+              <td rowspan="2" class="mt-td__span"><span class="mt-td__text"></span></td>
+              <td class="align-right mt-td__span"> <span class="">количество</span> </td>
+              <td rowspan="2" class="mt-td__span"></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span">ездок</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Место для штампа Заказчика </td>
+              <td rowspan="2" class="mt-td__span"><span class="mt-td__text"></span></td>
+              <td class="align-right mt-td__span"><span class="">код вида</span></td>
+              <td rowspan="2" class="mt-td__span"></td>
+            </tr>
+            <tr>
+              <td class="align-right mt-td__span ">груза</td>
+            </tr>
+          </table>
+        </div>
+        <div class="flexbox block-row">
+          <div style="width: 40%">
+            <div class="content__block">
+              <div class="content__flex">
+                <div class="flexbox ">
+                  <div class="content__title">
+                    <p> Таксировка:</p>
+                  </div>
+                </div>
+                <div class="flexbox ">
+                  <div class="content__input">
+                    <p class="input"></p>
+                  </div>
+                </div>
+                <div class="flexbox ">
+                  <div class="content__input">
+                    <p class="input"></p>
+                  </div>
+                </div>
+                <div class="flexbox ">
+                  <div class="content__input">
+                    <p class="input"></p>
+                  </div>
+                </div>
+                <div class="flexbox ">
+                  <div class="content__input">
+                    <p class="input"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="width: 35%;" class="main__table">
+            <table class="mt">
+              <tr>
+                <td colspan="3">Расход горючего</td>
+              </tr>
+              <tr>
+                <td>марка</td>
+                <td>по норме</td>
+                <td>фактически</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+              </tr>
+              <tr>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+              </tr>
+            </table>
+          </div>
+          <div style="width: 25%;" class="main__table">
+            <table class="mt">
+              <colgroup>
+                <col width="25%">
+              </colgroup>
+              <tr>
+                <td colspan="2">Зарплата</td>
+              </tr>
+              <tr>
+                <td>код</td>
+                <td>сумма, руб. коп</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+              </tr>
+              <tr>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+              </tr>
+              <tr>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+              </tr>
+              <tr>
+                <td><span class="mt-td__text"></span></td>
+                <td><span class="mt-td__text"></span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="table-4" class="main__table main__table--no-margin ">
+          <table class="mt">
+            <tr>
+              <td rowspan="3">Результат по второму заказчику</td>
+              <td rowspan="2">Время оплачиваемое</td>
+              <td rowspan="2">Езды</td>
+              <td rowspan="2">Экспедитор</td>
+              <td colspan="2">Пробег</td>
+              <td rowspan="2">Перепробег</td>
+              <td rowspan="2">Тонны</td>
+              <td rowspan="2">Т-км</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">Всего к оплате</td>
+            </tr>
+            <tr>
+              <td>всего</td>
+              <td>с грузом</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>34</td>
+              <td>35</td>
+              <td>36</td>
+              <td>37</td>
+              <td>38</td>
+              <td>39</td>
+              <td>40</td>
+              <td>41</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>Единица измерения</td>
+              <td>ч. мин</td>
+              <td>ед.</td>
+              <td>да/нет</td>
+              <td>км</td>
+              <td>км</td>
+              <td>км</td>
+              <td>т</td>
+              <td>ткм</td>
+              <td></td>
+              <td>ру. коп</td>
+            </tr>
+            <tr>
+              <td>Выполнено</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>Тариф, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text">X</span></td>
+            </tr>
+            <tr>
+              <td>К оплате, руб. коп</td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+              <td><span class="mt-td__text"></span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p> Таксировщик</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+            <div class="flexbox ">
+              <div class="content__title content__title--small">
+                <p> Начальник эксплуатации</p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">подпись</p>
+              </div>
+            </div>
+            <div class="flexbox full-width">
+              <div class="content__title">
+                <p></p>
+              </div>
+              <div class="content__input">
+                <p class="input"></p>
+                <p class="input__text">расшифровка подписи</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="cut-line">
+      <span>Линия отреза</span>
+      <div class="cut-line__line">
+      </div>
+    </div>
+    <div class="main__main">
+      <div class="main__block main__block--bordered">
+        <div class="main__block-content">
+          <div class="content__block">
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Организация (заполняется заказчиком)</p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">наименование</p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Марка автомобиля </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Государственный номерной знак </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Прицепы </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Государственный номерной знак </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Первый заказчик</p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">наименование организации, фамилия, имя, отчество, должность ответственного лица
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Прибытие к заказчику </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">дата, время, ч. мин </p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p></p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text"> показание спидометра </p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Убытие от заказчика </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">дата, время, ч. мин </p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p></p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text"> показание спидометра </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>Приложение ТТД №№</div>
+
+        </div>
+        <table class="mt">
+          <colgroup>
+            <col width="14%">
+            <col width="14%">
+            <col width="14%">
+            <col width="14%">
+            <col width="14%">
+            <col width="30">
+          </colgroup>
+          <tr>
+            <td class="no-border-bottom no-border-left">
+              Количество
+              ТТД
+            </td>
+            <td class="no-border-bottom">
+              Количество
+              ездок
+            </td>
+            <td class="no-border-bottom">
+
+            </td>
+            <td class="no-border-bottom">
+              Экспедитор
+            </td>
+            <td class="no-border-bottom">
+              да / нет
+            </td>
+            <td class="no-border-bottom no-border-right">Место для штампа Заказчика</td>
+          </tr>
+        </table>
+      </div>
+      <div class="main__block main__block--bordered">
+        <div class="main__block-content">
+          <div class="content__block">
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Организация (заполняется заказчиком)</p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">наименование</p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Марка автомобиля </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Государственный номерной знак </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Прицепы </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Государственный номерной знак </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Второй заказчик</p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">наименование организации, фамилия, имя, отчество, должность ответственного лица
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Прибытие к заказчику </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">дата, время, ч. мин </p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p></p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text"> показание спидометра </p>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox content__flex">
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p>Убытие от заказчика </p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text">дата, время, ч. мин </p>
+                </div>
+              </div>
+              <div class="flexbox full-width">
+                <div class="content__title">
+                  <p></p>
+                </div>
+                <div class="content__input">
+                  <p class="input"></p>
+                  <p class="input__text"> показание спидометра </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>Приложение ТТД №№</div>
+
+        </div>
+        <table class="mt">
+          <colgroup>
+            <col width="14%">
+            <col width="14%">
+            <col width="14%">
+            <col width="14%">
+            <col width="14%">
+            <col width="30">
+          </colgroup>
+          <tr>
+            <td class="no-border-bottom no-border-left">
+              Количество
+              ТТД
+            </td>
+            <td class="no-border-bottom">
+              Количество
+              ездок
+            </td>
+            <td class="no-border-bottom">
+
+            </td>
+            <td class="no-border-bottom">
+              Экспедитор
+            </td>
+            <td class="no-border-bottom">
+              да / нет
+            </td>
+            <td class="no-border-bottom no-border-right">Место для штампа Заказчика</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

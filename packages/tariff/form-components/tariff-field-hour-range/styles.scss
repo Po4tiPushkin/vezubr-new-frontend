@@ -1,0 +1,72 @@
+@import '../common/styles/theme';
+
+.tariff-field-hour-range {
+  &.vz-form-item {
+    &:not(.vz-form-item--disabled) {
+      .ant-input-number {
+        border-color: $input-border-color;
+      }
+
+      .ant-input-number-focused {
+        border-color: $input-hover-border-color;
+      }
+
+      .ant-input-number,
+      .ant-input-number-focused {
+        &.has-error {
+          border-color: $error-color;
+        }
+      }
+    }
+  }
+
+  &__action {
+    margin: 0 $control-padding-horizontal 0 auto;
+    flex: 0 0 auto;
+  }
+
+  &__picker {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__split {
+      display: block;
+      margin: 0 0.5em;
+      flex: 0 0 auto;
+    }
+
+    &__item {
+      &,
+      &.ant-time-picker {
+        flex: 1 1 auto;
+        max-width: 56px;
+      }
+
+      & {
+        margin: 5px 0;
+
+        &:first-child {
+          margin-left: $control-padding-horizontal;
+        }
+      }
+
+      .ant-time-picker-icon {
+        display: none;
+      }
+    }
+  }
+
+  &__all-day {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__label {
+      flex: 1 1 100%;
+      padding: 0 $control-padding-horizontal;
+    }
+  }
+}

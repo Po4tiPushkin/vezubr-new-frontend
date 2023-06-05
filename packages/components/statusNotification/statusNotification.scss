@@ -1,0 +1,72 @@
+@mixin statusColor($color) {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: $color;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
+.status-notification {
+  position: relative;
+  hr {
+    height: 1px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+  .status-title {
+    padding: 28px 24px 12px;
+  }
+  .status-description {
+    padding: 16px 24px 16px;
+  }
+
+  &.status-color {
+    &.red {
+      @include statusColor($gradient_red);
+    }
+    &.orange {
+      @include statusColor($gradient_orange);
+    }
+    &.orange2 {
+      @include statusColor($gradient_orange2);
+    }
+    &.blue {
+      @include statusColor($gradient_blue);
+    }
+    &.yellow {
+      @include statusColor($gradient_yellow);
+    }
+
+    &.grey {
+      @include statusColor($grey_3);
+    }
+  }
+  .status-order {
+    .status-order-section {
+      padding: 12px 18px 16px;
+      .status-order-section-element {
+        position: relative;
+        height: 44px;
+        display: flex;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        &:before {
+          content: '';
+          position: absolute;
+          border-bottom: 1px solid $grey_2;
+          bottom: 0;
+          width: 100%;
+        }
+        span {
+          display: flex;
+          position: relative;
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.no-background {
+  .modal-content {
+    background: none !important;
+    background-color: transparent;
+  }
+}
+
+.vz-modal {
+  .modal-dialog {
+    margin: 90px auto;
+  }
+  &.large {
+    .modal-dialog {
+      width: 1192px;
+    }
+  }
+  &.medium,
+  .md {
+    .modal-dialog {
+      width: 710px;
+    }
+  }
+  &.small {
+    .modal-dialog {
+      width: 472px;
+    }
+  }
+  &.x-small {
+    .modal-dialog {
+      width: 368px;
+    }
+  }
+  .modal-header {
+    display: flex;
+    border: none;
+    padding: 16px 16px 8px;
+    box-shadow: inset 0 -1px 0 0 rgba(11, 28, 53, 0.08);
+    .modal-icon-wrapper {
+      border: 4px solid #eef0f2;
+      border-radius: 50%;
+      background: $white;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h3 {
+      color: $dark_grey;
+      font-size: 28px;
+      font-weight: $bold;
+      display: flex;
+      align-items: center;
+      margin-left: 8px;
+      &.identificator {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-size: 17px;
+      margin: 0 0 0 auto;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .modal-content {
+    background: $white;
+    //padding: 0 16px;
+    box-shadow: none;
+    border: none;
+  }
+  .modal-body {
+    background: #ffffff;
+    margin-bottom: 8px;
+    padding-bottom: 0;
+    border-radius: 8px;
+    &.no-padding {
+      padding: 0;
+    }
+  }
+}
+
+.modal-close-button {
+  width: 44px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  border-radius: 8px;
+  right: -52px;
+  top: 0;
+  cursor: pointer;
+  background: #ffffff;
+}

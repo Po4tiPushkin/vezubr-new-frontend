@@ -1,0 +1,10 @@
+@import '../common/styles/theme';
+
+.bargain-action-accept {
+  .ant-tag {
+    font-size: $font-size-base;
+    padding: $btn-padding-sm;
+    border-radius: $btn-border-radius-sm;
+    line-height: $btn-height-sm - 2px;
+  }
+}

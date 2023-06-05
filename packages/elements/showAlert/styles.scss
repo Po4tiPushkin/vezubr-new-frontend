@@ -1,0 +1,39 @@
+@import '../common/styles/theme';
+
+.vz-show-alert-modal {
+  .ant-modal-body {
+    text-align: center;
+  }
+  .ant-modal-confirm-btns {
+    float: none;
+    text-align: center;
+    .ant-btn {
+      min-width: 292px;
+    }
+  }
+
+  .ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+    margin-left: 0;
+  }
+
+  .ant-modal-confirm-body > .anticon {
+    display: none;
+  }
+
+  .ant-modal-confirm-body {
+    > .anticon {
+      color: $vz-icon-color;
+      float: none;
+      margin: 0 0 14px 0;
+    }
+    .ant-modal-confirm-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  }
+
+  .ant-modal-content {
+    background-color: #fff;
+  }
+}

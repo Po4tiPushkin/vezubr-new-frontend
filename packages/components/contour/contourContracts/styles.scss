@@ -1,0 +1,16 @@
+@import '../common/styles/theme';
+
+.contour-contracts {
+  .ant-tabs {
+    margin-top: 10px;
+  }
+  .ant-tabs-bar {
+    margin-bottom: 0;
+  }
+
+  &__tab-content {
+    padding: 16px;
+    border: $border-width-base $border-style-base $border-color-split;
+    border-top: none;
+  }
+}

@@ -1,0 +1,115 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+
+$cls: 'monitor-layout-list-item';
+
+.#{$cls} {
+  $icon-width: 44px;
+  $icon-margin-right: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  position: relative;
+
+  &__icon {
+    flex: 0 0 auto;
+    width: $icon-width;
+    margin-right: $icon-margin-right;
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    max-width: calc(100% - #{$icon-width + $icon-margin-right});
+
+    &__top {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    &__addresses {
+      flex: 1 1 auto;
+      overflow: hidden;
+    }
+
+    &__time-at-arrival {
+      flex: 0 1 auto;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    &__cost {
+      flex: 0 1 auto;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    &__identifier {
+      font-weight: 700;
+      min-width: 50px;
+    }
+
+    &__subject {
+      flex: 1 1 auto;
+      font-weight: 700;
+    }
+
+    &__date {
+      flex: 0 1 auto;
+      text-align: right;
+    }
+
+    &__bargain {
+      white-space: nowrap;
+      font-weight: 700;
+      .bargain-status {
+        &-accepted {
+          color: #1fd1d2;
+        }
+        &-offers {
+          color: black;
+        }
+        &-empty {
+          color: #f33b3b;
+        }
+      }
+    }
+  }
+
+  .#{$cls}__actions {
+    position: absolute;
+    opacity: 0;
+    backface-visibility: visible;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transform: rotateX(90deg);
+    transition-delay: 0.1s;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    top: 50%;
+    margin-top: -19px;
+    right: 0;
+
+    @include in('<:hover') {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+  }
+}

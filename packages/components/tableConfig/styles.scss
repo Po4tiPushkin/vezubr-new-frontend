@@ -1,0 +1,35 @@
+.table-config {
+  &__table-wrp {
+    padding: 30px 25px;
+  }
+
+  &__table {
+  }
+
+  &__row {
+    position: relative;
+    margin-left: 34px;
+    border: 1px solid #ddd;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 10px;
+    position: relative;
+    &:last-child::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: #ddd;
+      display: block;
+      top: 0;
+      left: 0;
+    }
+    // &:not(:last-child) {
+    //   // border-right: 1px solid #ddd;
+    // }
+  }
+}

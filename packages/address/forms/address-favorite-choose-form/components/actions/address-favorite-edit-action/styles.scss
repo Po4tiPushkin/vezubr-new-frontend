@@ -1,0 +1,11 @@
+.address-favorite-edit-action {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: -10px 0 0 -10px;
+
+  > * {
+    margin: 10px 0 0 10px;
+  }
+}

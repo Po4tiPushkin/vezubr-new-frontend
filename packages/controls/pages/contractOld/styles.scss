@@ -1,0 +1,64 @@
+.contract-card {
+  display: flex;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  width: 952px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    .page-title--hr {
+      max-width: 90%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin: -15px 0 45px 0;
+  }
+
+  &__modal {
+    height: 500px;
+    overflow: scroll;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 3px 0 rgba(0, 0, 0, 0.05);
+    background: #fff;
+    border-radius: 8px;
+    width: 400px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+
+      &__label {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__agreements {
+    flex: 1;
+    padding: 20px 10px;
+    width: 900px;
+    overflow-x: scroll;
+
+    &-title {
+      padding-left: 12px;
+    }
+  }
+}
+
+.contract-card-filter {
+  display: flex;
+  justify-content: flex-end;
+}

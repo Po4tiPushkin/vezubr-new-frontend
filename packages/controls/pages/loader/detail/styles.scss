@@ -1,0 +1,26 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+
+.loader {
+  &__tabs {
+    &--red {
+      border: 2px solid #bc1a46 !important;
+      border-radius: 12px !important;
+    }
+    &--orange {
+      border: 2px solid #f17737 !important;
+      border-radius: 12px !important;
+    }
+  }
+
+  &__button {
+    &--red {
+      border: 2px solid #bc1a46 !important;
+      border-radius: 22px !important;
+    }
+    &--orange {
+      border: 2px solid #f17737 !important;
+      border-radius: 22px !important;
+    }
+  }
+}

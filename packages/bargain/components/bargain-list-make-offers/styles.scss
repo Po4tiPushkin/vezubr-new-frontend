@@ -1,0 +1,56 @@
+@import '../common/styles/variables';
+
+.bargain-list-make-offers {
+  $margin-offer-top: 20px;
+
+  .bargain-list {
+    &__wrapper {
+      margin: -#{$margin-offer-top} 0 0 0;
+    }
+  }
+
+  .bargain-item {
+    margin-top: $margin-offer-top;
+    @for $i from 1 through 10 {
+      $index: $i - 1;
+      &:nth-child(#{$i}) {
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
+        animation-name: fadeInLeft-20;
+        animation-delay: #{$index * 0.05}s;
+      }
+    }
+
+    &--right {
+      @for $i from 1 through 10 {
+        $index: $i - 1;
+        &:nth-child(#{$i}) {
+          animation-name: fadeInRight-20;
+        }
+      }
+    }
+  }
+
+  .bargain-offer {
+    .bargain-item__message {
+      min-width: 344px;
+    }
+
+    /*&--itself {
+      .bargain-item__message {
+        background: rgba($azure, 0.1);
+      }
+    }*/
+
+    &__producer {
+      font-size: 12px;
+      font-family: din\2014 Narrow, sans-serif;
+      color: #9b9fa3;
+      &,
+      &__name,
+      &__ago {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

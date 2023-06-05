@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>@Icons/achtung</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="@Icons/achtung" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.9610473,12.2859587 C22.8224473,12.0300819 22.6124109,11.8200455 22.356534,11.6814455 C21.6281047,11.2868796 20.7177373,11.5575294 20.3231714,12.2859587 L10.6810621,30.086776 C10.5622324,30.3061537 10.5,30.5517071 10.5,30.8012007 C10.5,31.6296278 11.1715729,32.3012007 12,32.3012007 L31.2842186,32.3012007 C31.5337123,32.3012007 31.7792656,32.2389682 31.9986434,32.1201386 C32.7270727,31.7255728 32.9977225,30.8152053 32.6031566,30.086776 L22.9610473,12.2859587 Z" id="Triangle" stroke="#C71E3E"></path>
+        <text id="!" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#C71E3E">
+            <tspan x="20" y="29">!</tspan>
+        </text>
+    </g>
+</svg>

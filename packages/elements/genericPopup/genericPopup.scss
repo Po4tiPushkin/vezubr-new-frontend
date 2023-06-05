@@ -1,0 +1,30 @@
+@import "../common/styles/variables";
+.generic-popup {
+  .generic-popup-header {
+    background: linear-gradient(225deg, rgba(8, 72, 104, 0.8) 0%, rgba(11, 71, 71, 0.9) 100%);
+    min-height: 148px;
+    display: flex;
+    border-radius: 6px 6px 0 0;
+    align-items: center;
+    justify-content: center;
+    max-height: 148px;
+    h3 {
+      font-size: 24px;
+      color: $white;
+    }
+  }
+
+  .generic-popup-status {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+    margin-bottom: 16px;
+  }
+
+  .generic-popup-wrapper {
+    font-size: 16px;
+    color: $dark_grey;
+    padding: 0 32px 32px;
+  }
+}

@@ -1,0 +1,25 @@
+@import 'components/action/styles';
+
+.subject-info {
+  &__notify-badge {
+    margin-top: 8px !important;
+  }
+  &__client {
+    max-width: 170px;
+    white-space: nowrap;
+    &__cell-value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.popup-info-bargain {
+  &__bargain__cell-value {
+    text-align: center;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "cartulary": "Реестры",
+  "table.id": "№ Рейса",
+  "table.type": "Тип рейса",
+  "table.date": "Дата подачи",
+  "table.typeCar": "Тип ТС",
+  "table.typeAmount": "Сумма рейса (без НДС)",
+  "table.orderSoftwareSum": "Сумма за ПО",
+  "table.executionFinishedAtDate": "Завершен",
+  "table.calculationAcceptedAtDate": "Подтвержден",
+  "table.clientCompany": "Заказчик",
+  "table.producerOrderCustomIdentifier": "Подрядчик",
+  "table.producerCompany": "Исполнитель",
+  "table.plateNumber": "Гос номер ТС",
+  "table.firstAddress": "Адрес подачи",
+  "table.lastAddress": "Адрес доставки",
+  "table.Identifier": "Идентификатор рейса",
+  "table.TypeContract": "Тип договора",
+  "typeCartulary": "Тип",
+  "all": "Все",
+  "orderId": "№ Рейса",
+  "filters": {
+    "clientTitle": "Заказчик",
+    "payedDateTill": "Оплачено",
+    "from": "От",
+    "to": "До",
+    "producerOrderIdentifier": "Идентификатор рейса",
+    "registrySumFrom": "Сумма",
+    "renterName": "Арендатор"
+  }
+}

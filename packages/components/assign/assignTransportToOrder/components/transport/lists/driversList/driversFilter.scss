@@ -1,0 +1,91 @@
+.drivers-filter {
+  position: absolute;
+  height: 324px;
+  width: 296px;
+  top: 40px;
+  border: 1px solid rgba(151, 151, 151, 0.2);
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  &__search {
+    max-width: 90%;
+  }
+
+  .drivers-elements {
+    margin-top: 4px;
+    overflow: auto;
+    height: 270px;
+    .element {
+      display: flex;
+      padding: 8px 8px;
+      cursor: pointer;
+
+      &:hover {
+        background: #f6f6f6;
+      }
+
+      &.is-shared-false {
+        background: #f6f6f6;
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      .driver-image {
+        padding: 4px;
+        background: #eef0f2;
+        width: 60px;
+        flex: 0 0 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        img {
+          display: block;
+          max-width: 52px;
+          max-height: 52px;
+        }
+      }
+
+      .driver-info {
+        width: 100%;
+        justify-content: space-around;
+        align-content: flex-start;
+        margin-left: 8px;
+
+        .driver-name {
+          font-weight: 500;
+          line-height: 20px;
+        }
+
+        .driver-status {
+          color: #4b4c55;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 300;
+        }
+
+        .driver-phone {
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 700;
+          color: #f17737;
+        }
+      }
+    }
+  }
+}
+
+.driver-action {
+  .ant-btn {
+    border-radius: unset;
+    padding: 0;
+  }
+  .ant-btn[disabled], .ant-btn[disabled]:hover {
+    background-color: #9ce3ec;
+    border-color: #9ce3ec;
+  }
+}

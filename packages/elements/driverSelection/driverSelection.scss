@@ -1,0 +1,36 @@
+.driver-selection-img-wrapper {
+  height: 52px;
+  width: 52px;
+  border: $border-corner_4 solid $grey_1;
+  border-radius: $border-corner_4;
+  background-color: $white;
+}
+
+.driver-selection-tooltip {
+  height: 256px;
+  width: 296px;
+  border: 1px solid rgba(151, 151, 151, 0.2);
+  border-radius: 8px;
+  background-color: $white;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.4);
+  position: absolute;
+  overflow-x: scroll;
+  top: 50px;
+  z-index: 10;
+  .driver-search {
+    margin-top: 8px;
+    input {
+      background: $grey_2;
+      width: 100%;
+      border-radius: $border-corner_4;
+      height: 36px;
+      border: 0;
+    }
+  }
+  .driver-item {
+    background-color: $white;
+    &:nth-child(odd) {
+      background-color: $grey_0;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.tariff-action-items-inline {
+  margin: -10px 0 0 -10px;
+  > * {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+  }
+}

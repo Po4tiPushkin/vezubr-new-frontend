@@ -1,0 +1,129 @@
+@import '../common/styles/theme';
+
+.ant-form-item label {
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-family: 'DIN 2014 Narrow', serif;
+}
+
+.ant-select-dropdown-menu {
+  padding: 0;
+}
+.ant-select-dropdown-menu-item {
+  padding: $vz-select-dropdown-menu-item-padding;
+  background: #fff;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  /*&.ant-select-dropdown-menu-item-active,
+  &:hover {
+    background: #f6f6f6;
+    color: #000;
+  }*/
+
+  &:hover:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: #f6f6f6;
+    color: #000;
+  }
+}
+
+/* table */
+.ant-table-row-expand-icon {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+/* input, select */
+
+.ant-select-selection--multiple .ant-select-selection__placeholder {
+  margin-left: 2px;
+}
+
+.ant-input-affix-wrapper {
+  .ant-input-prefix,
+  .ant-input-suffix {
+    color: #19b8d4;
+  }
+}
+
+.ant-select-arrow {
+  color: #19b8d4;
+}
+
+// radio fixed
+table td {
+  .ant-radio,
+  .ant-radio-wrapper {
+    line-height: 1em;
+  }
+}
+
+/* calendar */
+.ant-calendar-picker-icon,
+.ant-calendar-range-picker-separator {
+  color: #19b8d4;
+}
+
+/* Time picker */
+.ant-time-picker .ant-time-picker-icon .ant-time-picker-clock-icon {
+  color: #19b8d4;
+}
+.ant-time-picker-panel-inner {
+  background: #fff;
+}
+
+/* messages */
+.ant-message {
+  z-index: 9999999999;
+}
+
+/* modal */
+.ant-modal-wrap,
+.ant-modal-mask {
+  z-index: 1020;
+}
+
+/* popover */
+.ant-popover-inner {
+  background-color: #ffffff;
+}
+
+.ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-topLeft > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow {
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.ant-popover-placement-right > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-rightTop > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-rightBottom > .ant-popover-content > .ant-popover-arrow {
+  border-bottom-color: #ffffff;
+  border-left-color: #ffffff;
+}
+
+.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+}
+
+.ant-popover-placement-left > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-leftTop > .ant-popover-content > .ant-popover-arrow,
+.ant-popover-placement-leftBottom > .ant-popover-content > .ant-popover-arrow {
+  border-top-color: #ffffff;
+  border-right-color: #ffffff;
+}
+
+
+/* ant tag as small button */
+.ant-tag.vz-tag-as-button-sm {
+  font-size: $font-size-base;
+  padding: $btn-padding-sm;
+  border-radius: $btn-border-radius-sm;
+  line-height: $btn-height-sm - 2px;
+  margin: 0;
+}

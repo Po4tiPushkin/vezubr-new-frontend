@@ -1,0 +1,92 @@
+.edm {
+  &__header {
+    height: 5vh;
+    min-height: 45px;
+    width: 100%;
+    background-color: white;
+    padding-left: 10px;
+    &-title {
+      font-family: DIN 2014, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      color: #f57b23;
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    margin: 0 auto;
+    width: 100vw;
+    height: 95vh;
+  }
+
+  &__main {
+    height: 100%;
+    position: relative;
+  }
+
+  &__map {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__full-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+  }
+
+  &__info {
+    &-title {
+      padding-top: 5px;
+      padding-left: 15px;
+      padding-bottom: 5px;
+      background-color: #CCCCCC;
+      font-weight: 600;
+    }
+
+    &-subtitle {
+      padding-left: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-weight: 700;
+      color: #100101;
+    }
+
+    &-element {
+      padding-left: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &-name {
+      color: #706363;
+    }
+  }
+
+  &__cargo {
+    &-button {
+      width: 100%;
+      height: 50px !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  &__form {
+    .ant-checkbox-group-item {
+      display: block;
+      padding-left: 15px;
+      font-size: 24px;
+      padding-top: 15px;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    background: white;
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+
+.monitor-notify-badge {
+  $border-radius: 8px;
+
+  display: inline-block;
+
+  border: 2px solid #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  line-height: 1em;
+  color: #fff;
+  border-radius: $border-radius;
+  position: relative;
+
+  padding: 3px 11px;
+
+  &::before {
+    content: '';
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    position: absolute;
+    border-radius: $border-radius;
+    background: $gradient_orange2;
+  }
+
+  &__text {
+    position: relative;
+  }
+
+  &__popover {
+    max-width: 300px;
+  }
+}

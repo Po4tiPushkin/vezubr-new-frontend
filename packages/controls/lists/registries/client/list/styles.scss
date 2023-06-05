@@ -1,0 +1,31 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+@import "./actions/accept/styles";
+
+.registry-detail-table-container,
+.registries-table-container {
+  .rejected,
+  .accepted {
+    color: $azure;
+    padding-right: $btn-border-radius-sm;
+    font-size: 16px;
+    cursor: default;
+  }
+  .rejected {
+    color: $error-color;
+  }
+
+  .date-reject {
+    color: $error-color;
+  }
+  .date-accept {
+    color: $azure;
+  }
+}
+
+.registry-detail-table-container {
+  .registry-accept-orders {
+    margin: 0 12px 20px 12px;
+  }
+}
+

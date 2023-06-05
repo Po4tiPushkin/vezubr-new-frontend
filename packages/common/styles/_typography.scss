@@ -1,0 +1,94 @@
+$bigFont: 28px;
+$bigFontLineHeight: 32px;
+$middleFont: 24px;
+$smallFont: 20px;
+$pBig: 16px;
+$pMiddle: 14px;
+$pSmall: 12px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark_grey;
+}
+.text-grey {
+  color: $dark_grey;
+}
+
+button,
+p,
+span,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DIN 2014', sans-serif;
+  text-transform: none;
+}
+
+.big-title {
+  letter-spacing: -0.4px;
+  line-height: 32px;
+  font-size: $bigFont !important;
+}
+
+.middle-title {
+  line-height: 28px;
+  font-size: $middleFont;
+}
+
+.small-title {
+  line-height: 20px;
+  font-size: $smallFont !important;
+}
+
+.text-big {
+  line-height: 20px;
+  font-size: $pBig;
+}
+
+.text-middle {
+  line-height: 16px;
+  font-size: $pMiddle;
+}
+
+.text-small {
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  font-size: $pSmall;
+}
+
+.title-bold {
+  font-weight: bold;
+}
+
+.title-light {
+  font-weight: 300;
+}
+
+.light-bold {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.narrow {
+  font-family: 'DIN 2014 Narrow', serif;
+}
+
+.title-grey {
+  color: $grey_3;
+}
+@for $i from 0 through 10 {
+  .opacity-#{$i} {
+    opacity: #{$i / 10};
+  }
+}

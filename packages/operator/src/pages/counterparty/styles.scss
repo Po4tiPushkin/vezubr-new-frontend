@@ -1,0 +1,17 @@
+.counterparty-page {
+  width: 1070px;
+  margin: 0 auto;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 20px;
+    hr {
+      display: none;
+    }
+  }
+  &__body {
+    margin-top: 12px;
+  }
+}

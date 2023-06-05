@@ -1,0 +1,71 @@
+.popover-vehicle-info {
+  width: 330px;
+  $min-height: 50px;
+  $popover-bg: #fff;
+  $table-bg: #eef0f2;
+
+  &.ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow,
+  &.ant-popover-placement-topLeft > .ant-popover-content > .ant-popover-arrow,
+  &.ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow {
+    border-right-color: $popover-bg;
+    border-bottom-color: $popover-bg;
+  }
+
+  &.ant-popover-placement-right > .ant-popover-content > .ant-popover-arrow,
+  &.ant-popover-placement-rightTop > .ant-popover-content > .ant-popover-arrow,
+  &.ant-popover-placement-rightBottom > .ant-popover-content > .ant-popover-arrow {
+    border-bottom-color: $popover-bg;
+    border-left-color: $popover-bg;
+  }
+
+  &.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow,
+  &.ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow,
+  &.ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+    border-top-color: $popover-bg;
+    border-left-color: $popover-bg;
+  }
+
+  .ant-popover-inner-content {
+    padding: 0;
+    background: $table-bg;
+  }
+
+  .ant-popover-inner {
+    background-color: $popover-bg;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .ant-table {
+    font-size: 14px;
+    line-height: 16px;
+
+    &-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
+      background: $table-bg;
+    }
+
+    &-fixed-left,
+    &-fixed-right {
+      table {
+        background: $table-bg;
+      }
+    }
+  }
+
+  .ant-table-tbody > tr > td,
+  .ant-table-thead > tr > th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .ant-table-thead {
+    font-size: 12px;
+  }
+
+  .loader {
+    height: $min-height;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

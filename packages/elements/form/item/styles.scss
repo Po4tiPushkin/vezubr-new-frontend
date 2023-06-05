@@ -1,0 +1,227 @@
+@import '../common/styles/theme';
+@import '../common/styles/mixin';
+
+.vz-form-item {
+  display: flex;
+  font-weight: 400;
+  flex: 1 1 100%;
+  max-width: 100%;
+  min-height: 61px;
+  flex-flow: column;
+  text-align: left;
+
+  position: relative;
+  color: $input-color;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  background-color: $input-bg;
+  background-image: none;
+  border: $border-width-base $border-style-base $input-border-color;
+  border-radius: $border-radius-base;
+  transition: all 0.3s;
+  padding-bottom: 2px;
+  justify-content: center;
+
+  &--disabled {
+    opacity: 0.6;
+    background-color: $vz-disabled-bg;
+  }
+
+  &--required>&__label:after {
+    content: ' *';
+    color: red;
+    font-size: 16px;
+  }
+
+  &:not(&--disabled):hover {
+    border-color: $input-hover-border-color;
+    border-right-width: $border-width-base;
+  }
+
+  &.has-error {
+    border-color: $error-color;
+    &:hover {
+      border-color: $error-color;
+      box-shadow: 0 0 3px 0 rgba($error-color, 0.5);
+    }
+  }
+
+  &__label {
+    font-family: 'DIN 2014 Narrow', serif;
+    font-size: 12px;
+    line-height: 1em;
+    color: #4b4c55;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    padding: 8px 8px 0 8px;
+    &.center {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-top: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+  }
+
+  &__elem {
+    flex: 1 1 auto;
+    max-width: 100%;
+    & .ant-switch {
+      float: right
+    }
+  }
+
+  & &__error {
+    color: $error-color;
+    flex: 0 0 auto;
+    text-align: center;
+    .anticon {
+      display: block;
+      margin: 0 8px;
+      svg {
+        display: block;
+        width: 24px;
+        height: auto;
+      }
+    }
+  }
+
+  &__short-info-link {
+    margin-left: 5px;
+    color: $grey_3;
+  }
+
+  &__short-info-modal {
+    .ant-modal-confirm-btns {
+      float: none;
+      text-align: center;
+      .ant-btn {
+        min-width: 292px;
+      }
+    }
+
+    .ant-modal-confirm-body {
+      > .anticon {
+        color: $vz-icon-color;
+        margin-top: 4px;
+      }
+      .ant-modal-confirm-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+    }
+
+    .ant-modal-content {
+      background-color: #fff;
+    }
+  }
+
+  /* Input */
+  .ant-input {
+    color: #000;
+  }
+  .ant-input,
+  .ant-input:focus,
+  .ant-input:hover,
+  .ant-input-affix-wrapper:hover .ant-input,
+  &.has-error .ant-input,
+  &.has-error .ant-input:hover,
+  &.has-error .ant-input-affix-wrapper .ant-input,
+  &.has-error .ant-input:not([disabled]):hover,
+  &.has-error .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+    border-color: transparent;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .ant-input.ant-input-disabled {
+    color: $disabled-color;
+  }
+
+
+  /* Select */
+  .ant-select {
+    width: 100%;
+    .ant-select-selection {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &--disabled {
+    .ant-select-disabled {
+      .ant-select-selection {
+        background-color: $vz-disabled-bg;
+      }
+      .ant-select-arrow {
+        color: $disabled-color;
+      }
+    }
+  }
+
+  /* Input Number */
+  .ant-input-number {
+    width: 100%;
+  }
+  .ant-input-number,
+  .ant-input-number-input,
+  .ant-input-number-focused,
+  &.has-error .ant-input-number:not([disabled]):hover,
+  .ant-input-number:hover {
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &--disabled {
+    .ant-input-number-disabled {
+      background-color: $vz-disabled-bg;
+    }
+  }
+
+  /* Date Time picker */
+  .ant-calendar-picker,
+  .ant-time-picker {
+    display: block;
+    width: 100%;
+  }
+
+  .ant-calendar-picker:focus .ant-calendar-picker-input:not(.ant-input-disabled),
+  .ant-calendar-picker:hover .ant-calendar-picker-input:not(.ant-input-disabled) {
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .ant-time-picker-input {
+    &,
+    &:focus,
+    &:hover {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &.has-error .ant-time-picker-input:not([disabled]):hover {
+    border-color: transparent;
+  }
+
+  &--disabled {
+    .ant-time-picker-input[disabled] {
+      background-color: $vz-disabled-bg;
+    }
+  }
+
+  /* Autocomplete */
+  .ant-select-auto-complete.ant-select .ant-input,
+  .ant-select-auto-complete.ant-select .ant-input:focus,
+  .ant-select-auto-complete.ant-select .ant-input:hover {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}

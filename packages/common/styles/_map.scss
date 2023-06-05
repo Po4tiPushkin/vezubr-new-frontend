@@ -1,0 +1,129 @@
+.leaflet-zoom-custom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  .order-menu {
+    &.producer {
+      width: 287px;
+      //height: 192px;
+      top: -67px;
+    }
+    &.operator {
+      width: 287px;
+      //height: 192px;
+      top: -195px;
+    }
+    &.client {
+      width: 231px;
+      height: 148px;
+    }
+    background-color: #4b4c55;
+    border-radius: 8px;
+    right: 48px;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 0 18px 18px;
+    .order-menu-item {
+      &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+      font-size: 14px;
+      color: white;
+      //opacity: .5;
+    }
+  }
+  img {
+    cursor: pointer;
+    &:first-of-type {
+      margin-top: 4px;
+    }
+    &:last-of-type {
+      margin-bottom: 4px;
+    }
+    display: flex;
+    width: 32px;
+    height: 32px;
+  }
+}
+.map-check {
+  position: relative;
+  .checkmark {
+    //top: 18px;
+    //left: 18px;
+  }
+  .checkmark-text {
+    margin-left: 34px;
+    display: block;
+    opacity: 0.5;
+    font-family: 'DIN 2014 Narrow';
+    letter-spacing: 0.1px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+  /* On mouse-over, add a grey background color */
+  .map-checkmark:hover input ~ .checkmark,
+  .checkmark-radio {
+    background: none;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .map-checkmark input:checked ~ .checkmark {
+    background: linear-gradient(-45deg, #0f94d6 0%, #1fd1d2 100%);
+  }
+  .map-checkmark input:checked ~ .checkmark-radio {
+    background: none;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after,
+  .checkmark-radio:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .map-checkmark input:checked ~ .checkmark-radio:after {
+    display: block;
+  }
+  .map-checkmark input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .map-checkmark .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 7px;
+    height: 12px;
+    border: solid #4b4c55;
+    border-width: 0 2px 2px 0px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .map-checkmark .checkmark-radio:after {
+    left: 3px;
+    top: 3px;
+    width: 12px;
+    background: linear-gradient(-45deg, #0f94d6, #1fd1d2);
+    height: 12px;
+    border-radius: 50%;
+  }
+}

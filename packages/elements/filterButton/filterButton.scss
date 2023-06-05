@@ -1,0 +1,79 @@
+.filter-button-wrapper {
+  position: relative;
+  min-width: 50px;
+}
+
+.filter-button {
+  white-space: nowrap;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  padding: 1px;
+  min-height: 38px;
+  .icon-content {
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &.rounded {
+    border-radius: 24px;
+
+    .icon-content {
+      min-height: 36px;
+      padding-right: 24px;
+      padding-left: 8px;
+    }
+  }
+
+  &.circle {
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+  }
+
+  &.default {
+    background: $gradient_blue;
+    color: $azure;
+
+    &:hover {
+      color: $white;
+
+      span {
+        background: none;
+      }
+    }
+
+    & span {
+      display: flex;
+      align-items: center;
+      background: $white;
+      width: 100%;
+      border-radius: 24px;
+    }
+  }
+
+  &.primary {
+    background: $gradient_blue;
+    color: $white;
+
+    &:hover {
+      background: $gradient_blue;
+      color: $azure;
+
+      span {
+        background: $white;
+      }
+    }
+
+    & span {
+      display: flex;
+      align-items: center;
+      background: $gradient_blue;
+      width: 100%;
+      border-radius: 24px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.vz-favorite-button {
+  cursor: pointer;
+  border-radius: $border-corner_4;
+  border: 1px solid $grey_2;
+  margin-top: 12px;
+  margin-left: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  .vz-favorite-button-container {
+    align-items: center;
+    justify-content: center;
+    .element-icon {
+      flex: 0 0 auto;
+    }
+    span {
+      color: $black;
+      font-size: 12px;
+      text-align: left;
+      text-transform: uppercase;
+      flex: 1 1 auto;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@mixin statusColor($color) {
+  &:after {
+    background: $color;
+  }
+}
+
+.cancelled-order {
+  display: flex;
+  position: relative;
+  background: #f6f6f6;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 10px 10px 0;
+  .additional-filters {
+    z-index: 2;
+    position: absolute;
+    width: 48px;
+    background: none;
+    .additional-input {
+      background: none;
+      box-shadow: none;
+      &:after {
+        border-bottom: none;
+      }
+    }
+  }
+  .canceled-separate:first-of-type {
+    &:after {
+      border-top-left-radius: 6px;
+    }
+  }
+  .canceled-separate {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 100%;
+    }
+    &.one-canceled {
+      &:after {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+    }
+    &.two-canceled {
+      &:nth-child(2) {
+        &:after {
+          border-top-left-radius: 6px;
+        }
+      }
+      &:nth-child(3) {
+        &:after {
+          border-bottom-left-radius: 6px;
+        }
+      }
+      .cancelled-element {
+        .line {
+          height: 1px;
+          width: 90%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          position: absolute;
+          background: $grey_2;
+        }
+      }
+    }
+    &.red {
+      @include statusColor($gradient_red);
+    }
+    &.orange {
+      @include statusColor($gradient_orange);
+    }
+    &.orange2 {
+      @include statusColor($gradient_orange2);
+    }
+    &.blue {
+      @include statusColor($gradient_blue);
+    }
+    &.yellow {
+      @include statusColor($gradient_yellow);
+    }
+    &.grey {
+      @include statusColor($grey_grad);
+    }
+  }
+  .cancelled-element {
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 58px;
+    position: relative;
+    margin-bottom: 0;
+    li {
+      color: #000000;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      position: relative;
+      height: 44px;
+      &:nth-child(1) {
+        width: 2%;
+        padding-top: 12px;
+      }
+      &:nth-child(2) {
+        width: 18%;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 17%;
+        padding-top: 12px;
+      }
+      &:nth-child(4) {
+        width: 16%;
+        padding-top: 12px;
+      }
+      &:nth-child(5) {
+        width: 24%;
+        padding-top: 12px;
+      }
+      &:nth-child(6) {
+        width: 24%;
+        padding-top: 12px;
+      }
+    }
+  }
+}

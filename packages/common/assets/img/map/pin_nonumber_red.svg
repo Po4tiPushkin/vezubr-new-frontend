@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="43px" viewBox="0 0 30 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>pages/1 monitor/map/pin_nonumber_red</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#BC1A46" offset="0%"></stop>
+            <stop stop-color="#F33B3B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="!5-map-icons" transform="translate(-70.000000, -48.000000)" fill="url(#linearGradient-1)" stroke="#DEE3E8" stroke-width="4">
+            <path d="M83.4697199,85.2877277 C75.8601322,76.2448219 72,68.7585049 72,62.6666667 C72,55.6570532 77.8338361,50 85,50 C92.1661639,50 98,55.6570532 98,62.6666667 C98,68.7585049 94.1398678,76.2448219 86.5302801,85.2877277 L85,87.1062467 L83.4697199,85.2877277 Z M85,65 C86.1045695,65 87,64.1045695 87,63 C87,61.8954305 86.1045695,61 85,61 C83.8954305,61 83,61.8954305 83,63 C83,64.1045695 83.8954305,65 85,65 Z" id="pages/1-monitor/map/pin_nonumber_red"></path>
+        </g>
+    </g>
+</svg>

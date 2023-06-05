@@ -1,0 +1,37 @@
+@import 'DEPRECATED/button/button';
+@import 'DEPRECATED/buttonIcon/buttonIcon';
+@import './filterButton/filterButton';
+@import 'DEPRECATED/icon/sVGIcon';
+@import './loader/index';
+@import 'DEPRECATED/whiteBox/whiteBox';
+@import 'menuDropDown/menuDropDown';
+@import 'whiteBox/styles';
+@import 'empty/styles';
+@import 'showError/styles';
+@import 'showAlert/styles';
+@import 'showConfirm/styles';
+@import 'inputCheckbox/inputCheckbox';
+@import 'notifyBadge/notifyBadge';
+@import 'modal/styles';
+@import 'DEPRECATED/address/address';
+@import 'favoriteButton/favoriteButton';
+@import 'form/styles';
+@import 'alert/alert';
+@import 'DEPRECATED/emptyBlock/emptyBlock';
+@import 'DEPRECATED/customBox/customBox';
+@import 'DEPRECATED/mapPopup/mapPopup';
+@import 'driver/driver';
+@import 'driverSelection/driverSelection';
+@import 'antd/antd';
+@import 'page/page-title/styles';
+@import 'table/styles';
+@import 'descriptions/styles';
+@import './genericPopup/genericPopup';
+
+.white-container {
+  width: 100%;
+  box-shadow: $shadow;
+  background: $white;
+  display: flex;
+  border-radius: 8px;
+}

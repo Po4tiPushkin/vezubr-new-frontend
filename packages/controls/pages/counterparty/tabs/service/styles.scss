@@ -1,0 +1,20 @@
+.counterparty-service {
+  &__select {
+    height: auto !important;
+
+    &-label {
+      font-weight: 700;
+    }
+  }
+
+  .ant-select-selection__choice {
+    float: none !important;
+    height: 36px !important;
+    line-height: 36px !important;
+  }
+  &__hint {
+    &-title {
+      width: fit-content;
+    }
+  }
+}

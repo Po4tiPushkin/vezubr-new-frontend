@@ -1,0 +1,16 @@
+.assign-trailer {
+  width: 600px !important;
+  &__list {
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+    width: 100%;
+  }
+  &__assigned {
+    border-left: 1px solid #9b9fa3;
+  }
+  .ant-modal-body {
+    background-color: rgb(222, 227, 232);
+    padding: 5px;
+  }
+}

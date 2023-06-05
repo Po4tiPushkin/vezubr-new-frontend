@@ -1,0 +1,13 @@
+.publish-contour-info {
+  &__item {
+    color: #f17737;
+
+    i {
+      margin: 0 5px;
+    }
+
+    &__text {
+      cursor: help;
+    }
+  }
+}

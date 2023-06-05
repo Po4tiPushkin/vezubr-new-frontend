@@ -1,0 +1,18 @@
+.order-loader-choose-contour-producer-form {
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 24px 0 0 -10px;
+    .ant-btn {
+      margin: 10px 0 0 10px;
+      min-width: 150px;
+    }
+  }
+
+  .vz-form-group,
+  .area {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

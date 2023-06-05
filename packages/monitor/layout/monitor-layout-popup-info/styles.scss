@@ -1,0 +1,42 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+.monitor-info-popup {
+  &__body,
+  &__header,
+  &__footer {
+    padding: 0 12px;
+  }
+
+  &__header {
+    border-bottom: 1px solid #eee;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  &__footer {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  .monitor-altering-list {
+    &__cell {
+      &__title {
+        color: $grey_3;
+        font-family: 'DIN 2014 Narrow', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      &__value {
+        color: #000;
+        font-family: 'DIN 2014', sans-serif;
+        font-size: 16px;
+      }
+    }
+  }
+}

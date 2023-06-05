@@ -1,0 +1,23 @@
+.monitor-page {
+  flex: 1 1 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+
+  &__tabs {
+    flex: 0 0 auto;
+    margin-bottom: 16px;
+    .monitor-badge {
+      font-family: 'DIN 2014 Narrow', serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+      padding-right: 20px;
+      .ant-badge-count {
+        top: 50%;
+      }
+    }
+  }
+}

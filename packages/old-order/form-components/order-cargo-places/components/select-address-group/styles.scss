@@ -1,0 +1,29 @@
+@import '../common/styles/theme';
+.order-select-address-group {
+  position: relative;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  cursor: pointer;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__text {
+    flex: 1 1 auto;
+  }
+
+  &__add {
+    padding: 0 5px;
+    flex: 0 0 auto;
+    font-size: 16px;
+    line-height: normal;
+    color: $primary-color;
+  }
+
+  &__clear {
+    padding: 0 5px;
+    flex: 0 0 auto;
+    color: $grey_3;
+    font-size: 16px;
+    line-height: normal;
+  }
+}

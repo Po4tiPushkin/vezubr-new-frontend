@@ -1,0 +1,137 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+
+.settings-page {
+  max-width: 85vw;
+  margin: 0 auto;
+  position: relative;
+  &__body {
+    max-height: 74vh;
+    min-height: 74vh;
+    overflow-y: auto;
+    margin-top: 12px;
+    padding-bottom: 90px;
+  }
+
+  &__hint-title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start ;
+    gap: 5px;
+    i {
+      color: #19b8d4;
+      font-size: 16px;
+    }
+  }
+
+  &__form-title {
+    font-family: DIN\2014, sans-serif;
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &__form-subtitle {
+    font-family: DIN\2014, sans-serif;
+    width: 100%;
+    font-size: 22px;
+    padding: 0 4px;
+    font-weight: bold;
+  }
+
+  &__form-name {
+    font-family: DIN\2014, sans-serif;
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+.settings-form {
+  #loader {
+    position: absolute;
+    background: rgba(#fff, 0.5);
+    left: 0;
+    top: 0;
+    align-items: flex-start;
+
+    .spinner {
+      position: sticky;
+      top: 50%;
+    }
+  }
+
+  .vz-table-modern .ant-table-tbody > tr > td:before {
+    display: none;
+  }
+
+  &__status-title {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 18px;
+    .anticon {
+      color: $vz-icon-color;
+    }
+  }
+
+  &__group {
+    &__title {
+      margin: 20px 0 10px;
+      font-size: 20px;
+      color: $dark_grey;
+      font-weight: $bold;
+    }
+    &__subtitle {
+      font-size: 18px;
+      color: $dark_grey;
+      font-weight: $bold;
+    }
+  }
+
+  &__actions {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    background: #fff;
+    padding: 24px 12px;
+    z-index: 100;
+    border-top: 1px solid $grey_1;
+  }
+}
+
+.order-settings {
+  margin: 0 -24px -12px -24px;
+  padding: 24px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  .ant-tabs-card {
+    border: 1px solid #d9d9d9;
+    > .ant-tabs-content {
+      margin-top: -16px;
+      > .ant-tabs-tabpane {
+        background: #fff;
+        padding: 16px 0;
+      }
+    }
+    > .ant-tabs-bar {
+      border-color: #fff;
+      .ant-tabs-tab {
+        border-color: transparent;
+        background: transparent;
+      }
+      .ant-tabs-tab-active {
+        border-color: #fff;
+        background: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .settings-page {
+    min-width: 100%;
+    margin: 0;
+  }
+}

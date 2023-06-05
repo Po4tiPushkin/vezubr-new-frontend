@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экспедиторая Расписка</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .main__text {
+      margin-left: auto;
+      max-width: 220px;
+    }
+
+    .main__title {
+      text-align: center;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+
+    .form__top {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    .form__content {
+      margin-top: 25px;
+    }
+
+    .top {
+      min-width: 200px;
+    }
+
+    .top__text {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .content__flex {
+      align-items: end;
+    }
+
+    .content__title {
+      min-width: fit-content;
+    }
+
+    .content__block {
+      margin-bottom: 20px;
+    }
+
+    .content__input {
+      margin-left: 10px;
+      width: 100%;
+    }
+
+    .input {
+      border-bottom: 1px solid #000;
+      min-height: 19px;
+    }
+
+    .flexbox {
+      display: flex;
+    }
+
+    .content__flex .content__title:not(:first-child) {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <div class="main__text">
+      <div>
+        Приложение № 2
+      </div>
+      <div>
+        к Порядку оформления
+        и формы экспедиторских
+        документов (п.5)
+      </div>
+    </div>
+    <h2 class="main__title">
+      ЭКСПЕДИТОРСКАЯ РАСПИСКА
+    </h2>
+    <div class="form">
+      <div class="form__top">
+        <div class="top">
+          <div class="top__input">
+            <p class="input">15 февраля 2020</p>
+          </div>
+          <div class="top__text">
+            1 (дата)
+          </div>
+        </div>
+        <div class="top">
+          <div class="top__input">
+            <p class="input">342341-322</p>
+          </div>
+          <div class="top__text">
+            2 (номер)
+          </div>
+        </div>
+      </div>
+      <div class="form__content">
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="content__title">
+              <p>3. Грузоотправитель </p>
+            </div>
+            <div class="content__input">
+              <p class="input"></p>
+            </div>
+          </div>
+          <div>
+            <p class="input"></p>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="content__title">
+              <p>4. Клиент </p>
+            </div>
+            <div class="content__input">
+              <p class="input"></p>
+            </div>
+          </div>
+          <div>
+            <p class="input"></p>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="content__title">
+              <p>5. Экспедитор</p>
+            </div>
+            <div class="content__input">
+              <p class="input"></p>
+            </div>
+          </div>
+          <div>
+            <p class="input"></p>
+          </div>
+        </div>
+        <div class="content__block">
+          <div class="flexbox content__flex">
+            <div class="content__title">
+              <p>6. Страна происхождения груза </p>
+            </div>
+            <div class="content__input">
+              <p class="input"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="flexbox content__flex">
+          <div class="content__title">
+            <p>7. Товарный код</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+          <div class="content__title">
+            <p>8. Маркировка</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="flexbox content__flex">
+          <div class="content__title">
+            <p>9. Количество мест, вид упаковки </p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="flexbox content__flex">
+          <div class="content__title">
+            <p> 10. Вес брутто, нетто </p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+          <div class="content__title">
+            <p>11. Объем</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+          <div class="content__title">
+            <p>12. Стоимость</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="flexbox content__flex">
+          <div class="content__title">
+            <p>13. Размер упаковки</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="flexbox content__flex">
+          <div class="content__title">
+            <p>14. Условия</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+        <div>
+          <p class="input"></p>
+          <p class="input"></p>
+          <p class="input"></p>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="flexbox content__flex">
+          <div class="content__title">
+            <p>15. Особые отметки</p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+        <div>
+          <p class="input"></p>
+          <p class="input"></p>
+          <p class="input"></p>
+          <p class="input"></p>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="flexbox content__flex">
+          <div class="content__title">
+            <p> 16. Подпись экспедитора </p>
+          </div>
+          <div class="content__input">
+            <p class="input"></p>
+          </div>
+        </div>
+        <div>
+          <p class="input"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

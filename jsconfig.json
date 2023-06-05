@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@vezubr/*": [
+        "packages/*",
+        "packages/*.ts",
+        "packages/*.tsx",
+        "packages/*.js",
+        "packages/*.jsx",
+        "packages/*/index.ts",
+        "packages/*/index.tsx",
+        "packages/*/index.js",
+        "packages/*/index.jsx"
+      ]
+    }
+  },
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,16 @@
+.address-page-add {
+  max-width: 1070px;
+  margin: 0 auto;
+  &__body {
+    margin-top: 12px;
+  }
+
+  &__header {
+    color: #4b4c55;
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+  }
+}

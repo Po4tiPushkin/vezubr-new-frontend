@@ -1,0 +1,121 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+
+$preview-size: 84px;
+$max-image-size: $preview-size - 5px;
+
+.doc-viewer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  &__preview {
+    flex: 0 0 auto;
+    width: $preview-size;
+    height: $preview-size;
+
+    color: $primary-color;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px dashed #d3d7d7;
+
+    margin-right: 16px;
+
+    &__icon {
+      font-size: $max-image-size / 2;
+      .anticon {
+        display: block;
+      }
+      .anticon-file-excel,
+      .anticon-file-pdf {
+        font-size: $preview-size;
+      }
+      .anticon-file-pdf {
+        color: red
+      }
+      .anticon-file-excel {
+        color: green;
+      }
+    }
+
+    &__image {
+      max-width: $max-image-size;
+      max-height: $max-image-size;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 1 auto;
+
+    &__label,
+    &__filename {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__label {
+      color: #9b9fa3;
+      font-size: 14px;
+      max-width: 15vw;
+    }
+
+    &__filename {
+      &__active {
+        cursor: pointer;
+        color: $light_blue
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    &__item {
+      display: block;
+      font-size: 24px;
+      color: $primary-color;
+      margin-left: 16px;
+      cursor: pointer;
+
+      padding: 5px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: transparent;
+      transition: all 0.2s ease-in-out;
+
+      &:active,
+      &:hover {
+        border-color: #dee3e8;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) inset;
+      }
+
+      .anticon {
+        display: block;
+      }
+    }
+  }
+
+  &.field-has-error {
+    .doc-viewer__preview {
+      border: 2px solid $error-color;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import '../common/styles/theme';
+
+.tariff-cost-wrap {
+  transition: all 0.3s;
+  &--editable {
+    max-width: 78px;
+    background-image: none;
+    height: $input-height-sm;
+    font-size: $font-size-base;
+    line-height: $input-height-sm;
+    color: $input-color;
+    padding: 0 $input-padding-horizontal-sm;
+    border: $border-width-base $border-style-base $input-border-color;
+    border-radius: $border-radius-base;
+    background-color: $input-bg;
+    overflow-x: hidden;
+    &:hover {
+      border-color: $input-hover-border-color;
+    }
+  }
+
+  &--placeholder {
+    border: 0;
+    padding: 0px;
+    color:#9b9fa3;
+  }
+}
+
+.has-error .tariff-cost-wrap--editable {
+  border-color: $error-color;
+}
+
+.tariff-cost-placeholder-hover {
+  display: block;
+  position: absolute;
+
+}
+
+.tariff-cost-wrapper:hover {
+  .tariff-cost-placeholder-hover {
+    display: block;
+  }
+}

@@ -1,0 +1,91 @@
+
+$error-color: #bc1a46;
+.cargo-view-main-info {
+  .cargo-form {
+    .ant-descriptions {
+      .ant-descriptions-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-basis: 100%;
+        .ant-descriptions-item-label {
+          width: 115px;
+          min-width: 115px;
+          padding: 8px 4px 8px 16px;
+        }
+        .ant-descriptions-item-content {
+          flex: 0 1 100%;
+          padding: 8px 16px 8px 4px;
+        }
+      }
+    }
+
+    .ant-descriptions-item-content:not([colspan="1"]) {
+      width: 180px;
+    }
+
+    & .cargo-form__item {
+      &--break-all {
+        min-width: 220px;
+        & + .ant-descriptions-item-label {
+          hyphens: auto;
+        }
+      }
+
+      // &--wide {
+      //   width: calc(50% + 300px);
+      // }
+    }
+  }
+}
+.cargo-form {
+    .has-error {
+        & .icon-error {
+            color: $error-color;
+        }
+    }
+    .field-editor {
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+
+        & .anticon-warning {
+            color: $error-color;
+            position: absolute;
+            bottom: 25px;
+            margin-left: 2px;
+        }
+
+        & .ant-input-number {
+            width: 100%;
+        }
+        & .ant-calendar-picker {
+            width: 100%;
+            .ant-input {
+              border: none;
+            }
+        }
+        .ant-input-disabled {
+          background-color: #fff;
+        }
+        & .ant-input-number-disabled {
+            border: none;
+            background-color: transparent;
+            & .ant-input-number-input-wrap {
+                background-color: transparent;
+                & input {
+                    border: none;
+                }
+            }
+        }
+        & .ant-input-number-input-wrap {
+            background-color: #f6f6f6;;
+        }
+        & .ant-select-disabled {
+            & .ant-select-selection {
+                border: none;
+                background-color: transparent;
+                background: none;
+            }
+        }    
+    }
+}

@@ -1,0 +1,51 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+
+.order-view-point-arrival-departure {
+  width: 260px;
+  white-space: normal;
+
+  &__address {
+    font-family: "DIN 2014 Narrow", serif;
+    font-weight: 700;
+    font-size: 18px;
+    list-style: 22px;
+    margin: 0 0 5px 0;
+  }
+
+  &__items {
+    display: table;
+  }
+
+  &__item {
+    display: table-row;
+
+    &__title,
+    &__value {
+      display: table-cell;
+      padding: 2px 0;
+      font-weight: bold;
+      vertical-align: bottom;
+    }
+
+    &__value {
+      color: $vz-icon-color;
+      white-space: nowrap;
+    }
+
+    &__title {
+      padding-right: 5px;
+      color: $grey_5;
+      font-family: 'DIN 2014 Narrow', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    &--bad &__value {
+      color: $error-color;
+    }
+
+  }
+}

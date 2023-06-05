@@ -1,0 +1,18 @@
+@import '../common/styles/theme';
+
+.bargain-action-edit {
+  display: inline-flex;
+  justify-content: left;
+  align-items: center;
+
+  margin-left: -10px;
+
+  > * {
+    margin-left: 10px;
+  }
+
+  .ant-btn-icon-only.ant-btn-sm {
+    border-radius: 4px;
+    line-height: 28px;
+  }
+}

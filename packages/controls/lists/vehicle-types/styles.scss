@@ -1,0 +1,20 @@
+.orders {
+  .filters-apply {
+    &__button {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.vehicle-types {
+  &__settings {
+    h2 {
+      font-size: 24px !important;
+    }
+  }
+
+  &__table {
+    overflow-x: scroll;
+    width: 100%;
+  }
+} 

@@ -1,0 +1,46 @@
+@import '../../../../../common/styles/theme';
+@import '../../../../../common/styles/variables';
+
+.monitor-item-tim-at-arrival {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 12px;
+  line-height: 12px;
+  color: $black;
+  margin: 0 0 0 -10px;
+
+  &__item {
+    white-space: nowrap;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+
+    .anticon {
+      margin-right: 3px;
+    }
+
+    span {
+      font-family: 'DIN 2014 Narrow', serif;
+    }
+
+    &__required {
+      .anticon {
+        color: $primary-color;
+      }
+    }
+
+    &__expected {
+      .anticon {
+        color: $success-color;
+      }
+
+      &--late {
+        .anticon {
+          color: $red;
+        }
+      }
+    }
+  }
+}

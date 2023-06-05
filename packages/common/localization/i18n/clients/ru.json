@@ -1,0 +1,28 @@
+{
+  "title": "Заказчики",
+  "producer": "Подрядчики",
+  "table": {
+    "id": "ID",
+    "type": "Тип",
+    "inn": "Инн",
+    "name": "Наименование",
+    "vatRate": "НДС",
+    "balance": "баланс",
+    "creditLimit": "Лимит кредита",
+    "paymentDelayInDays": "Отсрочка",
+    "activeOrdersCount": "Рейсов",
+    "cancelledOrdersCount": "Отменено",
+    "cancelledOrdersRatio": "% отмен",
+    "uiState": "Статус",
+    "vehiclesCount": "Кол-во ТС",
+    "agent": "Агент",
+    "pastOrdersCount": "Исполнено"
+  },
+  "filter": {
+    "id": "ID",
+    "filterName": "Наименование",
+    "all": "Все",
+    "filterMinBalance": "Баланс",
+    "filterInn": "Инн"
+  }
+}

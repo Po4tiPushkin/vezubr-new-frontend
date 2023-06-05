@@ -1,0 +1,19 @@
+.bargain-offer-rate {
+  display: inline-flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .ant-input-number {
+    width: 120px;
+  }
+
+  &__title {
+    margin-right: 0.5em;
+  }
+
+  &__field {
+    color: #000;
+    font-weight: 600;
+  }
+}

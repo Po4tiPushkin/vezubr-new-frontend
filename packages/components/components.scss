@@ -1,0 +1,79 @@
+@import './DEPRECATED/fields/passwordStrength/passwordStrength';
+@import './profile/profile';
+@import './DEPRECATED/tabs/tabs';
+@import './DEPRECATED/map/map';
+@import './DEPRECATED/monitor/field';
+@import './DEPRECATED/modal/modal';
+@import './DEPRECATED/fileAttach/fileAttach';
+@import './inputField/inputField';
+@import './orders/additionalFilters/additionalFilters';
+@import './statusNotification/statusNotification';
+@import './DEPRECATED/fields/favoriteAddresses/favoriteAddresses';
+@import './DEPRECATED/fields/createEditUsers/createEditUser';
+@import './orders/deferredOrderCard/index';
+@import './orders/ordersFilterSection/index';
+@import './history/styles';
+@import './DEPRECATED/fields/docUpload/docUpload';
+@import './assign/assignDriver/assignDriver';
+@import './setParking/setParking';
+@import './assign/assignTransportToOrder/styles';
+@import './driversFilter/driversFilter';
+@import './registrationSteps/step1';
+@import './profileCardBinding/ProfileCardBinding';
+@import './tableFiltered/styles';
+@import './tableConfig/styles';
+@import './modals/ModalAttachDownload/styles';
+@import './topNavControl/styles';
+@import './import/styles';
+@import './confirm/styles';
+@import './genericContracts/styles';
+@import './loginView/styles';
+@import './contour/contourContracts/styles';
+@import './popovers/contragentUsersInfoPopover/styles';
+@import './registration/index';
+@import './contour/contourLinks/styles';
+@import './contour/publishContourInfo/styles';
+@import './notificationsMenu/styles';
+
+@import './statusNotificationNew/styles';
+@import './assign/assignTrailerNew/styles';
+@import './assign/assignTractorNew/styles';
+@import './multiSelect/styles';
+@import './rotator/styles';
+@import './tableSchedule/styles';
+.registration-types {
+  .type-title {
+    letter-spacing: 0.1px;
+  }
+}
+
+.registration-step-3 {
+  .inn-check {
+    position: absolute;
+    top: 150px;
+    right: 260px;
+    color: $logoOrange;
+    font-weight: 600;
+  }
+
+  #loader {
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    top: 10px;
+    right: -33px;
+
+    .spinner {
+      div {
+        height: 5px;
+        width: 5px;
+      }
+    }
+  }
+}
+
+.info-value {
+  &__orange {
+    color: #f17737;
+  }
+}

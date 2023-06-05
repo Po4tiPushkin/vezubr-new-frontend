@@ -1,0 +1,13 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+
+.transport-form {
+  width: 950px;
+}
+
+.page-transports-create, .page-transports-edit, .page-transports-new-create, .page-transports-new-edit  {
+  display: flex;
+  justify-content: center;
+  padding: 12px !important;
+  background-color: #f6f6f6 !important;
+}

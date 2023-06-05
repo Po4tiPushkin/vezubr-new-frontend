@@ -1,0 +1,16 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+
+.settings-form {
+  &__icon-red {
+    i {
+      color: #d26464;
+    }
+  }
+  &-field-time-range {
+    min-width: 215px;
+  }
+  .form-field-range-time__picker__split {
+    margin: 0
+  }
+}

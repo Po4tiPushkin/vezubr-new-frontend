@@ -1,0 +1,96 @@
+@import '../common/styles/variables';
+
+.element-button-icon {
+  width: $icon-size;
+  height: $icon-size;
+  padding: 0;
+
+  &.small {
+    width: $icon-small-size;
+    height: $icon-small-size;
+    &:before {
+      width: $icon-small-size;
+      height: $icon-small-size;
+    }
+  }
+
+  align-self: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  .element-icon {
+    position: relative;
+  }
+
+  &.regular {
+    //padding: 3px 0 0 0;
+    position: relative;
+
+    .element-icon {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  /* &:before {
+     top: 50%;
+     left: 50%;
+
+     width: $icon-size;
+     height: $icon-size;
+
+     transform: translate(-50%, -50%);
+     content: '';
+
+   }*/
+
+  &.rounded:before {
+    border-radius: 50%;
+  }
+
+  &.border {
+    border: 1px solid $grey_2;
+  }
+
+  &.strict {
+    height: 32px;
+    width: 128px;
+  }
+
+  &.theme-primary {
+    background: $white;
+    border-radius: 20px;
+    color: $azure;
+    border-color: $azure;
+    &.selected {
+      background: $gradient_blue;
+      color: $white;
+    }
+    &:before {
+    }
+  }
+  &.theme-danger {
+    background: $white;
+    border-radius: 20px;
+    color: $red;
+    border-color: $red;
+    &.selected {
+      background: $gradient_red;
+      color: $white;
+    }
+    &:before {
+    }
+  }
+
+  &.theme-secondary {
+    background: $gradient_blue;
+    border-radius: 20px;
+    color: $white;
+  }
+}

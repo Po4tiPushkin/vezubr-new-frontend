@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="43px" viewBox="0 0 30 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>pages/1 monitor/map/pin_number_red</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#BC1A46" offset="0%"></stop>
+            <stop stop-color="#F33B3B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="!5-map-icons" transform="translate(-70.000000, -122.000000)" fill="url(#linearGradient-1)" stroke="#DEE3E8" stroke-width="4">
+            <path d="M83.4697199,159.287728 C75.8601322,150.244822 72,142.758505 72,136.666667 C72,129.657053 77.8338361,124 85,124 C92.1661639,124 98,129.657053 98,136.666667 C98,142.758505 94.1398678,150.244822 86.5302801,159.287728 L85,161.106247 L83.4697199,159.287728 Z" id="pages/1-monitor/map/pin_number_red"></path>
+        </g>
+    </g>
+</svg>

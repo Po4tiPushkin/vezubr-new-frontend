@@ -1,0 +1,10 @@
+@import 'bargain-action-accept/styles';
+@import 'bargain-action-edit/styles';
+@import 'bargain-action-add/styles';
+
+.bargain-action__actions {
+  margin: -10px 0 0 -10px;
+  .ant-btn {
+    margin: 10px 0 0 10px;
+  }
+}

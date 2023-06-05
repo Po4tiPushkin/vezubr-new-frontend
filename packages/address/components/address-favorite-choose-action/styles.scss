@@ -1,0 +1,11 @@
+@import '../common/styles/theme';
+
+.address-favorite-choose-action {
+  
+  &__modal {
+    top: 10px;
+    .ant-modal-content {
+      background-color: $table-header-bg;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.vz-input {
+  &.attachment {
+    display: flex;
+    padding: 0;
+    input {
+      &[type='file'] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+      }
+    }
+    .file-data {
+      padding: 8px;
+      .vz-title {
+        font-size: 12px;
+        font-family: $font-family-narrow;
+        color: $dark_grey;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .vz-file-name {
+        line-height: 18px;
+        p {
+          max-width: 142px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+    .icon-wrap {
+      padding: 9px;
+      border-right: 1px solid $grey_2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}

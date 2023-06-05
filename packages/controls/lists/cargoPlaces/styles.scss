@@ -1,0 +1,50 @@
+.dashboard .container.page-cargoPlaces {
+  background: #fff;
+  padding: 0;
+
+  & .filter-button-wrapper {
+    display: flex;
+  }
+  & .vz-table-theme--default {
+    & .ant-table-tbody>tr.red>td:before,
+    & .ant-table-tbody>tr.yellow>td:before,
+    & .ant-table-tbody>tr.orange>td:before,
+    & .ant-table-tbody>tr.blue>td:before,
+    & .ant-table-tbody>tr.grey>td:before {
+      content: '';
+      bottom: 0px !important;
+      height: 1px !important;
+    }
+  }
+  .filters-apply__button {
+    margin-right: 10px;
+  }
+}
+
+.multiselect {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 20px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+  }
+  &__total {
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+
+    padding: 0px 15px;
+  }
+  .vz-form-actions {
+    margin: 0px;
+  }
+}

@@ -1,0 +1,50 @@
+$preview-size: 84px;
+$max-image-size: $preview-size - 5px;
+
+.doc-multiple-uploader {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  &__upload {
+    flex: 0 0 auto;
+    margin-right: 16px;
+    width: auto;
+    .ant-upload.ant-upload-select-picture-card {
+      width: $preview-size;
+      height: $preview-size;
+      margin: 0;
+    }
+
+    &__icon {
+      color: $primary-color;
+      font-size: 39.5px;
+      .anticon {
+        display: block;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 1 auto;
+
+    &__label,
+    &__filename {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__label {
+      color: #9b9fa3;
+      font-size: 14px;
+    }
+
+    &__filename {
+      word-break: break-all;
+    }
+  }
+}

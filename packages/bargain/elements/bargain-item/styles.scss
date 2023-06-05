@@ -1,0 +1,67 @@
+@import '../common/styles/variables';
+
+.bargain-item {
+  $avatar-indent: 5px;
+  $avatar-size: 40px;
+  $info-indent: $avatar-indent + $avatar-size;
+
+  a {
+    text-decoration: none;
+    color: $vz-icon-color;
+    border-bottom: 1px solid rgba($vz-icon-color, 0.2);
+    transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+      color: $azure;
+      border-bottom-color: rgba($azure, 0.6);
+    }
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &__body {
+    text-align: left;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-items: flex-start;
+    align-items: flex-end;
+  }
+
+  &__avatar {
+    flex: 0 0 auto;
+  }
+
+  &--right &__avatar {
+    margin-left: $avatar-indent;
+  }
+  &--left &__avatar {
+    margin-right: $avatar-indent;
+  }
+
+  &__message {
+    padding: 16px;
+    border-radius: 8px;
+    background: $grey_1;
+    &__items {
+      margin-top: -8px;
+      > * {
+        display: block;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: 5px;
+  }
+
+  &--right &__info {
+    margin-right: $info-indent;
+  }
+  &--left &__info {
+    margin-left: $info-indent;
+  }
+}

@@ -1,0 +1,81 @@
+//App Colors
+
+$azure: #1fd1d2;
+$black: #000;
+$black_transparent: rgba(0, 0, 0, 0.3);
+$black_transparent2: rgba(0, 0, 0, 0.1);
+$blue: #0f94d6;
+$grey_0: #f6f6f6;
+$grey_1: #eef0f2;
+$grey_2: #dee3e8;
+$grey_3: #9b9fa3;
+$grey_4: #e8e8ee;
+$grey_5: #3d4042;
+$orange: #faa526;
+$link-color: #0f94d6;
+$logoOrange: #f57b23;
+$red: #bc1a46;
+$yellow: #ecb933;
+$yellow_light: #f0e45e;
+$white: #fff;
+$dark_grey: #4b4c55;
+$light_blue: #1fd1d2;
+$gradient_blue: linear-gradient(45deg, #0f94d6 0%, #1fd1d2 100%);
+$gradient_orange: linear-gradient(-45deg, #f33b3b 0%, #ecb933 100%);
+$gradient_orange2: linear-gradient(45deg, #f33b3b 0%, #ecb933 100%);
+$gradient_red: linear-gradient(-45deg, #bc1a46 0%, #f33b3b 100%);
+$gradient_yellow: linear-gradient(-45deg, #ecb933 0%, #f0e45e 100%);
+$shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+$white_grad: linear-gradient(
+  46deg,
+  rgba(255, 255, 255, 0.4) 0%,
+  rgba(255, 255, 255, 0.95) 35%,
+  rgba(255, 255, 255, 1) 38%
+);
+$grey_grad: linear-gradient(
+  46deg,
+  rgba(246, 246, 246, 0.4) 0%,
+  rgba(246, 246, 246, 1) 37%,
+  rgba(246, 246, 246, 1) 100%
+);
+$grey_dark_grad: linear-gradient(-45deg, #9b9fa3 0%, #dee3e8 100%);
+$shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 3px 0 rgba(0, 0, 0, 0.05);
+$shadow_2: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+$shadow_3: inset 0 -1px 0 0 rgba(11, 28, 53, 0.08);
+$shadow_4: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+
+//Fonts
+
+$font-family: 'DIN 2014', -apple-system, sans-serif;
+$font-family-narrow: 'DIN 2014 Narrow', -apple-system, serif;
+$font-size: 16px;
+$extraBold: 800;
+$bold: bold;
+
+//border
+
+$border-radius: 5px;
+$border-radius-buttons: 22px;
+$border-radius-tabs: 8px;
+$border-corner_8: 8px;
+$border-corner_4: 4px;
+$border-color: #979797;
+
+//buttons
+$wide-button-width: 292px;
+$button-height: 36px;
+
+//icons
+$icon-actual-size: 44;
+$icon-half-size: (44/2);
+$icon-size: #{$icon-actual-size}px;
+$icon-small-size: 28px;
+
+$default_margin: 16px;
+
+$component-height-small: 25px;
+$component-spacing-big: 30px;
+$component-spacing: 15px;
+$component-spacing-small: 10px;
+
+$images-path: 'assets/img';

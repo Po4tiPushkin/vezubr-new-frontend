@@ -1,0 +1,30 @@
+@import '../common/styles/theme';
+
+.vz-form-field-switch {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    margin-right: 10px;
+    .vz-form-field-switch--checked & {
+      color: $primary-color;
+    }
+  }
+
+  &__size-default {
+    padding: $input-padding-horizontal-base $input-padding-vertical-base;
+    min-height: $input-height-base;
+  }
+
+  &__size-large {
+    padding: $input-padding-horizontal-lg $input-padding-vertical-lg;
+    min-height: $input-height-lg;
+  }
+
+  &__size-small {
+    padding: $input-padding-horizontal-sm $input-padding-vertical-sm;
+    min-height: $input-height-sm;
+  }
+}

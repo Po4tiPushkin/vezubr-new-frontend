@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>pages/1 monitor/map/zoom_out_inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="8" y="15" width="16" height="2" rx="1"></rect>
+    </defs>
+    <g id="Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="!2-icons" transform="translate(-1390.000000, -50.000000)">
+            <g id="Group-168" transform="translate(1390.000000, 50.000000)">
+                <g id="pages/1-monitor/map/zoom_out">
+                    <rect id="Rectangle-3" x="0" y="0" width="32" height="32"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Combined-Shape"></g>
+                    <g id="&amp;-color/gray_2" mask="url(#mask-2)" fill="#DEE3E8" fill-rule="evenodd">
+                        <rect x="0" y="0" width="32" height="32"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+.leaflet-bar.leaflet-location-custom {
+  background-color: #4b4c55;
+  a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s;
+    font-size: 32px;
+    line-height: 32px;
+    background-color: #4b4c55;
+    width: 40px;
+    height: 38px;
+    color: #dee3e8;
+    border: none;
+    &:hover,
+    &:active {
+      color: #1fd1d2;
+      background-color: #5d5e67;
+      border: none;
+    }
+
+    &.leaflet-disabled {
+      &,
+      &:hover,
+      &:active {
+        color: #6c6d77;
+        background-color: #4b4c55;
+      }
+    }
+
+    svg {
+      display: block;
+      width: auto;
+      height: 20px;
+    }
+  }
+}

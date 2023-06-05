@@ -1,0 +1,48 @@
+.responsible-employees {
+  &__select {
+      height: auto !important;
+      &-label {
+          font-weight: 700;
+          text-align: left;
+      }
+  }
+
+  .ant-select-selection__choice {
+    float: none !important;
+    height: 36px !important;
+    line-height: 36px !important;
+  }
+}
+
+.additional-order-info {
+  .responsible-employees {
+    width: 100%;
+  }
+}
+
+.connected-order {
+  .responsible-employees {
+    .vz-form-col {
+      width: 100%;
+    }
+  }
+}
+
+.order-rate-publish-form, .order-intercity-bargain-form, .order-tariff-publish-form {
+  .responsible-employees {
+    .vz-form-col {
+      width: 100%;
+    }
+    .vz-form-group {
+      padding: 0;
+    }
+  }
+}
+
+.counterparty-service {
+ .ant-select-selection__choice {
+    float: left !important;
+    height: 36px !important;
+    line-height: 36px !important;
+  }
+}

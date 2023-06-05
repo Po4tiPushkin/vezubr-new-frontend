@@ -1,0 +1,15 @@
+@import '../../../common/styles/theme';
+@import '../../../common/styles/variables';
+
+
+.page-orders {
+    #vehicleTypes {
+        .ant-select-selection__rendered {
+        }
+    }
+}
+
+.page-transports {
+    padding-top: 16px;
+  
+}

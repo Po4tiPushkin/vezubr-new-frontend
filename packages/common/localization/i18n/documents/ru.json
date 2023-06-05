@@ -1,0 +1,48 @@
+{
+  "documents": "Документы рейсов",
+  "filters": {
+    "orderId": "Номер Рейса",
+    "driverFIO": "ФИО водителя",
+    "vehiclePlateNumber": "Гос. номер ТС",
+    "sub": "Субподрядчик"
+  },
+  "table": {
+    "id": "№ Рейса",
+    "orderType": "Тип",
+    "orderUiState": "Статус",
+    "clientName": "Заказчик",
+    "toStartAtDate": "Подача",
+    "vehicleTypeId": "Тип ТС ",
+    "requiredLoadersCount": "Специалисты",
+    "finishedAtDate": "Завершен",
+    "calculationAcceptedAtDate": "Подтвержден",
+    "producerName": "Исполнитель",
+    "vehiclePlateNumber": "Гос номер ТС",
+    "brigadierSurname": "Имя бригадира",
+    "firstAddress": "Адрес подачи",
+    "lastAddress": "Адрес доставки",
+    "orderProducerCustomIdentifier": "Ид. рейса",
+    "renterName": "Арендатор"
+  },
+  "document": {
+    "status": "Статус",
+    "dateAndTime": "Дата и время подачи",
+    "address": "Адрес подачи",
+    "address2": "Адрес выгрузки",
+    "vehicleType": "Тип ТС",
+    "plateNumber": "Госномер ТС",
+    "driverName": "Имя водителя",
+    "driverPhone": "Телефон водителя",
+    "brigadirName": "Имя бригадира",
+    "loadersNames": "Имена специалистов",
+    "loadersCount": "Количество специалистов"
+  },
+  "commentsOnDocument": "Комментарий к документу",
+  "addComments": "Добавить комментарии",
+  "clientDocuments": "Документы заказчика",
+  "ordersDocuments": "Проверка документов",
+  "transportDocuments": "Перевозочные документы",
+  "formRegistryDocuments":"Сформировать Реестр",
+  "clientRegistries":"Реестры для Заказчика",
+  "producerRegistries":"Реестры от Подрядчика"
+}

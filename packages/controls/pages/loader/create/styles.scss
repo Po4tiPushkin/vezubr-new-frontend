@@ -1,0 +1,13 @@
+@import "../common/styles/theme";
+@import "../common/styles/variables";
+
+.loader-form {
+  width: 950px;
+}
+
+.page-loaders-create, .page-loaders-edit {
+  display: flex;
+  justify-content: center;
+  padding: 12px !important;
+  background-color: #f6f6f6 !important;
+}

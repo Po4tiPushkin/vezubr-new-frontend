@@ -1,0 +1,46 @@
+.code-expired {
+  color: $red;
+}
+.vz-address {
+  background: $grey_0;
+  border-radius: $border-corner_4;
+  border: 1px solid $grey_1;
+  text-align: left;
+  position: relative;
+  min-height: 56px;
+  width: 100%;
+  margin-top: 12px;
+  display: flex;
+  &.error {
+    border: 1px solid $red;
+  }
+  .icon-wrap {
+    display: flex;
+    padding: 9px;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid $grey_2;
+  }
+  .address-data {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    p {
+      margin: 0;
+    }
+    .vz-address-title {
+      font-size: 12px;
+      color: $dark_grey;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .vz-address-details {
+      font-size: 16px;
+      color: $black;
+      &.placeholder {
+        color: $grey_3;
+      }
+    }
+  }
+}

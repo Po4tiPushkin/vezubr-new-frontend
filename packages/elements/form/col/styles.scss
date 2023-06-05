@@ -1,0 +1,9 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+
+.vz-form-col {
+  > .vz-form-item {
+    height: 100%;
+    justify-content: flex-start;
+  }
+}

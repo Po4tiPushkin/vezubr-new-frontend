@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>@Icons/x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M23,21 L31,21 C31.5522847,21 32,21.4477153 32,22 C32,22.5522847 31.5522847,23 31,23 L23,23 L23,31 C23,31.5522847 22.5522847,32 22,32 C21.4477153,32 21,31.5522847 21,31 L21,23 L13,23 C12.4477153,23 12,22.5522847 12,22 C12,21.4477153 12.4477153,21 13,21 L21,21 L21,13 C21,12.4477153 21.4477153,12 22,12 C22.5522847,12 23,12.4477153 23,13 L23,21 Z" id="path-1"></path>
+    </defs>
+    <g id="@Icons/x" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Combined-Shape" transform="translate(22.000000, 22.000000) rotate(45.000000) translate(-22.000000, -22.000000) "></g>
+        <g id="&amp;-color/blue" mask="url(#mask-2)" fill="#0F94D6">
+            <g transform="translate(12.000000, 12.000000)">
+                <rect x="0" y="0" width="20" height="20"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

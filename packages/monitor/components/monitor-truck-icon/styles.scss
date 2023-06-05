@@ -1,0 +1,66 @@
+@import '../common/styles/variables';
+
+.monitor-truck-icon {
+  border-radius: 50%;
+  border: 2px solid $grey_2;
+  padding: 4px;
+
+  &__wrap {
+    border-radius: 50%;
+    border: 1px solid $grey_2;
+    overflow: hidden;
+  }
+
+  &-insurer {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -9px;
+    left: -9px;
+    background: linear-gradient(-45deg, #bc1a46, #f33b3b);
+    border-radius: 50%;
+    border:2px solid #fff;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.3);
+    text-align: center;
+     svg {
+      fill: white;
+      width: 12px;
+      height: 12px;
+      margin-top: 4px;
+    }
+    &-selected {
+      background: #19b8d4;
+    }
+  }
+
+  &-requirements {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 25px;
+    right: -9px;
+    background: #f17737;
+    border-radius: 50%;
+    border:2px solid #fff;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.3);
+    text-align: center;
+     svg {
+      fill: white;
+      width: 12px;
+      height: 12px;
+      margin-top: 4px;
+    }
+    &-selected {
+      background: #19b8d4;
+    }
+  }
+
+  img {
+    max-width: 30px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}

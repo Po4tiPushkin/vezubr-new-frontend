@@ -1,0 +1,119 @@
+@import '../common/styles/theme';
+
+.tariff-table {
+  .ant-table-fixed-left,
+  .ant-table-fixed-right {
+    z-index: 3;
+  }
+
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+
+  &--has-scale-error {
+    border-color: $error-color;
+  }
+
+  .ant-table {
+    font-size: $vz-table-base-font-size;
+    line-height: $vz-table-base-line-height;
+
+    &-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
+      background: #eef0f2;
+    }
+
+    &-fixed-left,
+    &-fixed-right {
+      table {
+        background: #eef0f2;
+      }
+    }
+  }
+
+  .ant-table-thead {
+    font-size: 12px;
+  }
+
+  .ant-table-thead > tr > th {
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:not(.ant-table-column-sort)::before {
+      opacity: 1;
+    }
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    @include in('tr:nth-child(2)') {
+      &:first-child {
+        &::before {
+          display: block;
+        }
+      }
+    }
+
+    .ant-table-column-sorter .ant-table-column-sorter-inner-full {
+      margin-top: -0.6em;
+    }
+
+    .anticon {
+      color: #9b9fa3;
+    }
+  }
+
+  .ant-table-tbody > tr > td {
+    height: $vz-table-row-height;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+
+    @include in('tr.vehicle-has-error') {
+      border-bottom-color: $error-color;
+    }
+
+    &::before {
+      display: none;
+    }
+    a {
+      color: $vz-icon-color;
+      text-decoration: underline;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $azure;
+      }
+    }
+  }
+
+  .ant-table-tbody > tr {
+    &:hover,
+    &.ant-table-row-hover {
+      > td::before {
+        display: none;
+      }
+    }
+  }
+
+  .col-vehicle {
+    .icon-error {
+      position: absolute;
+      right: 6px;
+      color: $error-color;
+    }
+  }
+}

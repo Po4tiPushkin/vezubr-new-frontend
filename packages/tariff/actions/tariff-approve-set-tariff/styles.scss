@@ -1,0 +1,19 @@
+.actions-set-approve-tariff {
+  position: relative;
+  margin: -10px 0 0 -10px;
+  > .ant-btn {
+    margin: 10px 0 0 10px;
+  }
+
+  .ant-dropdown-menu {
+    .ant-btn-link {
+      padding-left: 4px;
+      padding-right: 4px;
+      color: #19b8d4;
+      &:hover,
+      &:focus {
+        color: #1fd1d2;
+      }
+    }
+  }
+}

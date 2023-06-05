@@ -1,0 +1,60 @@
+@import '../common/styles/theme';
+
+.tariff-body-types-view {
+  font-size: 16px;
+  margin: -10px 0 0 -10px;
+  .anticon {
+    margin: 10px 0 0 10px;
+    cursor: help;
+    color: $vz-icon-color;
+  }
+}
+
+.tariff-body-types-editor {
+  .checkbox-indeterminate-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: -8px 0 0 -8px;
+    .btn-body-types-more {
+      height: 20px;
+      line-height: 16px;
+      font-size: 16px;
+      padding: 0;
+      border-radius: 4px;
+      top: -0.09em;
+    }
+
+    .ant-checkbox + span {
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+
+    .ant-checkbox-wrapper {
+      color: $vz-icon-color;
+    }
+
+    .ant-checkbox-wrapper,
+    .btn-body-types-more {
+      display: block;
+      margin: 8px 0 0 8px;
+    }
+  }
+
+  &__popover {
+    .ant-checkbox-group {
+      display: block;
+      margin: -8px 0 0 -8px;
+    }
+
+    .ant-checkbox-group-item {
+      display: block;
+      margin: 8px 0 0 8px;
+    }
+  }
+
+  /*.ant-checkbox-wrapper {
+    color: $vz-icon-color;
+  }*/
+}

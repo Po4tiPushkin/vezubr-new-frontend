@@ -1,0 +1,31 @@
+.profile {
+  border-left: 1px solid $grey_2;
+  h5,
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+  .title {
+    font-size: 12px;
+    color: $grey_3;
+    letter-spacing: 0.4px;
+    text-align: right;
+    line-height: 16px;
+  }
+  .balance {
+    font-size: 20px;
+    color: $dark_grey;
+    letter-spacing: 0;
+    text-align: right;
+    line-height: 20px;
+  }
+  .image {
+    width: 44px;
+    height: 44px;
+    border: $border-color;
+    border-radius: $border-radius;
+    img {
+      max-width: 100%;
+    }
+  }
+}

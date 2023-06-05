@@ -1,0 +1,19 @@
+.vz-form-actions {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 24px 0;
+
+  .ant-btn {
+    min-width: 150px;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+  &--center {
+    justify-content: center;
+  }
+  &--left {
+    justify-content: flex-start;
+  }
+}

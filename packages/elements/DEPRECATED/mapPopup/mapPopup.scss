@@ -1,0 +1,70 @@
+.vz-map {
+  .leaflet-popup {
+    min-width: 288px;
+
+    .leaflet-popup-close-button {
+      display: none !important;
+    }
+  }
+}
+
+//}
+.vz-map-popup {
+  .popup-head {
+    box-shadow: $shadow_2;
+    padding: 0;
+    color: $black;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .popup-content {
+    padding: 0 12px;
+
+    .popup-order-number {
+      color: #000000;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 11px;
+      margin-top: 5px;
+    }
+
+    .popup-sub-title {
+      color: $grey_3;
+      font-family: 'DIN 2014 Narrow', serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .popup-sub-reg {
+      color: $black;
+      font-family: 'DIN 2014', serif;
+      font-size: 16px;
+    }
+
+    .popup-status-info {
+      word-break: break-word;
+      color: #1fd1d2;
+      font-family: 'DIN 2014';
+      font-weight: 500;
+      line-height: 17px;
+      font-size: 17px;
+    }
+
+    .popup-status-info-time {
+      color: #9b9fa3;
+      font-family: 'DIN 2014';
+      font-size: 17px;
+      line-height: 17px;
+    }
+    .popup-status-last-update {
+      color: #9b9fa3;
+      font-size: 13px;
+      font-family: 'DIN 2014 Narrow';
+      text-transform: uppercase;
+      font-family: $font-family-narrow;
+    }
+  }
+}

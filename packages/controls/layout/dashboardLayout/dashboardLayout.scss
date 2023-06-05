@@ -1,0 +1,124 @@
+@import '../common/styles/variables';
+
+.dashboard {
+  min-height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &-content {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 100%;
+    position: relative;
+    justify-content: stretch;
+  }
+
+  .container {
+    flex: 1;
+    padding: 16px 12px 12px;
+    background: $grey_0;
+    margin-left: 60px;
+    box-shadow: inset 0 3px 10px 2px rgba(11, 28, 53, 0.08);
+    //height: calc(100vh - 104px);
+
+    //max-width: calc(100% - 224px);
+    &:first-child {
+      max-width: 100%;
+    }
+
+    &.auctions,
+    &.producers,
+    &.regular-orders,
+    &.clients,
+    &.agents,
+    &.contours,
+    &.counterparties,
+    &.documents-flow,
+    &.crypto-pro,
+    &.requests,
+    &.orders {
+      background: $white;
+      padding: 0;
+
+      &.map,
+      &.general,
+      &.page-orders-auctions,
+      &.preparation,
+      &.perpetrators,
+      &.cargo-place,
+      &.documents,
+      &.documents-client,
+      &.documents-producer,
+      &.documents-order,
+      &.calculations,
+      &.photos,
+      &.history,
+      &.page-orders-calculation,
+      &.page-orders-executors {
+        background: $grey_1;
+      }
+    }
+
+    &.transactions {
+      margin-top: 5px;
+      padding: 16px 0;
+      background: $white;
+    }
+
+    &.profile {
+      // align-items: center;
+      justify-content: center;
+    }
+
+    &.new-order,
+    &.edit-order,
+    &.regular-order,
+    &.republish-order,
+    &.finance {
+      display: flex;
+      justify-content: center;
+    }
+
+    &.invoices,
+    &.deferred,
+    &.registries,
+    &.documents,
+    &.tractors,
+    &.transports,
+    &.drivers,
+    &.trailers,
+    &.loaders {
+      background: $white;
+      padding: 0;
+    }
+
+    &.monitor {
+      background: $grey_1;
+    }
+  }
+
+  .table-section-container {
+    /* autoprefixer: off */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.alert-generic-modal {
+  &.modal-open {
+    .modal {
+      &.in {
+        z-index: 10000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .dashboard {
+    .container {
+      margin-left: 0;
+    }
+  }
+}

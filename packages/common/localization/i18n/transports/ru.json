@@ -1,0 +1,167 @@
+{
+  "title": "Транспортные средства",
+  "settings": "Параметры ТС",
+  "table": {
+    "bodyType": "Тип кузова",
+    "type": "Тип",
+    "classification": "Классиф ТС",
+    "markAndModel": "Марка",
+    "plateNumber": "Гос номер",
+    "driversCount": "Водителей",
+    "executed": "Исполнено",
+    "crashCount": "Поломок",
+    "onLine": "На линии",
+    "jobStarted": "Старт эксплуатации",
+    "jobEnded": "Конец эксплуатации",
+    "liftingCapacityInKg": "Грузоподъемность кузова, т.",
+    "palletsCapacity": "Паллет, шт.",
+    "bodyWidthInCm": "Объем, м3",
+    "volume": "Объем, м3.",
+    "uiStatus": "Статус ТС",
+    "producer": "Подрядчик",
+    "categoryType": "Тип автоперевозки",
+    "craneCapacity": "Грузоподъемность стрелы, т.",
+    "craneLength": "Длина стрелы, м.",
+    "platformLength": "Длина площадки, м.",
+    "platformHeight": "Высота площадки, м.",
+    "arCount": "Вместимость машин, шт.",
+    "isCarTransporterCovered": "Крытый кузов",
+    "compartmentCount": "Количество отсеков, шт.",
+    "passengersCapacity": "Количество пассажиров, чел."
+  },
+  "vehicleTypesCounterpartyHint": "В данной настройке отображаются Типы ТС не добавленные в вашем контуре, но добавленные в контуре контрагента.\nВы можете добавить интересующие вас типы ТС и сможете использовать их при взаимодействии с Контрагентом в системе Vezubr",
+  "vehicleTypesSettingsHint": "Если вы не обнаружили подходящих Типов ТС обратитесь в тех поддержку",
+  "filters": {
+    "today": "Сегодня",
+    "forMonth": "За Месяц",
+    "forWeek": "За неделю",
+    "forYear": "За год",
+    "yesterday": "Вчера",
+    "toStartAtDateFrom": "Дата и время подачи - от",
+    "toStartAtDateTill": "Дата и время подачи - до",
+    "finishDateFrom": {
+      "title": "Дата и время завершения - от",
+      "label": "Дата/время завершения"
+    },
+    "finishDateTill": "Дата и время завершения - до",
+    "orderId": {
+      "title": "Поиск по Номеру Рейса",
+      "placeholder": "№ Рейса"
+    },
+    "orderStatus": {
+      "title": "Статус",
+      "label": "Статус",
+      "placeholder": "Все статусы"
+    },
+    "orderStage": {
+      "title": "Стадии рейса",
+      "label": "Стадии рейса",
+      "placeholder": "Все стадии"
+    },
+    "orderType": {
+      "title": "Тип Рейса",
+      "placeholder": "Все типы",
+      "label": "Тип Рейса"
+    },
+    "deliverAddress": {
+      "title": "Адрес доставки",
+      "placeholder": "Выберите адрес",
+      "label": "Адрес Доставки"
+    },
+    "loadingAddress": {
+      "title": "Адрес погрузки",
+      "placeholder": "Выберите адрес",
+      "label": "Адрес подачи"
+    },
+    "transportType": {
+      "label": "Тип ТС",
+      "title": "Тип ТС",
+      "placeholder": "Все Типы ТС"
+    },
+    "transportBodyType": {
+      "label": "Тип кузова ТС",
+      "title": "Тип кузова ТС",
+      "placeholder": "Все Кузова"
+    },
+    "plateNumber": {
+      "label": "Госномер ТС",
+      "title": "Госномер ТС",
+      "placeholder": "Госномер ТС"
+    },
+    "producerTitle": {
+      "label": "Подрядчик",
+      "title": "Подрядчик",
+      "placeholder": "Подрядчик"
+    },
+    "executorSurname": {
+      "label": "Исполнитель",
+      "title": "Исполнитель",
+      "placeholder": "Исполнитель"
+    },
+    "orderIdentifier": {
+      "label": "Идентификатор",
+      "title": "Идентификатор рейса",
+      "placeholder": "Идентификатор рейса"
+    },
+    "filterSubProducerId": {
+      "label": "Субподрядчик",
+      "title": "Субподрядчик",
+      "placeholder": "Субподрядчик"
+    },
+    "actNo": {
+      "label": "№ Акта",
+      "title": "№ Акта",
+      "placeholder": "№ Акта"
+    },
+    "filterClientName": {
+      "label": "Заказчик",
+      "title": "Заказчик",
+      "placeholder": "Заказчик"
+    },
+    "filterProducerName": {
+      "label": "Подрядчик",
+      "title": "Подрядчик",
+      "placeholder": "Подрядчик"
+    },
+    "totalSumInCents": {
+      "label": "Оплачено",
+      "title": "Оплачено",
+      "placeholder": "Оплачено"
+    },
+    "finishedAtDate": {
+      "label": "Дата завершения",
+      "title": "Дата завершения от-до",
+      "placeholder": "Дата завершения"
+    },
+    "finishedAtDateSince": {
+      "label": "до",
+      "title": "до",
+      "placeholder": "до"
+    },
+    "filterFirstAddress": {
+      "label": "Адрес подачи",
+      "title": "Адрес подачи",
+      "placeholder": "Адрес подачи"
+    },
+    "filterLastAddress": {
+      "label": "Адрес доставки",
+      "title": "Адрес доставки",
+      "placeholder": "Адрес доставки"
+    },
+    "filterOrderProducerCustomIdentifier": {
+      "label": "Идентификатор рейса",
+      "title": "Идентификатор рейса",
+      "placeholder": "Идентификатор рейса"
+    },
+    "filterUiStatus": {
+      "label": "Фильтр по статусам ТС",
+      "title": "Фильтр по статусам ТС",
+      "placeholder": "Фильтр по статусам ТС"
+    }
+  },
+  "fio": "ФИО",
+  "uiStatus": "Статус",
+  "hint": {
+    "privateOwners": "Выберите Компанию, владельца ТС (за которой будет зарегистрировано данное транспортное средство.)"
+  }
+}

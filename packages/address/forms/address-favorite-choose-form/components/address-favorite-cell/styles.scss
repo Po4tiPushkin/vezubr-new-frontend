@@ -1,0 +1,44 @@
+.address-favorite-cell {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__content {
+    flex: 1 1 100%;
+    .title {
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 4px;
+    }
+
+    .address-string {
+      font-size: 14px;
+      color: #9b9fa3;
+      margin: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex: 0 0 auto;
+    margin: -15px 0 0 0;
+
+    font-size: 26px;
+
+    .action {
+      margin: 15px 0 0 15px;
+    }
+  }
+}
+
+.address-favorite-action-popover {
+  .ant-popover-inner-content {
+    background-color: #fff;
+  }
+}

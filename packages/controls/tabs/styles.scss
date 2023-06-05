@@ -1,0 +1,87 @@
+@import '../common/styles/theme';
+@import '../common/styles/variables';
+
+.vz-tabs-modern {
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: $border-radius-tabs;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  background: $white;
+  box-shadow: $shadow;
+
+  .vz-tabs-modern__item {
+    flex: 1 1 auto;
+
+    font-family: 'DIN 2014 Narrow', serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: $dark_grey;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-left: 1px solid $grey_2;
+
+    transition: all 0.2s ease-in-out;
+
+    &:first-child {
+      border: none;
+      border-top-left-radius: $border-radius-base;
+      border-bottom-left-radius: $border-radius-base;
+    }
+
+    &:last-child {
+      border-top-right-radius: $border-radius-tabs;
+      border-bottom-right-radius: $border-radius-tabs;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark_grey;
+      background-color: rgba($primary-color, 0.1);
+    }
+
+    &.active {
+      color: $white;
+      background-color: $dark_grey;
+      cursor: default;
+    }
+
+    &[disabled]:not(.active) {
+      opacity: 0.3;
+    }
+
+    &.matched {
+      @include in('.vz-tabs-modern.vz-tabs-modern--has-no-active.vz-tabs-modern--has-matched-count-1') {
+        color: $white;
+        background-color: $dark_grey;
+      }
+    }
+  }
+}
+
+.vz-tabs-modern-mobile {
+  background: none;
+  box-shadow: none;
+  justify-content: flex-end;
+
+  .filter-button {
+    background: none;
+    border-radius: 50%;
+    border: 0.5px solid #c6dfdf;
+  }
+  .menu-dropdown {
+    min-width: max-content;
+
+    .vz-tabs-modern__item {
+      border: none;
+      padding: 10px;
+    }
+  }
+}

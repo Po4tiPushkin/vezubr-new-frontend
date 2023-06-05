@@ -1,0 +1,130 @@
+@import '../common/styles/theme';
+
+.leaflet-checkbox-group-control {
+  background-color: #4b4c55;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+
+  &__button {
+    background-color: #4b4c55;
+    border-color: #4b4c55;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    color: #dee3e8;
+
+    font-family: sans-serif;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #1fd1d2;
+      background-color: #5d5e67;
+      border-color: #5d5e67;
+    }
+  }
+
+  &__popover {
+    .ant-popover-inner {
+      background-color: #4b4c55;
+      border-color: #5d5e67;
+      color: #dee3e8;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+    }
+
+    .ant-popover-inner-content {
+      padding: 18px;
+    }
+
+    .ant-popover-title {
+      color: #dee3e8;
+      border-bottom: 1px solid rgba(#dee3e8, 0.3);
+      padding: 8px 18px 8px;
+    }
+
+    &.ant-popover-placement-top > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-topLeft > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow {
+      border-right-color: #4b4c55;
+      border-bottom-color: #4b4c55;
+    }
+
+    &.ant-popover-placement-right > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-rightTop > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-rightBottom > .ant-popover-content > .ant-popover-arrow {
+      border-bottom-color: #4b4c55;
+      border-left-color: #4b4c55;
+    }
+
+    &.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+      border-top-color: #4b4c55;
+      border-left-color: #4b4c55;
+    }
+
+    &.ant-popover-placement-left > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-leftTop > .ant-popover-content > .ant-popover-arrow,
+    &.ant-popover-placement-leftBottom > .ant-popover-content > .ant-popover-arrow {
+      border-top-color: #4b4c55;
+      border-right-color: #4b4c55;
+    }
+  }
+
+  &__checkbox-group {
+    display: block;
+    margin: -18px 0 0 0;
+
+    .ant-checkbox-wrapper {
+      color: rgba(222, 227, 232, 0.55);
+      &-checked {
+        color: #dee3e8;
+      }
+    }
+
+    .ant-checkbox-group-item {
+      display: block;
+      margin: 18px 0 0 0;
+    }
+
+    .ant-checkbox + span {
+      padding-right: 8px;
+      padding-left: 8px;
+
+      font-family: 'DIN 2014 Narrow', sans-serif;
+      letter-spacing: 0.1px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .ant-checkbox-inner {
+      $control-checkbox-size: 24px;
+
+      width: $control-checkbox-size;
+      height: $control-checkbox-size;
+
+      background-color: #5d5e67;
+
+      border-radius: 4px;
+
+      &::after {
+        border-radius: 4px;
+
+        $control-check-width: ($control-checkbox-size / 14px) * 5px;
+        $control-check-height: ($control-checkbox-size / 14px) * 8px;
+
+        width: $control-check-width;
+        height: $control-check-height;
+      }
+    }
+
+    .ant-checkbox-checked {
+      &::after {
+        border-radius: 5px;
+      }
+      .ant-checkbox-inner {
+        background-color: $checkbox-color;
+      }
+    }
+  }
+}

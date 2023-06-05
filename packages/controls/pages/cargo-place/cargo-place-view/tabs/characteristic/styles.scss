@@ -1,0 +1,38 @@
+
+.cargo-view {
+  &-tab-characteristic {
+
+    display: block;
+    overflow: hidden;
+    .vz-empty {
+      margin-top: 100px;
+    }
+    & .cargo-view-main-info {
+      & table {
+        table-layout: fixed !important;
+      }
+      & .ant-descriptions-row {
+        border-top: 1px solid #eef0f2;
+        border-bottom: 1px solid #eef0f2;
+
+        & .ant-descriptions-item-label:before,
+        & .ant-descriptions-item-content:before {
+          height: 0px;
+          content: '';
+        }
+      }
+      & .ant-descriptions-title {
+        background: #f6f6f6 !important;
+        color: #9b9fa3;
+        font-size: 12px;
+        width: 100%;
+        padding: 24px 16px 8px;
+        text-transform: uppercase; 
+        &::before {
+          content: '';
+          background: none;
+        }
+      }
+    }
+  }
+}

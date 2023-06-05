@@ -1,0 +1,27 @@
+@import '../common/styles/theme';
+
+.vz-show-error-modal {
+  .ant-modal-confirm-btns {
+    float: none;
+    text-align: center;
+    .ant-btn {
+      min-width: 292px;
+    }
+  }
+
+  .ant-modal-confirm-body {
+    > .anticon {
+      color: $error-color;
+      margin-top: 4px;
+    }
+    .ant-modal-confirm-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+  }
+
+  .ant-modal-content {
+    background-color: #fff;
+  }
+}

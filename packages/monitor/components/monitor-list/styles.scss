@@ -1,0 +1,187 @@
+@import '../common/styles/variables';
+@import '../common/styles/theme';
+
+$cls: 'monitor-list';
+
+$cls-list-item: 'monitor-layout-list-item';
+
+.#{$cls} {
+  $item-padding: 8px;
+  $item-padding-right: 16px;
+  $group-horizontal-margin: 10px;
+  $group-vertical-margin: 14px;
+
+  display: block;
+  overflow: auto;
+  padding-bottom: $group-vertical-margin;
+  margin: 0 -#{$group-horizontal-margin} 0 -#{$group-horizontal-margin};
+
+  .monitor-list-skeleton .ant-skeleton,
+  .#{$cls}__group {
+    margin: #{$group-vertical-margin} #{$group-horizontal-margin} 0 #{$group-horizontal-margin};
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @for $i from 1 through 12 {
+      $index: $i - 1;
+      &:nth-child(#{$i}) {
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
+        animation-name: fadeInLeft-20;
+        animation-delay: #{$index * 0.05}s;
+      }
+    }
+  }
+
+  .monitor-list-skeleton {
+    margin-left: $group-horizontal-margin + $item-padding;
+    margin-right: $group-horizontal-margin;
+
+    .ant-skeleton {
+      margin-left: 0;
+      margin-right: 0;
+
+      .ant-skeleton-header {
+        padding-right: $item-padding;
+      }
+
+      &.ant-skeleton-with-avatar .ant-skeleton-content {
+        .ant-skeleton-title {
+          margin-top: 6px;
+          + .ant-skeleton-paragraph {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .#{$cls}__group {
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12);
+
+    .#{$cls-list-item} {
+      background-color: #fff;
+      padding: $item-padding;
+      padding-right: $item-padding-right;
+      transition: background-color 0.2s ease-in-out;
+
+      &:first-child {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+
+      .#{$cls-list-item}__actions {
+        padding-left: $item-padding * 3;
+        background-image: linear-gradient(
+          to right,
+          rgba($grey_0, 0) 0%,
+          rgba($grey_0, 0.8) 20%,
+          rgba($grey_0, 0.8) 100%
+        );
+
+        .monitor-actions {
+          display: flex;
+          align-items: center;
+        }
+
+        .monitor-action-link {
+          display: flex;
+          width: 56px;
+          height: 56px;
+          align-items: center;
+          justify-content: center;
+          margin-right: $item-padding-right;
+          color: #000;
+          padding: 5px;
+          border: 1px solid transparent;
+          border-radius: $border-radius-base;
+          background-color: transparent;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            border-color: $grey_2;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+          }
+          &:active {
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) inset;
+          }
+        }
+      }
+
+      .#{$cls-list-item}__icon {
+        position: relative;
+
+        @include in('.monitor-list__group.monitor-list__group--has-children') {
+          &::before {
+            content: '';
+            display: block;
+            width: 2px;
+            background-color: $grey_2;
+            position: absolute;
+            top: -$item-padding;
+            left: 50%;
+            bottom: -$item-padding;
+            margin-left: -1px;
+          }
+        }
+
+        @include in('<:first-child') {
+          &::before {
+            top: 0;
+          }
+        }
+
+        @include in('<:last-child') {
+          &::before {
+            bottom: auto;
+            height: $item-padding;
+          }
+        }
+
+        .monitor-truck-icon {
+          position: relative;
+          background-color: $grey_0;
+        }
+
+        .monitor-badge .ant-badge-count {
+          top: 5px;
+          right: 5px;
+        }
+      }
+
+      .#{$cls-list-item}__body__date {
+        .monitor-date-time {
+          font-family: 'DIN 2014 Narrow', serif;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+
+      &.order-type--has-problem {
+        &,
+        .#{$cls-list-item}__icon .monitor-truck-icon {
+          background-color: #fff;
+        }
+        .#{$cls-list-item}__actions {
+          background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 20%,
+            rgba(255, 255, 255, 0.8) 100%
+          );
+        }
+      }
+    }
+  }
+
+  .vz-empty {
+    margin-top: 100px;
+  }
+}
