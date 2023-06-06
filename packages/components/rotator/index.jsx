@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useMemo, useRef } from 'react';
 import { Ant, IconDeprecated } from '@vezubr/elements';
 import { Utils } from '@vezubr/common/common';
-import { Document, Page } from 'react-pdf';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 const DEGREES = [270, 180, 90, 0, 90, 180, 270];
 

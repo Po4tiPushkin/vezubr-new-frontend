@@ -136,7 +136,7 @@ const defaultStore = {
     'requests',
     'dispatcherContragents',
     // 'documentsForDispatcher',
-    // 'documentManagement',
+    'documentManagement',
     'directoriesForDispatcher',
     'profile',
     'settings',
