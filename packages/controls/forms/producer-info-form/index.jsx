@@ -74,15 +74,6 @@ const ProducerInfo = ({ data, dictionaries }) => {
       <VzForm.Group title={<h2 className="bold">Данные компании</h2>}>
         <VzForm.Row>{Object.keys(FIELDS_ALL_DETAILS).map((key) => makeField(key))}</VzForm.Row>
       </VzForm.Group>
-      <VzForm.Group title={<h2 className="bold">Система налогообложения</h2>}>
-        <VzForm.Row>
-          <VzForm.Col span={6}>
-            <VzForm.Item label={'НДС'} disabled>
-              <Ant.Input value={data.isVatPayer ? 'Плательщик НДС' : 'Не плательщик НДС'} disabled />
-            </VzForm.Item>
-          </VzForm.Col>
-        </VzForm.Row>
-      </VzForm.Group>
       <VzForm.Group title={<h2 className="bold">Банковские реквизиты</h2>}>
         <VzForm.Row>{Object.keys(BANK_DETAILS).map((key) => makeField(key))}</VzForm.Row>
       </VzForm.Group>

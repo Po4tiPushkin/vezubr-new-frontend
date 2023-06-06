@@ -49,15 +49,6 @@ const tabs = {
     },
     {
       title: (
-        <M.LabelProblems type={'order'} filteredFunc={M.Utils.filterOrderBargain}>
-          Торги
-        </M.LabelProblems>
-      ),
-      id: 'monitor-bargains',
-      route: ROUTE_MONITOR_AUCTIONS,
-    },
-    {
-      title: (
         <M.LabelProblems type={'order'} filteredFunc={M.Utils.filterOrderExecution}>
           Исполнение
         </M.LabelProblems>

@@ -44,7 +44,6 @@ function DashboardLayout({ children, store, history, location }) {
         <div className={`${classesArr.join(' ').trim()} ${classPageDeep2} ${classPage} ${fullPagePathClass} container`}>
           {children}
         </div>
-        <LogoBottom />
       </div>
       {
         APP !== 'operator'

@@ -113,7 +113,7 @@ const Service = (props) => {
                 colSpan={24}
               />
             </div>
-            <div className='counterparty-service__item margin-top-15'>
+            {/* <div className='counterparty-service__item margin-top-15'>
               <ResponsibleEmployees
                 groupTitle={
                   <Ant.Tooltip placement="right" title={t.settings('hint.employeesCompany')}>
@@ -129,7 +129,7 @@ const Service = (props) => {
                 data={userList}
                 colSpan={24}
               />
-            </div>
+            </div> */}
             <div className='flexbox margin-top-15' style={{ 'justifyContent': 'flex-end' }}>
               <Ant.Button type={'primary'} disabled={changed} onClick={onSave}>
                 Сохранить

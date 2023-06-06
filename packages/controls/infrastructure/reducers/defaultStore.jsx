@@ -1,6 +1,6 @@
-import t from '@vezubr/old-common/src/localization';
-import { MapDeprecated } from '@vezubr/old-components';
-import platformName from '@vezubr/old-common/src/common/platformName';
+import t from '@vezubr/common/localization';
+import { MapDeprecated } from '@vezubr/components';
+import platformName from '@vezubr/common/common/platformName';
 import React from 'react';
 
 const DRIVER = 1;
@@ -134,15 +134,13 @@ const defaultStore = {
     'monitor',
     'newOrder',
     'requests',
-    'ordersForDispatcher',
-    'cargoPlaces',
     'dispatcherContragents',
-    'documentsForDispatcher',
-    'documentManagement',
+    // 'documentsForDispatcher',
+    // 'documentManagement',
     'directoriesForDispatcher',
     'profile',
     'settings',
-    'help',
+    // 'help',
   ],
   enterSidebarNav: [
     'monitor',
@@ -344,32 +342,32 @@ const defaultStore = {
       icon: 'plusOrange',
       className: 'rightCenter',
       arrowPosition: 'leftCenter',
-      sub: [
-        {
-          id: 'city',
-          title: t.order('transportOrder'),
-          icon: 'orderTypeDeliveryOrange',
-          url: '/new-order/city',
-        },
-        {
-          id: 'intercity',
-          title: t.order('intercityOrder'),
-          icon: 'truckIntercityOrangeNf',
-          url: '/new-order/intercity',
-        },
-        {
-          id: 'regular',
-          title: t.order('regularOrder'),
-          icon: 'regularOrders',
-          url: '/regular-order/new',
-        },
-        {
-          id: 'loaders',
-          title: 'ПРР',
-          icon: 'orderTypeLoad',
-          url: '/new-order/loader',
-        }
-      ],
+      // sub: [
+      //   {
+      //     id: 'city',
+      //     title: t.order('transportOrder'),
+      //     icon: 'orderTypeDeliveryOrange',
+      //     url: '/new-order/city',
+      //   },
+      //   {
+      //     id: 'intercity',
+      //     title: t.order('intercityOrder'),
+      //     icon: 'truckIntercityOrangeNf',
+      //     url: '/new-order/intercity',
+      //   },
+      //   {
+      //     id: 'regular',
+      //     title: t.order('regularOrder'),
+      //     icon: 'regularOrders',
+      //     url: '/regular-order/new',
+      //   },
+      //   {
+      //     id: 'loaders',
+      //     title: 'ПРР',
+      //     icon: 'orderTypeLoad',
+      //     url: '/new-order/loader',
+      //   }
+      // ],
     },
     ordersForDispatcher: {
       url: '/orders',
@@ -1054,13 +1052,13 @@ const defaultStore = {
           title: 'Адреса',
           icon: 'addressesOrange',
         },
-        {
-          id: 'tariffs',
-          url: '/tariffs',
-          title: t.nav('tariffs'),
-          icon: 'tariffsOrange',
-          className: 'tariffs',
-        },
+        // {
+        //   id: 'tariffs',
+        //   url: '/tariffs',
+        //   title: t.nav('tariffs'),
+        //   icon: 'tariffsOrange',
+        //   className: 'tariffs',
+        // },
         {
           id: 'drivers',
           url: '/drivers',
@@ -1078,36 +1076,36 @@ const defaultStore = {
           className: 'transports',
           access: [DRIVER],
         },
-        {
-          id: 'tractors',
-          title: t.tractors('title'),
-          icon: 'semiTruckOrange',
-          className: 'tractor',
-          url: '/tractors',
-          access: [DRIVER],
-        },
-        {
-          id: 'trailers',
-          url: '/trailers',
-          title: t.trailer('title'),
-          icon: 'trailerOrange',
-          className: 'trailer',
-          access: [DRIVER],
-        },
-        {
-          id: 'loaders',
-          url: '/loaders',
-          title: 'Специалисты',
-          icon: 'orderTypeLoad',
-          className: 'loader',
-          access: [DRIVER],
-        },
-        {
-          id: 'insurers',
-          url: '/insurers',
-          title: 'Страховые компании',
-          icon: 'insurerOrange'
-        }
+        // {
+        //   id: 'tractors',
+        //   title: t.tractors('title'),
+        //   icon: 'semiTruckOrange',
+        //   className: 'tractor',
+        //   url: '/tractors',
+        //   access: [DRIVER],
+        // },
+        // {
+        //   id: 'trailers',
+        //   url: '/trailers',
+        //   title: t.trailer('title'),
+        //   icon: 'trailerOrange',
+        //   className: 'trailer',
+        //   access: [DRIVER],
+        // },
+        // {
+        //   id: 'loaders',
+        //   url: '/loaders',
+        //   title: 'Специалисты',
+        //   icon: 'orderTypeLoad',
+        //   className: 'loader',
+        //   access: [DRIVER],
+        // },
+        // {
+        //   id: 'insurers',
+        //   url: '/insurers',
+        //   title: 'Страховые компании',
+        //   icon: 'insurerOrange'
+        // }
 
       ],
       url: '/directories',

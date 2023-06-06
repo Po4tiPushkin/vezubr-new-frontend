@@ -68,12 +68,12 @@ const OrderViewRight = (props) => {
           id: 'order-map',
           ...props,
         },
-        {
-          title: 'Торги',
-          id: 'order-bargain',
-          route: ROUTE_ORDER_BARGAIN,
-          ...props,
-        },
+        // {
+        //   title: 'Торги',
+        //   id: 'order-bargain',
+        //   route: ROUTE_ORDER_BARGAIN,
+        //   ...props,
+        // },
         {
           title: 'Исполнители',
           id: 'order-executors',
@@ -88,13 +88,13 @@ const OrderViewRight = (props) => {
           ...props,
         },
 
-        {
-          title: 'Грузоместа',
-          id: 'order-cargoplace',
-          route: ROUTE_ORDER_CARGOPLACE,
-          show: type !== 2,
-          ...props,
-        },
+        // {
+        //   title: 'Грузоместа',
+        //   id: 'order-cargoplace',
+        //   route: ROUTE_ORDER_CARGOPLACE,
+        //   show: type !== 2,
+        //   ...props,
+        // },
 
         {
           title: 'Документы ГВ',

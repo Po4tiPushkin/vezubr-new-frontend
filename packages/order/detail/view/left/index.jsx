@@ -9,8 +9,8 @@ const OrderViewLeft = () => {
         <OrderViewTopInfo />
         <div className={'info-title'}>{'Расчет'}</div>
         <OrderViewPriceInfo />
-        <OrderViewImplementer />
-        <OrderViewResponsibleEmployees />
+        {/* <OrderViewImplementer /> */}
+        {/* <OrderViewResponsibleEmployees /> */}
       </div>
     </div>
   )

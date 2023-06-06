@@ -51,12 +51,12 @@ const useOrderInfo = ({ order, requiredDocuments, dictionaries }) => {
             ?.join(', ')
           : dictionaries?.vehicleBodies?.[order.requiredBodyTypes]) || '-',
       },
-      {
-        title: 'Тип автоперевозки',
-        value: order?.type === 2
-          ? null
-          : dictionaries?.vehicleTypeCategories?.find(item => item.id == order?.vehicleTypeCategory)?.title,
-      },
+      // {
+      //   title: 'Тип автоперевозки',
+      //   value: order?.type === 2
+      //     ? null
+      //     : dictionaries?.vehicleTypeCategories?.find(item => item.id == order?.vehicleTypeCategory)?.title,
+      // },
     ] : [
       [
         {
@@ -423,19 +423,19 @@ const useOrderInfo = ({ order, requiredDocuments, dictionaries }) => {
         column: false,
         key: 'additional'
       },
-      {
-        title: t.order('documentsInfo'),
-        data: documentsInfo,
-        column: false,
-        className: 'documents-info',
-        key: 'documents'
-      },
-      {
-        title: t.order('Стоимость, категория груза и страхование'),
-        data: prices,
-        column: false,
-        key: 'insurance'
-      },
+      // {
+      //   title: t.order('documentsInfo'),
+      //   data: documentsInfo,
+      //   column: false,
+      //   className: 'documents-info',
+      //   key: 'documents'
+      // },
+      // {
+      //   title: t.order('Стоимость, категория груза и страхование'),
+      //   data: prices,
+      //   column: false,
+      //   key: 'insurance'
+      // },
       {
         title: t.common('more'),
         data: moreInfo,
@@ -444,14 +444,14 @@ const useOrderInfo = ({ order, requiredDocuments, dictionaries }) => {
       },
     ];
 
-    if (customProperties?.length > 0) {
-      infos.push({
-        title: t.order('customProperties'),
-        data: customPropertiesInfo,
-        column: false,
-        key: 'customProperties',
-      });
-    }
+    // if (customProperties?.length > 0) {
+    //   infos.push({
+    //     title: t.order('customProperties'),
+    //     data: customPropertiesInfo,
+    //     column: false,
+    //     key: 'customProperties',
+    //   });
+    // }
 
     if (order?.ownGroupedOrders.length) {
       infos.push({

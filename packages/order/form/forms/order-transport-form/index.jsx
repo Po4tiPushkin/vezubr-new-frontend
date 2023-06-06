@@ -387,15 +387,15 @@ function OrderTransportForm(props) {
       ) : null}
       <VzForm.Group title={'Данные по транспортному средству'}>
         <VzForm.Row wrap={true}>
-          <VzForm.Col span={6}>
+          {/* <VzForm.Col span={6}>
             <OrderFieldSelectCategoryChoice
               id={'order-ordercategory'}
               name={'orderCategory'}
               label={'Тип автоперевозки'}
               disabled={disabledFields.includes('orderCategory')}
             />
-          </VzForm.Col>
-          <VzForm.Col span={6}>
+          </VzForm.Col> */}
+          <VzForm.Col span={8}>
             <OrderFieldSelectVehicleList
               name={'vehicleType'}
               label={'Тип ТС'}
@@ -404,7 +404,7 @@ function OrderTransportForm(props) {
               id={'order-vehicletype'}
             />
           </VzForm.Col>
-          <VzForm.Col span={12}>
+          <VzForm.Col span={16}>
             <OrderFieldTreeSelect
               style={{ height: 34 }}
               name={'bodyTypes'}
@@ -487,7 +487,7 @@ function OrderTransportForm(props) {
         </VzForm.Group>
       )}
 
-      <VzForm.Group>
+      {/* <VzForm.Group>
         <OrderAdvancedOptionsTransport
           disabled={disabledFields.includes('advancedOptions')}
           geozones={geozones}
@@ -499,7 +499,7 @@ function OrderTransportForm(props) {
           disabled={disabledFields.includes('advancedOptions')}
           geozones={geozones}
         />
-      </VzForm.Group>
+      </VzForm.Group> */}
       {/* 
       <VzForm.Group>
         <OrderCustomProperties
@@ -531,11 +531,11 @@ function OrderTransportForm(props) {
         </VzForm.Row>
       </VzForm.Group>
 
-      <OrderCustomProperties
+      {/* <OrderCustomProperties
         name={'customProperties'}
         wrapped={false}
         disabled={disabledFields.includes('customProperties')}
-      />
+      /> */}
 
       <VzForm.Group title={'Дополнительно'}>
         <VzForm.Row>
@@ -551,7 +551,7 @@ function OrderTransportForm(props) {
             />
           </VzForm.Col>
         </VzForm.Row>
-        <VzForm.Row>
+        {/* <VzForm.Row>
           <div style={{ textAlign: 'left' }}>
             <div>Внутренние комментарии:</div>
             {<Comments comments={store.getDataItem('innerComments')} />}
@@ -569,7 +569,7 @@ function OrderTransportForm(props) {
               disabled={disabledFields.includes('innerComment')}
             />
           </VzForm.Col>
-        </VzForm.Row>
+        </VzForm.Row> */}
       </VzForm.Group>
 
       {children}
@@ -590,7 +590,7 @@ function OrderTransportForm(props) {
           </Ant.Button>
         )}
 
-        {onBargain && (
+        {/* {onBargain && (
           <Ant.Button
             onClick={handleProcess}
             type={'primary'}
@@ -599,7 +599,7 @@ function OrderTransportForm(props) {
           >
             {saveButtonText ? saveButtonText : 'В торги'}
           </Ant.Button>
-        )}
+        )} */}
 
         {onRate && (
           <Ant.Button
@@ -612,7 +612,7 @@ function OrderTransportForm(props) {
           </Ant.Button>
         )}
 
-        {onTariff && (
+        {/* {onTariff && (
           <Ant.Button
             onClick={handleProcess}
             data-tariffpublishing={'true'}
@@ -621,7 +621,7 @@ function OrderTransportForm(props) {
           >
             {saveButtonText ? saveButtonText : 'По тарифу'}
           </Ant.Button>
-        )}
+        )} */}
       </VzForm.Actions>
 
       {(loading || saving) && <Loader />}

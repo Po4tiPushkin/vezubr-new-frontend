@@ -35,38 +35,38 @@ const getTabs = (id, info) => {
         route: ROUTE_COUNTERPARTY_INFO,
         ...props
       },
-      {
-        title: 'Договоры',
-        route: ROUTE_COUNTERPARTY_CONTRACTS,
-        additionalRoutesMatch: [
-          {
-            route: ROUTES.COUNTERPARTY,
-            ...props
-          },
-        ],
-        ...props
-      },
-      {
-        title: 'Тарифы',
-        route: ROUTE_COUNTERPARTY_TARIFFS,
-        ...props
-      },
-      {
-        title: 'Настройки',
-        route: ROUTE_COUNTERPARTY_SETTINGS,
-        show: !info?.isPrivate || APP == "dispatcher" || info?.role == 4 || info.contours?.[0]?.isManager || info?.role == 2,
-        ...props
-      },
+      // {
+      //   title: 'Договоры',
+      //   route: ROUTE_COUNTERPARTY_CONTRACTS,
+      //   additionalRoutesMatch: [
+      //     {
+      //       route: ROUTES.COUNTERPARTY,
+      //       ...props
+      //     },
+      //   ],
+      //   ...props
+      // },
+      // {
+      //   title: 'Тарифы',
+      //   route: ROUTE_COUNTERPARTY_TARIFFS,
+      //   ...props
+      // },
+      // {
+      //   title: 'Настройки',
+      //   route: ROUTE_COUNTERPARTY_SETTINGS,
+      //   show: !info?.isPrivate || APP == "dispatcher" || info?.role == 4 || info.contours?.[0]?.isManager || info?.role == 2,
+      //   ...props
+      // },
       {
         title: 'Служебное',
         route: ROUTE_COUNTERPARTY_SERVICE,
         ...props
       },
-      {
-        title: 'Доп. Информация',
-        route: ROUTE_COUNTERPARTY_EXTRA,
-        ...props
-      }
+      // {
+      //   title: 'Доп. Информация',
+      //   route: ROUTE_COUNTERPARTY_EXTRA,
+      //   ...props
+      // }
     ],
   };
 };

@@ -165,7 +165,7 @@ function OrderAdd(props) {
       onRate={onPublish}
       onTariff={onPublish}
       onBargain={onPublish}
-      title={`Новый ${orderType === 'city' ? 'городской' : 'междугородний'} рейс`}
+      title={`Новый рейс`}
     />
   );
 }
