@@ -20,15 +20,14 @@ import { TransportProfile as TransportView } from '@vezubr/controls';
 import Auctions from '@vezubr/controls/lists/auctions';
 
 import Orders from '@vezubr/controls/lists/orders';
-import OrderView from '@vezubr/controls/pages/order/detail';
+import OrderView from '@vezubr/order/detail';
+import OrderAddLoader from '@vezubr/order/form/create/pages/loader/order-add-loader';
 import OrderAddIntercity from '@vezubr/order/form/create/pages/cityIntercity/order-add';
 import OrderAddCity from '@vezubr/order/form/create/pages/cityIntercity/order-add';
-import OrderAddLoader from '@vezubr/order/form/create/pages/loader/order-add-loader';
-
+import OrderAddBindLoader from '@vezubr/order/form/create/pages/loader/order-add-transport-related';
 import OrderEditIntercity from '@vezubr/order/form/create/pages/cityIntercity/order-edit';
 import OrderEditCity from '@vezubr/order/form/create/pages/cityIntercity/order-edit';
 import OrderEditLoader from '@vezubr/order/form/create/pages/loader/order-edit-loader';
-
 import OrderAddFromCity from '@vezubr/order/form/create/pages/cityIntercity/order-add-from';
 import OrderAddFromIntercity from '@vezubr/order/form/create/pages/cityIntercity/order-add-from';
 import OrderAddFromLoader from '@vezubr/order/form/create/pages/loader/order-add-from-loader';
@@ -61,7 +60,7 @@ import TrailerEdit from '@vezubr/controls/pages/trailer/edit';
 import { TrailerProfle as Trailer } from '@vezubr/controls/pages/trailer';
 
 import RegistriesProducer from '@vezubr/controls/lists/registries/producer/list';
-import RegistriesClient  from '@vezubr/controls/lists/registries/client/list';
+import RegistriesClient from '@vezubr/controls/lists/registries/client/list';
 import RegistriesCreate from '@vezubr/controls/lists/registries/producer/create'
 import RegistryClient from '@vezubr/controls/lists/registries/client/detail';
 import RegistryProducer from '@vezubr/controls/lists/registries/producer/detail';
@@ -74,7 +73,7 @@ import RegularOrderList from '@vezubr/controls/lists/regularOrders'
 
 import { Settings } from '@vezubr/controls'
 
-import AgreementCard from '@vezubr/controls/pages/agreement-card';
+import AgreementCard from '@vezubr/controls/pages/agreement/detail';
 
 import LoadersList from '@vezubr/controls/lists/loaders';
 import LoaderProfile from '@vezubr/controls/pages/loader/detail';
@@ -84,16 +83,27 @@ import LoaderEdit from '@vezubr/controls/pages/loader/edit';
 import { TemplatePreview } from '@vezubr/controls'
 import { Rotator } from '@vezubr/components'
 
-import Insurers from '@vezubr/controls/lists/insurers';
+import Insurers from '@vezubr/controls/lists/insurers'
 import InsurerCard from '@vezubr/controls/pages/insurer/detail';
 import InsurerContractAdd from '@vezubr/controls/pages/insurer/contract/create';
 import InsurerContractInfo from '@vezubr/controls/pages/insurer/contract/info';
+
+import DocumentsFlow from '@vezubr/controls/lists/documentsFlow';
+import EdmOrder from '@vezubr/controls/pages/edm';
+
+import Requests from '@vezubr/controls/lists/requests/all';
+import RequestsAuction from '@vezubr/controls/lists/requests/auction';
+import RequestsActive from '@vezubr/controls/lists/requests/active';
+
+import CounterpartyCreateChild from '@vezubr/controls/pages/counterparty/create-child';
+import CryptoProTest from '@vezubr/controls/pages/crypto-pro-test';
 export {
   Rotator,
   TariffList,
   TariffAdd,
   TariffInfoEdit,
   TariffClone,
+  TariffCopy,
   NotFound,
   Producers,
   Clients,
@@ -159,5 +169,13 @@ export {
   Insurers,
   InsurerCard,
   InsurerContractAdd,
-  InsurerContractInfo
+  InsurerContractInfo,
+  DocumentsFlow,
+  EdmOrder,
+  Requests,
+  OrderAddBindLoader,
+  RequestsAuction,
+  RequestsActive,
+  CounterpartyCreateChild,
+  CryptoProTest
 };

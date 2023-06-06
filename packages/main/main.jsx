@@ -97,13 +97,14 @@ const App = () => {
               render={(location) => {
                 const token = location.match.params.token;
                 if (token) {
-                  setLocalStorageItem('verificationToken', token);
+                  localStorage.setItem('verificationToken', token);
                 }
                 return <Redirect to="/login" />;
               }}
             />
             <Route path="/forgot-password/email" exact component={ForgotPassword} />
             <Route path="/forgot-password/:token" exact component={ForgotPassword} />
+            <Route path="/edm/:id" component={Pages.EdmOrder} />
             {loaded && (
               <DashboardLayout store={store} history={history}>
                 <Switch>
@@ -116,13 +117,14 @@ const App = () => {
                   <Route {...ROUTES.ADDRESS} component={Pages.AddressCard} />
 
                   <Route path="/profile/:tab" component={Pages.Profile} />
-                  <Route path="/new-order/from/:id/intercity" exact component={Pages.OrderAddFromIntercity} />
+                  {/* <Route path="/new-order/from/:id/intercity" exact component={Pages.OrderAddFromIntercity} />
                   <Route path="/new-order/from/:id/city" exact component={Pages.OrderAddFromCity} />
                   <Route path="/new-order/from/:id/loader" exact component={Pages.OrderAddFromLoader} />
 
                   <Route path="/new-order/loader" exact component={Pages.OrderAddLoader} />
                   <Route path="/new-order/intercity" exact component={Pages.OrderAddIntercity} />
-                  <Route path="/new-order/city" exact component={Pages.OrderAddCity} />
+                  <Route path="/new-order/create-bind/:id/loader" component={Pages.OrderAddBindLoader} /> */}
+                  <Route path="/new-order" exact component={Pages.OrderAddCity} />
 
                   <Route path="/edit-order/:id/intercity" component={Pages.OrderEditIntercity} />
                   <Route path="/edit-order/:id/city" component={Pages.OrderEditCity} />
@@ -207,6 +209,7 @@ const App = () => {
 
 
                   <Route exact path={'/counterparty/:id/contract/add'} component={Pages.ContractAdd} />
+                  <Route exact path={'/counterparty/create-child'} component={Pages.CounterpartyCreateChild} />
                   <Route {...ROUTES.COUNTERPARTY} component={Pages.Counterparty} />
 
                   <Route exact path="/regular-order/new" component={Pages.RegularOrderCreate} />
@@ -219,7 +222,14 @@ const App = () => {
                   <Route path="/insurers/contracts/:id" component={Pages.InsurerContractInfo} />
                   <Route {...ROUTES.INSURER} component={Pages.InsurerCard} />
                   <Route path="/insurers" component={Pages.Insurers} />
-                  
+
+                  <Route path="/documents-flow" component={Pages.DocumentsFlow} />
+
+                  <Route path="/requests/all" component={Pages.Requests} />
+                  <Route path="/requests/auction" component={Pages.RequestsAuction} />
+                  <Route path="/requests/active" component={Pages.RequestsActive} />
+                  <Route path="/crypto-pro" component={Pages.CryptoProTest} />
+
                   <Route component={Pages.NotFound} />
                 </Switch>
               </DashboardLayout>
@@ -231,8 +241,8 @@ const App = () => {
   )
 }
 
-if (window.API_CONFIGS[window.APP].yandexMetric) {
-  initYandexMetriс(window.API_CONFIGS[window.APP].yandexMetric);
+if (window.API_CONFIGS[APP].yandexMetric) {
+  initYandexMetriс(window.API_CONFIGS[APP].yandexMetric);
 }
 
 ReactDOM.render(<App />, document.getElementById('main'));

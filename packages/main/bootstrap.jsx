@@ -45,6 +45,7 @@ class Bootstrap {
       ...user,
       requestGroupIds: (await ProfileService.contractorGetUser(user.decoded.userId)).requestGroupIds
     }
+    window.IS_ADMIN = user.decoded.employeeRoles.includes(13)
     store.dispatch({ type: 'SET_USER', user: user });
 
     const userSettingsResponse = await UserService.getInterfaceSettings();

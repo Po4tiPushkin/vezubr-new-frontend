@@ -2,7 +2,7 @@ import t from '@vezubr/common/localization';
 import { TableActions } from '@vezubr/components';
 import LinkWithBack from '@vezubr/components/link/linkWithBack';
 import { IconDeprecated, VzTable } from '@vezubr/elements';
-import * as Order from '../../../../../../order/form';
+import * as Order from '@vezubr/order/form';
 import moment from 'moment-timezone';
 import React, { useMemo } from 'react';
 

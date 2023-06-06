@@ -61,10 +61,6 @@ const _PLUGINS = [
           },
         ]
       : []),
-    {
-      from: './public',
-      to: '',
-    },
   ]),
 ];
 
