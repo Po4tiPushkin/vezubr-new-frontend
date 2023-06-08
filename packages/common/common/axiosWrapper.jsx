@@ -4,8 +4,8 @@
 
 import axios from 'axios';
 import Cookies from './cookies';
-const HOST = window.API_CONFIGS[APP].host;
-const API_VERSION = window.API_CONFIGS[APP].apiVersion;
+const HOST = window.API_CONFIGS[window.APP].host;
+const API_VERSION = window.API_CONFIGS[window.APP].apiVersion;
 const GEO_CODING_HOST = window.API_CONFIGS.geoCodingHost;
 const HOSTS = {
   default: {
@@ -50,7 +50,7 @@ class AxiosInstance {
     // before the request is sent to the server, add jwt to the Authorization header
     axiosInstance.interceptors.request.use((config) => {
       if (hosts.token) {
-        const token = Cookies.get(APP + 'Token');
+        const token = Cookies.get(window.APP + 'Token');
         if (token) {
           config.headers['Authorization'] = `${token.replace('%20', ' ')}`;
         }
@@ -74,7 +74,7 @@ class AxiosInstance {
       },
       (error) => {
         if (error.response && error.response.status === 401) {
-          Cookies.delete(APP + 'Token');
+          Cookies.delete(window.APP + 'Token');
           window.location.href = '/login';
         }
         return Promise.reject(

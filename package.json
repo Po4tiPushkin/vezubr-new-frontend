@@ -12,7 +12,8 @@
     "build:prod": "cross-env NODE_ENV=production webpack",
     "start:client": "cross-env NODE_ENV=development APP_ENV=client webpack-dev-server",
     "start:producer": "cross-env NODE_ENV=development APP_ENV=producer webpack-dev-server",
-    "start:dispatcher": "cross-env NODE_ENV=development APP_ENV=dispatcher webpack-dev-server"
+    "start:dispatcher": "cross-env NODE_ENV=development APP_ENV=dispatcher webpack-dev-server",
+    "start:operator": "cross-env NODE_ENV=development APP_ENV=operator webpack-dev-server"
   },
   "imports": {
     "@vezubr/*": [

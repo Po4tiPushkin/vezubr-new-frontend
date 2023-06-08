@@ -18,7 +18,9 @@ import { setLocalStorageItem } from '@vezubr/common/common/utils';
 import initYandexMetriс from '@vezubr/services/metrics/initYandexMetric';
 import { RegisterView, LoginView, ForgotPassword } from '@vezubr/components';
 import throttle from 'lodash/throttle'
+import { OPERATOR_BOOTSTRAP, OPERATOR_ROUTES } from '@vezubr/operator';
 
+const homePage = window.APP == 'operator' ? 'clients' : 'monitor'
 const enterHost = window.API_CONFIGS.enterHost;
 
 const App = () => {
@@ -40,13 +42,17 @@ const App = () => {
     const userToken = Cookies.get(`${window.APP}Token`);
     try {
       if (userToken) {
-        Utils.setLocalStorageFromBackend()
-        window.addEventListener('local-storage', async (e) => {
-          throttle(async () => await Utils.sendLocalStorageToBackend(), 500)()
-        })
-        await Bootstrap.run(userToken);
+        if (window.APP !== 'operator') {
+          Utils.setLocalStorageFromBackend()
+          window.addEventListener('local-storage', async (e) => {
+            throttle(async () => await Utils.sendLocalStorageToBackend(), 500)()
+          })
+          await Bootstrap.run(userToken);
+        } else {
+          await OPERATOR_BOOTSTRAP.run(userToken)
+        }
         if (history.location.pathname === '/login' || history.location.pathname === '/') {
-          history.push('monitor');
+          history.push(homePage);
           if (Cookies.get('contourCode')) {
             await joinContour(Cookies.get('contourCode'));
           }
@@ -61,12 +67,15 @@ const App = () => {
       }
     } catch (e) {
       console.error(e);
-      Utils.logout();
       localStorage.setItem('redirectUrl', history.location.pathname)
-      history.push('/login');
+      Utils.logout();
+      history.push(`${enterHost}/login`);
     }
     document.getElementById('loader').style.display = 'none';
     setLoaded(true);
+    window.addEventListener('beforeunload', () => {
+      if (Cookies.get("delegatedApp") == window.APP) Utils.endDelegation();
+    })
   }, [history]);
 
   useEffect(() => {
@@ -77,6 +86,9 @@ const App = () => {
     return () => {
       document.removeEventListener('input',(e) => {
         Utils.handleDateTimeInput(e)
+      })
+      window.removeEventListener('beforeunload', () => {
+        if (Cookies.get("delegatedApp") == window.APP) Utils.endDelegation();
       })
     }
   }, []);
@@ -107,131 +119,141 @@ const App = () => {
             <Route path="/edm/:id" component={Pages.EdmOrder} />
             {loaded && (
               <DashboardLayout store={store} history={history}>
-                <Switch>
-                  <Route path="/orders" exact component={Pages.Orders} />
-                  <Route {...ROUTES.ORDER} component={Pages.OrderView} />
-                  <Route path="/changelog" component={Pages.Changelog} />
-                  <Route path="/cargoPlaces" exact component={Pages.CargoPlaceList} />
-                  <Route path="/addresses" exact component={Pages.Addresses} />
-                  <Route {...ROUTES.ADDRESS_ADD} component={Pages.AddressesAdd} />
-                  <Route {...ROUTES.ADDRESS} component={Pages.AddressCard} />
+                {APP !== 'operator' ? (
+                  <Switch>
+                    <Route path="/orders" exact component={Pages.Orders} />
+                    <Route {...ROUTES.ORDER} component={Pages.OrderView} />
+                    <Route path="/changelog" component={Pages.Changelog} />
+                    <Route path="/cargoPlaces" exact component={Pages.CargoPlaceList} />
+                    <Route path="/addresses" exact component={Pages.Addresses} />
+                    <Route {...ROUTES.ADDRESS_ADD} component={Pages.AddressesAdd} />
+                    <Route {...ROUTES.ADDRESS} component={Pages.AddressCard} />
 
-                  <Route path="/profile/:tab" component={Pages.Profile} />
-                  {/* <Route path="/new-order/from/:id/intercity" exact component={Pages.OrderAddFromIntercity} />
-                  <Route path="/new-order/from/:id/city" exact component={Pages.OrderAddFromCity} />
-                  <Route path="/new-order/from/:id/loader" exact component={Pages.OrderAddFromLoader} />
+                    <Route path="/profile/:tab" component={Pages.Profile} />
+                    {/* <Route path="/new-order/from/:id/intercity" exact component={Pages.OrderAddFromIntercity} />
+                    <Route path="/new-order/from/:id/city" exact component={Pages.OrderAddFromCity} />
+                    <Route path="/new-order/from/:id/loader" exact component={Pages.OrderAddFromLoader} />
 
-                  <Route path="/new-order/loader" exact component={Pages.OrderAddLoader} />
-                  <Route path="/new-order/intercity" exact component={Pages.OrderAddIntercity} />
-                  <Route path="/new-order/create-bind/:id/loader" component={Pages.OrderAddBindLoader} /> */}
-                  <Route path="/new-order" exact component={Pages.OrderAddCity} />
+                    <Route path="/new-order/loader" exact component={Pages.OrderAddLoader} />
+                    <Route path="/new-order/intercity" exact component={Pages.OrderAddIntercity} />
+                    <Route path="/new-order/create-bind/:id/loader" component={Pages.OrderAddBindLoader} /> */}
+                    <Route path="/new-order" exact component={Pages.OrderAddCity} />
 
-                  <Route path="/edit-order/:id/intercity" component={Pages.OrderEditIntercity} />
-                  <Route path="/edit-order/:id/city" component={Pages.OrderEditCity} />
-                  <Route path="/edit-order/:id/loader" component={Pages.OrderEditLoader} />
+                    <Route path="/edit-order/:id/intercity" component={Pages.OrderEditIntercity} />
+                    <Route path="/edit-order/:id/city" component={Pages.OrderEditCity} />
+                    <Route path="/edit-order/:id/loader" component={Pages.OrderEditLoader} />
 
-                  <Route path="/republish-order/:id" exact component={Pages.OrderRepublish} />
+                    <Route path="/republish-order/:id" exact component={Pages.OrderRepublish} />
 
-                  <Route path="/profile/agent/add" component={Pages.AddAgent} />
+                    <Route path="/profile/agent/add" component={Pages.AddAgent} />
 
-                  <Route path="/profile/contour/add" component={Pages.AddContour} />
+                    <Route path="/profile/contour/add" component={Pages.AddContour} />
 
-                  <Route path="/profile" component={Pages.Profile} />
-                  <Route path="/auctions" component={Pages.Auctions} />
+                    <Route path="/profile" component={Pages.Profile} />
+                    <Route path="/auctions" component={Pages.Auctions} />
 
-                  <Route path="/check" component={Pages.Check} />
-                  <Route {...ROUTES.CARGO_PLACE_ADD} component={Pages.CargoPlaceAdd} />
-                  <Route {...ROUTES.CARGO_PLACE} component={Pages.CargoPlaceView} />
+                    <Route path="/check" component={Pages.Check} />
+                    <Route {...ROUTES.CARGO_PLACE_ADD} component={Pages.CargoPlaceAdd} />
+                    <Route {...ROUTES.CARGO_PLACE} component={Pages.CargoPlaceView} />
 
-                  <Route {...ROUTES.MONITOR} component={Pages.Monitor} />
+                    <Route {...ROUTES.MONITOR} component={Pages.Monitor} />
 
-                  <Route path="/tariffs/add" exact component={Pages.TariffAdd} />
-                  <Route path="/tariffs/:id(\d+)/clone" component={Pages.TariffClone} />
-                  <Route path="/tariffs/:id(\d+)" exact component={Pages.TariffInfoEdit} />
-                  <Route path="/tariffs" exact component={Pages.TariffList} />
-                  <Route path="/tariffs/copy/:id" exact component={Pages.TariffCopy} />
+                    <Route path="/tariffs/add" exact component={Pages.TariffAdd} />
+                    <Route path="/tariffs/:id(\d+)/clone" component={Pages.TariffClone} />
+                    <Route path="/tariffs/:id(\d+)" exact component={Pages.TariffInfoEdit} />
+                    <Route path="/tariffs" exact component={Pages.TariffList} />
+                    <Route path="/tariffs/copy/:id" exact component={Pages.TariffCopy} />
 
-                  <Route path="/deferred" component={Pages.DeferredOrders} />
+                    <Route path="/deferred" component={Pages.DeferredOrders} />
 
-                  <Route path="/new-order" component={Pages.NewOrder} />
-                  <Route path="/edit-order" component={Pages.EditOrder} />
+                    <Route path="/new-order" component={Pages.NewOrder} />
+                    <Route path="/edit-order" component={Pages.EditOrder} />
 
-                  <Route path="/transports/create" component={Pages.TransportCreate} />
-                  <Route path="/transports/:id/edit" component={Pages.TransportEdit} />
-                  <Route path="/transports/:id" component={Pages.TransportView} />
-                  <Route path="/transports" component={Pages.Transports} />
+                    <Route path="/transports/create" component={Pages.TransportCreate} />
+                    <Route path="/transports/:id/edit" component={Pages.TransportEdit} />
+                    <Route path="/transports/:id" component={Pages.TransportView} />
+                    <Route path="/transports" component={Pages.Transports} />
 
-                  <Route path="/clients" component={Pages.Clients} />
-                  <Route path="/producers" component={Pages.Producers} />
+                    <Route path="/clients" component={Pages.Clients} />
+                    <Route path="/producers" component={Pages.Producers} />
 
-                  <Route path="/drivers/create" exact component={Pages.DriverCreate} />
-                  <Route path="/drivers/:id/edit" component={Pages.DriverEdit} />
-                  <Route {...ROUTES.DRIVER} component={Pages.DriverView} />
-                  <Route path="/drivers" component={Pages.DriversList} />
+                    <Route path="/drivers/create" exact component={Pages.DriverCreate} />
+                    <Route path="/drivers/:id/edit" component={Pages.DriverEdit} />
+                    <Route {...ROUTES.DRIVER} component={Pages.DriverView} />
+                    <Route path="/drivers" component={Pages.DriversList} />
 
-                  <Route path="/tractors/create" component={Pages.TractorCreate} />
-                  <Route path="/tractors/:id/edit" component={Pages.TractorEdit} />
-                  <Route {...ROUTES.TRACTOR} component={Pages.TractorDetail} />
-                  <Route path="/tractors" component={Pages.Tractors} />
+                    <Route path="/tractors/create" component={Pages.TractorCreate} />
+                    <Route path="/tractors/:id/edit" component={Pages.TractorEdit} />
+                    <Route {...ROUTES.TRACTOR} component={Pages.TractorDetail} />
+                    <Route path="/tractors" component={Pages.Tractors} />
 
-                  <Route path="/contracts" component={Pages.Contracts} />
-                  <Route path="/counterparties" component={Pages.CounterParties} />
+                    <Route path="/contracts" component={Pages.Contracts} />
+                    <Route path="/counterparties" component={Pages.CounterParties} />
 
-                  <Route path="/registries/create" exact component={Pages.RegistriesCreate} />
-                  <Route path="/registries/client/:id" component={Pages.RegistryClient} />
-                  <Route path="/registries/client" exact component={Pages.RegistriesClient} />
-                  <Route path="/registries/producer/:id" component={Pages.RegistryProducer} />
-                  <Route path="/registries/producer" exact component={Pages.RegistriesProducer} />
-                  <Route path="/registries" exact component={Pages.Registries} />
-                  <Route path="/registries/create" component={Pages.RegistryCreate} />
-                  <Route path="/registries/:id" component={Pages.RegistryDetail} />
+                    <Route path="/registries/create" exact component={Pages.RegistriesCreate} />
+                    <Route path="/registries/client/:id" component={Pages.RegistryClient} />
+                    <Route path="/registries/client" exact component={Pages.RegistriesClient} />
+                    <Route path="/registries/producer/:id" component={Pages.RegistryProducer} />
+                    <Route path="/registries/producer" exact component={Pages.RegistriesProducer} />
+                    <Route path="/registries" exact component={Pages.Registries} />
+                    <Route path="/registries/create" component={Pages.RegistryCreate} />
+                    <Route path="/registries/:id" component={Pages.RegistryDetail} />
 
-                  <Route path="/documents" exact component={Pages.Documents} />
+                    <Route path="/documents" exact component={Pages.Documents} />
 
-                  <Route path="/trailers/create" component={Pages.TrailerCreate} />
-                  <Route path="/trailers/:id/edit" component={Pages.TrailerEdit} />
-                  <Route path="/trailers/:id" component={Pages.Trailer} />
-                  <Route path="/trailers" component={Pages.Trailers} />
-                  <Route path="/loaders/create" exact component={Pages.LoaderCreate} />
-                  <Route path="/loaders/:id/edit" component={Pages.LoaderEdit} />
-                  <Route {...ROUTES.LOADER} component={Pages.LoaderProfile} />
-                  <Route path="/loaders" component={Pages.LoadersList} />
-                  <Route path="/404" exact component={Pages.NotFound} />
-                  <Route path="/settings" component={Pages.Settings} />
+                    <Route path="/trailers/create" component={Pages.TrailerCreate} />
+                    <Route path="/trailers/:id/edit" component={Pages.TrailerEdit} />
+                    <Route path="/trailers/:id" component={Pages.Trailer} />
+                    <Route path="/trailers" component={Pages.Trailers} />
+                    <Route path="/loaders/create" exact component={Pages.LoaderCreate} />
+                    <Route path="/loaders/:id/edit" component={Pages.LoaderEdit} />
+                    <Route {...ROUTES.LOADER} component={Pages.LoaderProfile} />
+                    <Route path="/loaders" component={Pages.LoadersList} />
+                    <Route path="/404" exact component={Pages.NotFound} />
+                    <Route path="/settings" component={Pages.Settings} />
 
-                  <Route path="/agents" component={Pages.Agents} />
-                  <Route path="/contours" component={Pages.Contours} />
-                  <Route path="/agreement/:id" component={Pages.AgreementCard} />
-                  <Route path="/contracts" component={Pages.Contracts} />
-                  <Route path={'/contract/:id/edit'} component={Pages.ContractEdit} />
-                  <Route exact path="/contract/:id/agreement/add" component={Pages.AddAgreement} />
-                  <Route path="/contract/:id" component={Pages.Contract} />
+                    <Route path="/agents" component={Pages.Agents} />
+                    <Route path="/contours" component={Pages.Contours} />
+                    <Route path="/agreement/:id" component={Pages.AgreementCard} />
+                    <Route path="/contracts" component={Pages.Contracts} />
+                    <Route path={'/contract/:id/edit'} component={Pages.ContractEdit} />
+                    <Route exact path="/contract/:id/agreement/add" component={Pages.AddAgreement} />
+                    <Route path="/contract/:id" component={Pages.Contract} />
 
 
-                  <Route exact path={'/counterparty/:id/contract/add'} component={Pages.ContractAdd} />
-                  <Route exact path={'/counterparty/create-child'} component={Pages.CounterpartyCreateChild} />
-                  <Route {...ROUTES.COUNTERPARTY} component={Pages.Counterparty} />
+                    <Route exact path={'/counterparty/:id/contract/add'} component={Pages.ContractAdd} />
+                    <Route exact path={'/counterparty/create-child'} component={Pages.CounterpartyCreateChild} />
+                    <Route {...ROUTES.COUNTERPARTY} component={Pages.Counterparty} />
 
-                  <Route exact path="/regular-order/new" component={Pages.RegularOrderCreate} />
-                  <Route path="/regular-order/:id" component={Pages.RegularOrderEdit} />
-                  <Route path="/regular-orders" component={Pages.RegularOrderList} />
-                  <Route path="/rotator" component={Pages.Rotator} />
-                  <Route path="/template-preview" component={Pages.TemplatePreview} />
+                    <Route exact path="/regular-order/new" component={Pages.RegularOrderCreate} />
+                    <Route path="/regular-order/:id" component={Pages.RegularOrderEdit} />
+                    <Route path="/regular-orders" component={Pages.RegularOrderList} />
+                    <Route path="/rotator" component={Pages.Rotator} />
+                    <Route path="/template-preview" component={Pages.TemplatePreview} />
 
-                  <Route path="/insurers/:id/contracts/add" component={Pages.InsurerContractAdd} />
-                  <Route path="/insurers/contracts/:id" component={Pages.InsurerContractInfo} />
-                  <Route {...ROUTES.INSURER} component={Pages.InsurerCard} />
-                  <Route path="/insurers" component={Pages.Insurers} />
+                    <Route path="/insurers/:id/contracts/add" component={Pages.InsurerContractAdd} />
+                    <Route path="/insurers/contracts/:id" component={Pages.InsurerContractInfo} />
+                    <Route {...ROUTES.INSURER} component={Pages.InsurerCard} />
+                    <Route path="/insurers" component={Pages.Insurers} />
 
-                  <Route path="/documents-flow" component={Pages.DocumentsFlow} />
+                    <Route path="/documents-flow" component={Pages.DocumentsFlow} />
 
-                  <Route path="/requests/all" component={Pages.Requests} />
-                  <Route path="/requests/auction" component={Pages.RequestsAuction} />
-                  <Route path="/requests/active" component={Pages.RequestsActive} />
-                  <Route path="/crypto-pro" component={Pages.CryptoProTest} />
+                    <Route path="/requests/all" component={Pages.Requests} />
+                    <Route path="/requests/auction" component={Pages.RequestsAuction} />
+                    <Route path="/requests/active" component={Pages.RequestsActive} />
+                    <Route path="/crypto-pro" component={Pages.CryptoProTest} />
 
-                  <Route component={Pages.NotFound} />
-                </Switch>
+                    <Route component={Pages.NotFound} />
+                  </Switch>
+
+                ) : (
+                  <Switch>
+                    {OPERATOR_ROUTES.map(item => (
+                      <Route key={item.path} {...item.extraProps} exact={!!item.exact} path={item.path} component={item.component} />
+                    ))}
+                  </Switch>
+                )}
+                
               </DashboardLayout>
             )}
           </Switch>

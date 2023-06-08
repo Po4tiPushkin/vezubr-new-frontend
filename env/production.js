@@ -13,6 +13,7 @@ const CONFIGS = {
   },
   operator: {
     host: 'https://operator.vezubr.ru/',
+    url: 'https://operator.vezubr.ru/',
     apiVersion: 'v1',
   },
   dispatcher: {
