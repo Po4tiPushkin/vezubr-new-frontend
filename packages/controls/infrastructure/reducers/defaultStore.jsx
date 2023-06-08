@@ -1,6 +1,6 @@
-import t from '@vezubr/old-common/src/localization';
-import { MapDeprecated } from '@vezubr/old-components';
-import platformName from '@vezubr/old-common/src/common/platformName';
+import t from '@vezubr/common/localization';
+import { MapDeprecated } from '@vezubr/components';
+import platformName from '@vezubr/common/common/platformName';
 import React from 'react';
 
 const DRIVER = 1;
